@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package commontype;
+
+option java_multiple_files = true;
+// 表示生成 Java 对象所在包名
+option java_package = "com.zachary.bifromq.type";
+// 表示生成的 Java 对象的外部类名
+option java_outer_classname = "ClientInfoProto";
+// 可以被设置为 SPEED, CODE_SIZE,or LITE_RUNTIME。默认 SPEED 加快解析
+option optimize_for = SPEED;
+
+/**
+客户端信息
+ */
+message ClientInfo{
+  // 属性 tenantId，类型为 string（protobuf类型），1 表示序号，不是值
+  string tenantId = 1;
+  // 属性 type，类型为 string（protobuf类型），2 表示序号
+  // 调用 客户端 的类型 可以是 外部用户客户端 或 内部服务
+  // the type of the calling client could be external user client or internal service
+  string type = 2;
+  // the metadata of the client
+  // 客户端的 元数据
+  map<string, string> metadata = 3;
+}

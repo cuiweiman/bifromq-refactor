@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.zachary.bifromq</groupId>
+        <artifactId>bifromq-mqtt</artifactId>
+        <version>0.1</version>
+    </parent>
+
+    <artifactId>bifromq-mqtt-server</artifactId>
+
+    <dependencies>
+        <!-- bifromq 开发模块-->
+        <!--混合逻辑时钟-->
+        <dependency>
+            <groupId>com.zachary.bifromq</groupId>
+            <artifactId>base-hlc</artifactId>
+        </dependency>
+        <!--MQTT 版本常量 和 消息protoc 定义-->
+        <dependency>
+            <groupId>com.zachary.bifromq</groupId>
+            <artifactId>bifromq-common-type</artifactId>
+        </dependency>
+        <!--度量配置-->
+        <dependency>
+            <groupId>com.zachary.bifromq</groupId>
+            <artifactId>bifromq-metrics</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

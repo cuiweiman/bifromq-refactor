@@ -1,0 +1,843 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.zachary.bifromq</groupId>
+    <artifactId>bifromq-refactor</artifactId>
+    <version>0.1</version>
+
+    <name>bifromq-refactor</name>
+    <packaging>pom</packaging>
+
+    <url>https://github.com/cuiweiman/birfomq-refactor</url>
+    <description>通过照抄重构 BifroMQ 达到学习的目的</description>
+
+    <modules>
+        <module>bifromq-mqtt</module>
+        <module>base-hlc</module>
+        <module>bifromq-common-type</module>
+        <module>bifromq-metrics</module>
+    </modules>
+
+    <developers>
+        <developer>
+            <id>ZacharyCui</id>
+            <name>Zachary Cui</name>
+            <email>cuiweiman@proton.me</email>
+            <url>http://localhost</url>
+            <organization>Individual Developer</organization>
+            <organizationUrl>None yet</organizationUrl>
+        </developer>
+    </developers>
+
+    <properties>
+        <!-- build properties -->
+        <release.version>${project.version}</release.version>
+        <java.source.version>17</java.source.version>
+        <java.target.version>17</java.target.version>
+        <source.encoding>UTF-8</source.encoding>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ssZ</maven.build.timestamp.format>
+
+        <javax.annotation.api.version>1.3.2</javax.annotation.api.version>
+        <pf4j.version>3.8.0</pf4j.version>
+        <reflections.verion>0.10.2</reflections.verion>
+        <apache.commons.cli.version>1.5.0</apache.commons.cli.version>
+        <apache.commons.lang.version>3.12.0</apache.commons.lang.version>
+        <apache.commons.collections.version>4.4</apache.commons.collections.version>
+        <jackson.dataformat.yaml.version>2.15.2</jackson.dataformat.yaml.version>
+        <caffeine.version>3.1.5</caffeine.version>
+        <concurrency.limits.version>0.4.0</concurrency.limits.version>
+        <grpc.version>1.53.0</grpc.version>
+        <protoc.version>3.21.12</protoc.version>
+        <guava.version>32.0.1-jre</guava.version>
+        <rxjava3.version>3.1.5</rxjava3.version>
+        <rocksdb.version>7.10.2</rocksdb.version>
+        <netty.version>4.1.94.Final</netty.version>
+        <micrometer.version>1.11.1</micrometer.version>
+        <jctools.version>4.0.1</jctools.version>
+
+        <slf4j.version>1.7.30</slf4j.version>
+        <logback.version>1.2.9</logback.version>
+        <lombok.version>1.18.24</lombok.version>
+
+        <!-- test dependencies-->
+        <awaitility.version>4.2.0</awaitility.version>
+        <paho.mqtt.version>1.2.5</paho.mqtt.version>
+        <mockito.version>4.6.0</mockito.version>
+        <testng.version>7.8.0</testng.version>
+        <jmh.version>1.36</jmh.version>
+
+        <!-- maven.plugin.version-->
+        <maven.compiler.plugin.version>3.10.1</maven.compiler.plugin.version>
+        <maven.jar.plugin.version>3.2.2</maven.jar.plugin.version>
+        <maven.javadoc.plugin.version>3.4.0</maven.javadoc.plugin.version>
+        <maven.release.plugin.version>2.5.3</maven.release.plugin.version>
+        <maven.resources.plugin.version>3.2.0</maven.resources.plugin.version>
+        <maven.source.plugin.version>3.2.1</maven.source.plugin.version>
+        <maven.dependency.plugin.version>3.3.0</maven.dependency.plugin.version>
+        <maven.assembly.plugin.version>3.4.1</maven.assembly.plugin.version>
+        <maven.surefire.plugin.version>3.0.0-M5</maven.surefire.plugin.version>
+        <maven.jacoco.plugin.version>0.8.9</maven.jacoco.plugin.version>
+        <maven.checkstyle.plugin.version>3.2.2</maven.checkstyle.plugin.version>
+        <maven.wrapper.plugin.version>3.1.1</maven.wrapper.plugin.version>
+        <maven.gpg.plugin.version>1.6</maven.gpg.plugin.version>
+        <nexus.staging.maven.plugin.version>1.6.13</nexus.staging.maven.plugin.version>
+        <protobuf.plugin.version>0.6.1</protobuf.plugin.version>
+        <os.plugin.version>1.6.2</os.plugin.version>
+        <checkstyle.version>10.11.0</checkstyle.version>
+        <maven.bos.plugin.version>0.0.2</maven.bos.plugin.version>
+
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- bifromq 开发模块-->
+            <!--混合逻辑时钟-->
+            <dependency>
+                <groupId>com.zachary.bifromq</groupId>
+                <artifactId>base-hlc</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!--MQTT 版本常量 和 消息protoc 定义-->
+            <dependency>
+                <groupId>com.zachary.bifromq</groupId>
+                <artifactId>bifromq-common-type</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!--度量配置-->
+            <dependency>
+                <groupId>com.zachary.bifromq</groupId>
+                <artifactId>bifromq-metrics</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+
+            <!-- 三方依赖模块 -->
+            <!-- JDK 的注释依赖 -->
+            <dependency>
+                <groupId>javax.annotation</groupId>
+                <artifactId>javax.annotation-api</artifactId>
+                <version>${javax.annotation.api.version}</version>
+            </dependency>
+            <!--
+            提供解析命令行参数的API，命令行的处理共分为三个阶段：定义阶段、解析阶段和审讯阶段。
+            它也可以在命令行打印详细的参数信息。
+            解析命令行参数如：-d dbName -t tbName -files f1 f2 ==》
+            database: dbName, tableName: tbName, files: [f1,f2]
+            -->
+            <dependency>
+                <groupId>commons-cli</groupId>
+                <artifactId>commons-cli</artifactId>
+                <version>${apache.commons.cli.version}</version>
+            </dependency>
+            <!--常用 Java 工具包-->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${apache.commons.lang.version}</version>
+            </dependency>
+            <!--常用 Java 集合 工具包-->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${apache.commons.collections.version}</version>
+            </dependency>
+            <!--读取 yaml 文件，并且反序列化到对象中的一个模块-->
+            <dependency>
+                <groupId>com.fasterxml.jackson.dataformat</groupId>
+                <artifactId>jackson-dataformat-yaml</artifactId>
+                <version>${jackson.dataformat.yaml.version}</version>
+            </dependency>
+            <!--
+            自适应限流神器，应对高并发的手段之一。从 Guava 的 RateLimiter 到 Hystrix，以及 Sentinel 都可作为限流的工具。
+            自适应限流不需要手动指定限流阈值，也不需要去预估系统的容量，并且阈值能够随着系统相关指标变化而变化。
+            自适应限流算法借鉴了TCP拥塞算法，根据各种指标预估限流的阈值，并且不断进行调整。
+            -->
+            <dependency>
+                <groupId>com.netflix.concurrency-limits</groupId>
+                <artifactId>concurrency-limits-core</artifactId>
+                <version>${concurrency.limits.version}</version>
+            </dependency>
+            <!--
+            RocksDB JNI API依赖
+            RocksDB 是C++编写的一个嵌入式的服务器本地的一个高性能的 K-V 数据库，无需安装部署。很多教程是拉取源码编译运行，实则大可不必。
+            RocksDBJni 的源码里api最后都是走的 native 方法，把数据库的源码功能封装了一层，直接调用就好了。
+            -->
+            <dependency>
+                <groupId>org.rocksdb</groupId>
+                <artifactId>rocksdbjni</artifactId>
+                <version>${rocksdb.version}</version>
+            </dependency>
+            <!--GRpc 全量依赖 https://doc.oschina.net/grpc-->
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-bom</artifactId>
+                <type>pom</type>
+                <scope>import</scope>
+                <version>${grpc.version}</version>
+            </dependency>
+            <!--netty 全量依赖-->
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-bom</artifactId>
+                <type>pom</type>
+                <scope>import</scope>
+                <version>${netty.version}</version>
+            </dependency>
+            <!--Caffeine 优秀的本地缓存器-->
+            <dependency>
+                <groupId>com.github.ben-manes.caffeine</groupId>
+                <artifactId>caffeine</artifactId>
+                <version>${caffeine.version}</version>
+            </dependency>
+            <!--Protobuf: Java 中对于 GRpc 框架使用的 序列化 依赖-->
+            <dependency>
+                <groupId>com.google.protobuf</groupId>
+                <artifactId>protobuf-java</artifactId>
+                <version>${protoc.version}</version>
+            </dependency>
+            <!--Java 中使用 protobuf 的工具类，方便 protobuf 和 json 的相互转换-->
+            <dependency>
+                <groupId>com.google.protobuf</groupId>
+                <artifactId>protobuf-java-util</artifactId>
+                <version>${protoc.version}</version>
+            </dependency>
+            <!--pf4j 开源轻量级的插件框架。通过插件形式对系统功能进行个性化扩展。插件需要实现扩展点，扩展点由系统进行定义。
+            可以为第三方提供应用扩展的渠道，可以轻松将一个普通的 Java 应用转成一个模块化的应用-->
+            <dependency>
+                <groupId>org.pf4j</groupId>
+                <artifactId>pf4j</artifactId>
+                <version>${pf4j.version}</version>
+            </dependency>
+            <!--Java 反射框架
+            - 获取某个类型的全部子类
+            - 只要类型、构造器、方法，字段上带有特定注解，便能获取带有这个注解的全部信息(类型、构造器、方法，字段)
+            - 获取所有能匹配某个正则表达式的资源
+            - 获取所有带有特定签名的方法，包括参数，参数注解，返回类型
+            - 获取所有方法的名字
+            - 获取代码里所有字段、方法名、构造器的使用权
+            -->
+            <dependency>
+                <groupId>org.reflections</groupId>
+                <artifactId>reflections</artifactId>
+                <version>${reflections.verion}</version>
+            </dependency>
+            <!--Google 的 Java 工具库-->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+            <!--Slf4j-api 为 java 提供简单的日志接口，配合 logback、log4j 等依赖，实现项目的日志打印-->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <!-- logback-classic 是 log4j 的一个改良版本。
+            此外 logback-classic 完整实现 SLF4J API。可以很方便地更换成其它日志系统如 log4j 或 JDK14 Logging-->
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <!-- JCtools 是对jdk并发数据结构进行增强的并发工具，主要提供了 map 以及 queue 的增强数据结构。
+            原来netty还是自己写的 MpscLinkedQueueNode，后来新版本就换成使用 JCTools 的并发队列了。-->
+            <dependency>
+                <groupId>org.jctools</groupId>
+                <artifactId>jctools-core</artifactId>
+                <version>${jctools.version}</version>
+            </dependency>
+            <!-- RxJava 是响应式编程(Reactive Extensions)的java实现，它基于观察者模式的实现了异步编程接口。-->
+            <dependency>
+                <groupId>io.reactivex.rxjava3</groupId>
+                <artifactId>rxjava</artifactId>
+                <version>${rxjava3.version}</version>
+            </dependency>
+            <!--应用程序 度量的 度量库：
+            为基于 JVM 的应用程序的性能监测数据收集提供了一个通用的 API，支持多种度量指标类型，
+            这些指标可以用于观察、警报以及对应用程序当前状态做出响应。-->
+            <dependency>
+                <groupId>io.micrometer</groupId>
+                <artifactId>micrometer-core</artifactId>
+                <version>${micrometer.version}</version>
+            </dependency>
+            <!-- Micrometer 接入 Prometheus
+            Prometheus 基于服务发现的模式，定时从应用程序实例上拉取指标数据，它支持自定义查询的语言以及数学操作。
+            -->
+            <dependency>
+                <groupId>io.micrometer</groupId>
+                <artifactId>micrometer-registry-prometheus</artifactId>
+                <version>${micrometer.version}</version>
+            </dependency>
+            <!-- test dependencies -->
+            <!--接口自动化-使用 Awaitility 测试异步代码
+            该工具提供轮询的方式，判断操作是否完成，以最短的时间获取异步任务结果。
+            官方文档：https://github.com/awaitility/awaitility/wiki/Usage#usage-examples-->
+            <dependency>
+                <groupId>org.awaitility</groupId>
+                <artifactId>awaitility</artifactId>
+                <version>${awaitility.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <!--单元测试 mock 调用
+            论坛教程 https://zhuanlan.zhihu.com/p/45175174
+            官方文档 https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html-->
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${mockito.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-inline</artifactId>
+                <version>${mockito.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <!-- TestNG Java 自动化测试框架
+            论坛教程 https://zhuanlan.zhihu.com/p/623245201
+            官方文档 https://testng.org/doc/index.html-->
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>${testng.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <!--精确到微秒级别的性能测试框架
+            JMH已经在JDK 12中被包含，其他版本的需要自行引入maven
+            论坛教程 https://zhuanlan.zhihu.com/p/434083702
+            https://github.com/openjdk/jmh
+            -->
+            <!--Java 微基准测试,用于测一个方法的性能好坏-->
+            <dependency>
+                <groupId>org.openjdk.jmh</groupId>
+                <artifactId>jmh-core</artifactId>
+                <version>${jmh.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <!--Java 微基准测试,用于测一个方法的性能好坏-->
+            <dependency>
+                <groupId>org.openjdk.jmh</groupId>
+                <artifactId>jmh-generator-annprocess</artifactId>
+                <version>${jmh.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <!--mqtt 依赖
+            官方 API https://eclipse.dev/paho/files/javadoc/org/eclipse/paho/client/mqttv3/package-summary.html-->
+            <dependency>
+                <groupId>org.eclipse.paho</groupId>
+                <artifactId>org.eclipse.paho.client.mqttv3</artifactId>
+                <version>${paho.mqtt.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>javax.annotation-api</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- TestNG Java 自动化测试框架
+           论坛教程 https://zhuanlan.zhihu.com/p/623245201
+           官方文档 https://testng.org/doc/index.html-->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <extensions>
+            <!--设置各种有用属性（从 OS 中检测的 ${os.name} 和 ${os.arch} 属性）的 Maven 插件-->
+            <extension>
+                <groupId>kr.motd.maven</groupId>
+                <artifactId>os-maven-plugin</artifactId>
+                <version>${os.plugin.version}</version>
+            </extension>
+            <!--
+            mafei01@baidu.com 开发的插件
+            功能暂时看不出来
+            -->
+            <extension>
+                <groupId>io.github.mafei6827</groupId>
+                <artifactId>maven-repository-bos</artifactId>
+                <version>${maven.bos.plugin.version}</version>
+            </extension>
+        </extensions>
+        <pluginManagement>
+            <plugins>
+                <!--maven 编译插件-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.compiler.plugin.version}</version>
+                    <configuration>
+                        <source>${java.source.version}</source>
+                        <target>${java.target.version}</target>
+                        <encoding>${source.encoding}</encoding>
+                    </configuration>
+                </plugin>
+                <!-- https://maven.apache.org/plugins/maven-jar-plugin/index.html
+                这是 maven 生命周期 package 阶段的默认打包插件，当不想对该插件进行自定义配置时， 就不用在 pom.xml 中主动声明该插件。
+                通常主动声明的插件想与生命周期绑定时需要进行一些配置，但这个插件不需要，其默认绑定 package 阶段-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${maven.jar.plugin.version}</version>
+                </plugin>
+                <!--自动生成Java文档。该插件生成项目的javadoc.对于构建jar目标，javadoc会首先生成并打包放入jar文件中。-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>${maven.javadoc.plugin.version}</version>
+                    <configuration>
+                        <!--  keep only errors and warnings  -->
+                        <quiet>true</quiet>
+                        <failOnError>false</failOnError>
+                        <encoding>${source.encoding}</encoding>
+                        <docencoding>${source.encoding}</docencoding>
+                        <linksource>true</linksource>
+                        <!--  prevent svnpub to be too much noisy  -->
+                        <notimestamp>true</notimestamp>
+                        <links>
+                            <link>https://docs.oracle.com/javase/8/docs/api/</link>
+                            <link>https://docs.oracle.com/javase/7/docs/api/</link>
+                            <link>https://docs.oracle.com/javase/6/docs/api/</link>
+                        </links>
+                        <archive>
+                            <manifest>
+                                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                                <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                            </manifest>
+                        </archive>
+                    </configuration>
+                </plugin>
+                <!--简化项目版本的发布和管理，确保版本号的正确性，并自动处理与版本发布相关的任务。-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>${maven.release.plugin.version}</version>
+                </plugin>
+                <!--处理资源⽂件。默认的主资源⽂件⽬录是 src/main/resources，
+                当需要添加额外的资源⽂件⽬录时，可以通过配置maven-resources-plugin来实现-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>${maven.resources.plugin.version}</version>
+                    <configuration>
+                        <encoding>${source.encoding}</encoding>
+                    </configuration>
+                </plugin>
+                <!--对 maven 工程的源码，打包成 jar 包
+                官方文档：https://maven.apache.org/plugins/maven-source-plugin/usage.html-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>${maven.source.plugin.version}</version>
+                    <configuration>
+                        <attach>true</attach>
+                        <archive>
+                            <manifest>
+                                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                                <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                            </manifest>
+                        </archive>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <!--处理与依赖相关的插件-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>${maven.dependency.plugin.version}</version>
+                </plugin>
+                <!--支持定制化打包方式，例如 apache 项目的打包方式，它是maven中针对打包任务而提供的标准插件。-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>${maven.assembly.plugin.version}</version>
+                </plugin>
+                <!-- mvn test. maven里执行测试用例的插件，不显示配置就会用默认配置
+                https://maven.apache.org/surefire/maven-surefire-plugin/index.html-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven.surefire.plugin.version}</version>
+                </plugin>
+                <!--检查 Java 源代码是否遵守代码标准或验证规则集（最佳实践）的工具.
+                mvn checkstyle:help 查看帮助
+                mvn checkstyle:check 查看工程是否满足检查。如果不满足，检查失败，可以通过target/checkstyle-result.xml来查看
+                mvn checkstyle:checkstyle 查看工程是否满足检查。如果不满足，不会失败，可以通过target/site/checkstyle.html查看检查信息
+                mvn checkstyle:checkstyle-aggregate 检查工程是否满足检查。如果不满足，不会失败，可以通过target/site/checkstyle.html查看-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-checkstyle-plugin</artifactId>
+                    <version>${maven.checkstyle.plugin.version}</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>com.puppycrawl.tools</groupId>
+                            <artifactId>checkstyle</artifactId>
+                            <version>${checkstyle.version}</version>
+                        </dependency>
+                    </dependencies>
+                    <configuration>
+                        <configLocation>checkstyle.xml</configLocation>
+                        <consoleOutput>true</consoleOutput>
+                        <violationSeverity>error</violationSeverity>
+                        <sourceDirectories>
+                            <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
+                        </sourceDirectories>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>validate</id>
+                            <phase>validate</phase>
+                            <goals>
+                                <goal>check</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <!--主要目的是确保无论在哪里构建 Maven 项目，都使用相同版本的 Maven-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-wrapper-plugin</artifactId>
+                    <version>${maven.wrapper.plugin.version}</version>
+                </plugin>
+                <!--Java 集成 Protobuf 插件编译 proto 文件。
+                https://blog.csdn.net/keenw/article/details/124458379-->
+                <plugin>
+                    <groupId>org.xolstice.maven.plugins</groupId>
+                    <artifactId>protobuf-maven-plugin</artifactId>
+                    <version>${protobuf.plugin.version}</version>
+                    <configuration>
+                        <!--${os.detected.classifier} 变量是maven内置的，获取当前操作系统的类型 windows-x86-64 或 osx -->
+                        <protocArtifact>com.google.protobuf:protoc:${protoc.version}:exe:${os.detected.classifier}
+                        </protocArtifact>
+                        <pluginId>grpc-java</pluginId>
+                        <pluginArtifact>io.grpc:protoc-gen-grpc-java:${grpc.version}:exe:${os.detected.classifier}
+                        </pluginArtifact>
+                        <!--配置proto文件编译地址-->
+                        <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+                        <!--关闭clean，追加生成，不清理原包的文件-->
+                        <clearOutputDirectory>false</clearOutputDirectory>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>compile</goal>
+                                <goal>compile-custom</goal>
+                                <goal>test-compile</goal>
+                                <goal>test-compile-custom</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <!--测试代码覆盖率统计报告
+                https://www.jacoco.org/jacoco/trunk/doc/maven.html-->
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>${maven.jacoco.plugin.version}</version>
+                    <configuration>
+                        <destFile>${project.basedir}/target/jacoco.exec</destFile>
+                        <append>true</append>
+                        <excludes>
+                            <exclude>com/baidu/bifromq/type/*.class</exclude>
+                            <exclude>**/proto/*.class</exclude>
+                        </excludes>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>jacoco-initialize</id>
+                            <goals>
+                                <goal>prepare-agent</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>jacoco-report</id>
+                            <phase>test</phase>
+                            <goals>
+                                <goal>report</goal>
+                            </goals>
+                            <configuration>
+                                <outputDirectory>
+                                    ${session.executionRootDirectory}/target/site/coverage/${project.artifactId}
+                                </outputDirectory>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <reporting>
+        <plugins>
+            <!--用于生成代码的测试覆盖率报告-->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <!-- select non-aggregate reports -->
+                            <report>report</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+        </plugins>
+    </reporting>
+
+    <!--在不同环境下，要使用的 不同参数、插件-->
+    <profiles>
+        <profile>
+            <id>local</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>build</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>${session.executionRootDirectory}/testsuites/UnitTests.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>build-coverage</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>${session.executionRootDirectory}/testsuites/UnitTests.xml</suiteXmlFile>
+                                <suiteXmlFile>${session.executionRootDirectory}/testsuites/IntegrationTests.xml
+                                </suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.jacoco</groupId>
+                        <artifactId>jacoco-maven-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <!-- mvn clean install -Prelease -->
+        <profile>
+            <id>maven-central-deploy</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <!--maven 打包工具-->
+                        <artifactId>maven-source-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>create-source-jar</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                    <goal>test-jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!--maven package打包声明工具-->
+                    <plugin>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>test-jar</goal>
+                                </goals>
+                                <configuration>
+                                    <!--  Avoids an error when releasing the parent pom  -->
+                                    <skipIfEmpty>true</skipIfEmpty>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!--java 文档生成工具-->
+                    <plugin>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>create-javadoc-jar</id>
+                                <goals>
+                                    <goal>javadoc</goal>
+                                    <goal>jar</goal>
+                                </goals>
+                                <phase>package</phase>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <source>${java.source.version}</source>
+                        </configuration>
+                    </plugin>
+                    <!--这个插件使用 GnuPG 对项目的所有附加工件进行签名。
+                    https://maven.apache.org/plugins/maven-gpg-plugin/
+                    -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>${maven.gpg.plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                                <configuration>
+                                    <gpgArguments>
+                                        <arg>--pinentry-mode</arg>
+                                        <arg>loopback</arg>
+                                    </gpgArguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!--是一个nexus用来自动控制流程的客户端插件，可以分享java开源项目到maven中央仓库-->
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <version>${nexus.staging.maven.plugin.version}</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <serverId>sonatype-nexus-repository</serverId>
+                            <nexusUrl>https://oss.sonatype.org</nexusUrl>
+                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+            <!--负责管理构件的发布。这是一个环境变量-->
+            <distributionManagement>
+                <!--maven仓库分为两种 release发布仓库(<repository>) 和 snapshot快照仓库(<snapshotsrepository>)
+                snapshot快照仓库用于保存开发过程中的不稳定版本
+                release正式仓库用来保存稳定的发行版本-->
+                <snapshotRepository>
+                    <id>sonatype-nexus-repository</id>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+                </snapshotRepository>
+                <repository>
+                    <id>sonatype-nexus-repository</id>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+        <profile>
+            <id>bos-repo-deploy</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>create-source-jar</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                    <goal>test-jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>test-jar</goal>
+                                </goals>
+                                <configuration>
+                                    <!--  Avoids an error when releasing the parent pom  -->
+                                    <skipIfEmpty>true</skipIfEmpty>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>create-javadoc-jar</id>
+                                <goals>
+                                    <goal>javadoc</goal>
+                                    <goal>jar</goal>
+                                </goals>
+                                <phase>package</phase>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <source>${java.source.version}</source>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+            <distributionManagement>
+                <repository>
+                    <id>bos-repo</id>
+                    <url>${bos.repo.release}</url>
+                </repository>
+                <snapshotRepository>
+                    <id>bos-repo</id>
+                    <url>${bos.repo.snapshot}</url>
+                </snapshotRepository>
+            </distributionManagement>
+        </profile>
+    </profiles>
+
+</project>

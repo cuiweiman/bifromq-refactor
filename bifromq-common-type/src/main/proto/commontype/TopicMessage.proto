@@ -1,0 +1,65 @@
+syntax = "proto3";
+import "commontype/QoS.proto";
+import "commontype/ClientInfo.proto";
+
+package commontype;
+
+option java_multiple_files = true;
+option java_package = "com.zachary.bifromq.type";
+option java_outer_classname = "TopicMessageProtos";
+
+/**
+消息
+ */
+message Message{
+  uint64 messageId = 1;
+  QoS pubQoS = 2;
+  bytes payload = 3; // user payload
+  uint64 timestamp = 4; // UTC ts
+  uint64 expireTimestamp = 5; // UTC ts
+}
+
+/**
+主题消息
+ */
+message TopicMessage {
+  // 发送或订阅的主题
+  string topic = 1;
+  // 消息
+  Message message = 2;
+  // 客户端 发布者
+  ClientInfo publisher = 3;
+}
+
+/**
+主体消息 包: 一个 topic 对应 多个 client 和 message
+ */
+message TopicMessagePack {
+  // repeated 代表可重复，可以理解为数组
+  message PublisherPack{
+    // 客户端发布者
+    ClientInfo publisher = 1;
+    // 多条 消息数组
+    repeated Message message = 2;
+  }
+  // 一个消息主题
+  string topic = 1;
+  // 多个 客户端生产者 的 发布包
+  repeated PublisherPack message = 2;
+}
+
+
+/**
+消息发布者包: 一个 client，对应多个 topic 和 message
+ */
+message PublisherMessagePack {
+  message TopicPack {
+    string topic = 1;
+    // repeated 代表可重复，可以理解为数组
+    repeated Message message = 2;
+  }
+  // 一个 客户端生产者
+  ClientInfo publisher = 1;
+  // 多条 主题消息包
+  repeated TopicPack messagePack = 2;
+}
