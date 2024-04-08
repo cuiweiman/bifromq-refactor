@@ -6,33 +6,32 @@
 
     <parent>
         <groupId>com.zachary.bifromq</groupId>
-        <artifactId>bifromq-mqtt</artifactId>
+        <artifactId>base-env</artifactId>
         <version>0.1</version>
     </parent>
 
-    <artifactId>bifromq-mqtt-server</artifactId>
+    <artifactId>base-env-provider</artifactId>
 
     <dependencies>
-        <!-- bifromq 开发模块-->
-        <!--混合逻辑时钟-->
         <dependency>
             <groupId>com.zachary.bifromq</groupId>
-            <artifactId>base-hlc</artifactId>
+            <artifactId>base-hookloader</artifactId>
         </dependency>
-        <!--MQTT 版本常量 和 消息protoc 定义-->
         <dependency>
             <groupId>com.zachary.bifromq</groupId>
-            <artifactId>bifromq-common-type</artifactId>
+            <artifactId>base-env-provider-spi</artifactId>
         </dependency>
-        <!--度量配置-->
         <dependency>
-            <groupId>com.zachary.bifromq</groupId>
-            <artifactId>bifromq-metrics</artifactId>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
         </dependency>
-
-
-
-
+        <!-- testing -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
+
 
 </project>

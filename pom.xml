@@ -17,6 +17,9 @@
         <module>base-hlc</module>
         <module>bifromq-common-type</module>
         <module>bifromq-metrics</module>
+        <module>base-hookloader</module>
+        <module>base-env</module>
+        <module>bifromq-sysprops</module>
     </modules>
 
     <developers>
@@ -109,6 +112,23 @@
             <dependency>
                 <groupId>com.zachary.bifromq</groupId>
                 <artifactId>bifromq-metrics</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!--使用 Java SPI, 通过配置信息,根据接口,获取实现类-->
+            <dependency>
+                <groupId>com.zachary.bifromq</groupId>
+                <artifactId>base-hookloader</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!--CPU数量、ThreadFactory 提供者-->
+            <dependency>
+                <groupId>com.zachary.bifromq</groupId>
+                <artifactId>base-env-provider-spi</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zachary.bifromq</groupId>
+                <artifactId>base-env-provider</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
