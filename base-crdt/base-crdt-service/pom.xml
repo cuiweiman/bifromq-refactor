@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.zachary.bifromq</groupId>
+        <artifactId>base-crdt</artifactId>
+        <version>0.1</version>
+    </parent>
+
+    <artifactId>base-crdt-service</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.zachary.bifromq</groupId>
+            <artifactId>base-crdt-store</artifactId>
+        </dependency>
+        <!--
+        环境变量提供者
+            1. Java 中根据 接口类型 获取 其实现类
+            2. 获取系统的 CPU 核数
+            3. 提供 ThreadFactory 线程工厂
+        -->
+        <dependency>
+            <groupId>com.zachary.bifromq</groupId>
+            <artifactId>base-env-provider</artifactId>
+        </dependency>
+        <!--日志 API-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <!-- for testing-->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>

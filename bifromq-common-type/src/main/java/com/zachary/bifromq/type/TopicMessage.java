@@ -4,6 +4,11 @@
 package com.zachary.bifromq.type;
 
 /**
+ * <pre>
+ **
+ *主题消息
+ * </pre>
+ *
  * Protobuf type {@code commontype.TopicMessage}
  */
 public final class TopicMessage extends
@@ -48,6 +53,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object topic_ = "";
   /**
+   * <pre>
+   * 发送或订阅的主题
+   * </pre>
+   *
    * <code>string topic = 1;</code>
    * @return The topic.
    */
@@ -65,6 +74,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * 发送或订阅的主题
+   * </pre>
+   *
    * <code>string topic = 1;</code>
    * @return The bytes for topic.
    */
@@ -86,6 +99,10 @@ private static final long serialVersionUID = 0L;
   public static final int MESSAGE_FIELD_NUMBER = 2;
   private com.zachary.bifromq.type.Message message_;
   /**
+   * <pre>
+   * 消息
+   * </pre>
+   *
    * <code>.commontype.Message message = 2;</code>
    * @return Whether the message field is set.
    */
@@ -94,6 +111,10 @@ private static final long serialVersionUID = 0L;
     return message_ != null;
   }
   /**
+   * <pre>
+   * 消息
+   * </pre>
+   *
    * <code>.commontype.Message message = 2;</code>
    * @return The message.
    */
@@ -102,6 +123,10 @@ private static final long serialVersionUID = 0L;
     return message_ == null ? com.zachary.bifromq.type.Message.getDefaultInstance() : message_;
   }
   /**
+   * <pre>
+   * 消息
+   * </pre>
+   *
    * <code>.commontype.Message message = 2;</code>
    */
   @java.lang.Override
@@ -112,6 +137,10 @@ private static final long serialVersionUID = 0L;
   public static final int PUBLISHER_FIELD_NUMBER = 3;
   private com.zachary.bifromq.type.ClientInfo publisher_;
   /**
+   * <pre>
+   * 客户端 发布者
+   * </pre>
+   *
    * <code>.commontype.ClientInfo publisher = 3;</code>
    * @return Whether the publisher field is set.
    */
@@ -120,6 +149,10 @@ private static final long serialVersionUID = 0L;
     return publisher_ != null;
   }
   /**
+   * <pre>
+   * 客户端 发布者
+   * </pre>
+   *
    * <code>.commontype.ClientInfo publisher = 3;</code>
    * @return The publisher.
    */
@@ -128,6 +161,10 @@ private static final long serialVersionUID = 0L;
     return publisher_ == null ? com.zachary.bifromq.type.ClientInfo.getDefaultInstance() : publisher_;
   }
   /**
+   * <pre>
+   * 客户端 发布者
+   * </pre>
+   *
    * <code>.commontype.ClientInfo publisher = 3;</code>
    */
   @java.lang.Override
@@ -322,6 +359,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   **
+   *主题消息
+   * </pre>
+   *
    * Protobuf type {@code commontype.TopicMessage}
    */
   public static final class Builder extends
@@ -533,6 +575,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object topic_ = "";
     /**
+     * <pre>
+     * 发送或订阅的主题
+     * </pre>
+     *
      * <code>string topic = 1;</code>
      * @return The topic.
      */
@@ -549,6 +595,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * 发送或订阅的主题
+     * </pre>
+     *
      * <code>string topic = 1;</code>
      * @return The bytes for topic.
      */
@@ -566,6 +616,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * 发送或订阅的主题
+     * </pre>
+     *
      * <code>string topic = 1;</code>
      * @param value The topic to set.
      * @return This builder for chaining.
@@ -579,6 +633,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 发送或订阅的主题
+     * </pre>
+     *
      * <code>string topic = 1;</code>
      * @return This builder for chaining.
      */
@@ -589,6 +647,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 发送或订阅的主题
+     * </pre>
+     *
      * <code>string topic = 1;</code>
      * @param value The bytes for topic to set.
      * @return This builder for chaining.
@@ -607,6 +669,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.zachary.bifromq.type.Message, com.zachary.bifromq.type.Message.Builder, com.zachary.bifromq.type.MessageOrBuilder> messageBuilder_;
     /**
+     * <pre>
+     * 消息
+     * </pre>
+     *
      * <code>.commontype.Message message = 2;</code>
      * @return Whether the message field is set.
      */
@@ -614,6 +680,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     * <pre>
+     * 消息
+     * </pre>
+     *
      * <code>.commontype.Message message = 2;</code>
      * @return The message.
      */
@@ -625,6 +695,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * 消息
+     * </pre>
+     *
      * <code>.commontype.Message message = 2;</code>
      */
     public Builder setMessage(com.zachary.bifromq.type.Message value) {
@@ -641,6 +715,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 消息
+     * </pre>
+     *
      * <code>.commontype.Message message = 2;</code>
      */
     public Builder setMessage(
@@ -655,6 +733,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 消息
+     * </pre>
+     *
      * <code>.commontype.Message message = 2;</code>
      */
     public Builder mergeMessage(com.zachary.bifromq.type.Message value) {
@@ -674,6 +756,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 消息
+     * </pre>
+     *
      * <code>.commontype.Message message = 2;</code>
      */
     public Builder clearMessage() {
@@ -687,6 +773,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 消息
+     * </pre>
+     *
      * <code>.commontype.Message message = 2;</code>
      */
     public com.zachary.bifromq.type.Message.Builder getMessageBuilder() {
@@ -695,6 +785,10 @@ private static final long serialVersionUID = 0L;
       return getMessageFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * 消息
+     * </pre>
+     *
      * <code>.commontype.Message message = 2;</code>
      */
     public com.zachary.bifromq.type.MessageOrBuilder getMessageOrBuilder() {
@@ -706,6 +800,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * 消息
+     * </pre>
+     *
      * <code>.commontype.Message message = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -726,6 +824,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.zachary.bifromq.type.ClientInfo, com.zachary.bifromq.type.ClientInfo.Builder, com.zachary.bifromq.type.ClientInfoOrBuilder> publisherBuilder_;
     /**
+     * <pre>
+     * 客户端 发布者
+     * </pre>
+     *
      * <code>.commontype.ClientInfo publisher = 3;</code>
      * @return Whether the publisher field is set.
      */
@@ -733,6 +835,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
+     * <pre>
+     * 客户端 发布者
+     * </pre>
+     *
      * <code>.commontype.ClientInfo publisher = 3;</code>
      * @return The publisher.
      */
@@ -744,6 +850,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * 客户端 发布者
+     * </pre>
+     *
      * <code>.commontype.ClientInfo publisher = 3;</code>
      */
     public Builder setPublisher(com.zachary.bifromq.type.ClientInfo value) {
@@ -760,6 +870,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 客户端 发布者
+     * </pre>
+     *
      * <code>.commontype.ClientInfo publisher = 3;</code>
      */
     public Builder setPublisher(
@@ -774,6 +888,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 客户端 发布者
+     * </pre>
+     *
      * <code>.commontype.ClientInfo publisher = 3;</code>
      */
     public Builder mergePublisher(com.zachary.bifromq.type.ClientInfo value) {
@@ -793,6 +911,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 客户端 发布者
+     * </pre>
+     *
      * <code>.commontype.ClientInfo publisher = 3;</code>
      */
     public Builder clearPublisher() {
@@ -806,6 +928,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 客户端 发布者
+     * </pre>
+     *
      * <code>.commontype.ClientInfo publisher = 3;</code>
      */
     public com.zachary.bifromq.type.ClientInfo.Builder getPublisherBuilder() {
@@ -814,6 +940,10 @@ private static final long serialVersionUID = 0L;
       return getPublisherFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * 客户端 发布者
+     * </pre>
+     *
      * <code>.commontype.ClientInfo publisher = 3;</code>
      */
     public com.zachary.bifromq.type.ClientInfoOrBuilder getPublisherOrBuilder() {
@@ -825,6 +955,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * 客户端 发布者
+     * </pre>
+     *
      * <code>.commontype.ClientInfo publisher = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

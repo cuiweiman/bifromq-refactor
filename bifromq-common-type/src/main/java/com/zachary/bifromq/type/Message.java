@@ -4,6 +4,11 @@
 package com.zachary.bifromq.type;
 
 /**
+ * <pre>
+ **
+ *消息
+ * </pre>
+ *
  * Protobuf type {@code commontype.Message}
  */
 public final class Message extends
@@ -321,6 +326,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   **
+   *消息
+   * </pre>
+   *
    * Protobuf type {@code commontype.Message}
    */
   public static final class Builder extends

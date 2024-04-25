@@ -8,11 +8,19 @@ public interface ClientInfoOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * 属性 tenantId，类型为 string（protobuf类型），1 表示序号，不是值
+   * </pre>
+   *
    * <code>string tenantId = 1;</code>
    * @return The tenantId.
    */
   java.lang.String getTenantId();
   /**
+   * <pre>
+   * 属性 tenantId，类型为 string（protobuf类型），1 表示序号，不是值
+   * </pre>
+   *
    * <code>string tenantId = 1;</code>
    * @return The bytes for tenantId.
    */
@@ -21,6 +29,8 @@ public interface ClientInfoOrBuilder extends
 
   /**
    * <pre>
+   * 属性 type，类型为 string（protobuf类型），2 表示序号
+   * 调用 客户端 的类型 可以是 外部用户客户端 或 内部服务
    * the type of the calling client could be external user client or internal service
    * </pre>
    *
@@ -30,6 +40,8 @@ public interface ClientInfoOrBuilder extends
   java.lang.String getType();
   /**
    * <pre>
+   * 属性 type，类型为 string（protobuf类型），2 表示序号
+   * 调用 客户端 的类型 可以是 外部用户客户端 或 内部服务
    * the type of the calling client could be external user client or internal service
    * </pre>
    *
@@ -42,6 +54,7 @@ public interface ClientInfoOrBuilder extends
   /**
    * <pre>
    * the metadata of the client
+   * 客户端的 元数据
    * </pre>
    *
    * <code>map&lt;string, string&gt; metadata = 3;</code>
@@ -50,6 +63,7 @@ public interface ClientInfoOrBuilder extends
   /**
    * <pre>
    * the metadata of the client
+   * 客户端的 元数据
    * </pre>
    *
    * <code>map&lt;string, string&gt; metadata = 3;</code>
@@ -65,6 +79,7 @@ public interface ClientInfoOrBuilder extends
   /**
    * <pre>
    * the metadata of the client
+   * 客户端的 元数据
    * </pre>
    *
    * <code>map&lt;string, string&gt; metadata = 3;</code>
@@ -74,6 +89,7 @@ public interface ClientInfoOrBuilder extends
   /**
    * <pre>
    * the metadata of the client
+   * 客户端的 元数据
    * </pre>
    *
    * <code>map&lt;string, string&gt; metadata = 3;</code>
@@ -86,6 +102,7 @@ java.lang.String defaultValue);
   /**
    * <pre>
    * the metadata of the client
+   * 客户端的 元数据
    * </pre>
    *
    * <code>map&lt;string, string&gt; metadata = 3;</code>

@@ -4,6 +4,31 @@
 package com.zachary.bifromq.type;
 
 /**
+ * <pre>
+ **
+ *QoS 0 at most once 至多一次。 消息 发送一次。
+ *"即发即忘"，消息不会被 接受方 确认收到，消息发送方 也不会进行 存储和重新传输。其提供与底层 TCP 协议相同的保证。
+ *适用于：
+ *建立了稳定持久的连接。以容忍消息有部分的丢失。不需要消息队列，只有在 QoS 1 和 2 时消息才会排队。
+ *QoS 1 at least once 至多一次。消息 发送多次，响应一次。
+ *1. QoS 1 的级别会保证消息至少有一次可以传递给接受者，发送方 存储消息 直到 接受到 接收方 响应的 PUBACK（发布确认）包，消息可能被传递一次或者多次。
+ *2. 发送方 会使用存储的每个数据包中的 packetId 与 响应的 PUBACK 数据包进行匹配，如果在一个的时间段内没有收到 PUBACK 包则进行重新发送。
+ *3. 重新发送的消息会设置 DUP 标志为 true，仅仅用于表示消息是 重新发送的。
+ *适用于：
+ *需要确保每条消息到达，服务可以处理重复数据。
+ *无法承受 QoS 2 的开销，QoS 1 传递消息的速度要比 QoS 2 快很多。
+ *QoS 2 exactly once 恰好一次。
+ *1. 生产者发送消息 PUBLISH 成功后，等待 broker 的 PUBREC 响应。
+ *2. broker 响应 PUBREC 表示收到。
+ *3. 生产者若没有收到 PUBREC 会将消息 DUP 标志设为 true 并重新发送。直到接收到 broker 的 PUBREC 响应。
+ *生产者接收到 PUBREC 后，再发送一次 PUBREL 请求，要求 broker 释放 packageId 以便于可以重复使用。
+ *4. broker 接收到 PUBREL 后，会响应 PUBCOMP 事件，并释放 packageId 相关的数据包存储状态。
+ *5. 过程中若有一方在一定时间内接收不到请求或者响应，会重新发送一次自己的事件。
+ *适用于：
+ *消息精准一次至关重要，且无法处理重复数据。
+ *可以容忍 QoS 2 更长时间的交互。
+ * </pre>
+ *
  * Protobuf enum {@code commontype.QoS}
  */
 public enum QoS

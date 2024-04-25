@@ -13,10 +13,12 @@
     <artifactId>base-env-provider</artifactId>
 
     <dependencies>
+        <!--通过配置信息,根据接口,获取实现类, 类似于 SpringApplicationContext 功能-->
         <dependency>
             <groupId>com.zachary.bifromq</groupId>
             <artifactId>base-hookloader</artifactId>
         </dependency>
+        <!--CPU数量、ThreadFactory 提供者 接口-->
         <dependency>
             <groupId>com.zachary.bifromq</groupId>
             <artifactId>base-env-provider-spi</artifactId>

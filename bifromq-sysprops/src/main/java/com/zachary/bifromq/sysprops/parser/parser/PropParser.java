@@ -8,5 +8,7 @@ package com.zachary.bifromq.sysprops.parser.parser;
  * @date: 2024/4/3 11:53
  */
 public interface PropParser<T> {
+
     T parse(String value);
+
 }

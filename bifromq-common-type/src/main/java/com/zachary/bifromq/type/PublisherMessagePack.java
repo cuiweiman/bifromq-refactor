@@ -4,6 +4,11 @@
 package com.zachary.bifromq.type;
 
 /**
+ * <pre>
+ **
+ *消息发布者包: 一个 client，对应多个 topic 和 message
+ * </pre>
+ *
  * Protobuf type {@code commontype.PublisherMessagePack}
  */
 public final class PublisherMessagePack extends
@@ -61,24 +66,44 @@ private static final long serialVersionUID = 0L;
         getTopicBytes();
 
     /**
+     * <pre>
+     * repeated 代表可重复，可以理解为数组
+     * </pre>
+     *
      * <code>repeated .commontype.Message message = 2;</code>
      */
     java.util.List<com.zachary.bifromq.type.Message> 
         getMessageList();
     /**
+     * <pre>
+     * repeated 代表可重复，可以理解为数组
+     * </pre>
+     *
      * <code>repeated .commontype.Message message = 2;</code>
      */
     com.zachary.bifromq.type.Message getMessage(int index);
     /**
+     * <pre>
+     * repeated 代表可重复，可以理解为数组
+     * </pre>
+     *
      * <code>repeated .commontype.Message message = 2;</code>
      */
     int getMessageCount();
     /**
+     * <pre>
+     * repeated 代表可重复，可以理解为数组
+     * </pre>
+     *
      * <code>repeated .commontype.Message message = 2;</code>
      */
     java.util.List<? extends com.zachary.bifromq.type.MessageOrBuilder> 
         getMessageOrBuilderList();
     /**
+     * <pre>
+     * repeated 代表可重复，可以理解为数组
+     * </pre>
+     *
      * <code>repeated .commontype.Message message = 2;</code>
      */
     com.zachary.bifromq.type.MessageOrBuilder getMessageOrBuilder(
@@ -169,6 +194,10 @@ private static final long serialVersionUID = 0L;
     @SuppressWarnings("serial")
     private java.util.List<com.zachary.bifromq.type.Message> message_;
     /**
+     * <pre>
+     * repeated 代表可重复，可以理解为数组
+     * </pre>
+     *
      * <code>repeated .commontype.Message message = 2;</code>
      */
     @java.lang.Override
@@ -176,6 +205,10 @@ private static final long serialVersionUID = 0L;
       return message_;
     }
     /**
+     * <pre>
+     * repeated 代表可重复，可以理解为数组
+     * </pre>
+     *
      * <code>repeated .commontype.Message message = 2;</code>
      */
     @java.lang.Override
@@ -184,6 +217,10 @@ private static final long serialVersionUID = 0L;
       return message_;
     }
     /**
+     * <pre>
+     * repeated 代表可重复，可以理解为数组
+     * </pre>
+     *
      * <code>repeated .commontype.Message message = 2;</code>
      */
     @java.lang.Override
@@ -191,6 +228,10 @@ private static final long serialVersionUID = 0L;
       return message_.size();
     }
     /**
+     * <pre>
+     * repeated 代表可重复，可以理解为数组
+     * </pre>
+     *
      * <code>repeated .commontype.Message message = 2;</code>
      */
     @java.lang.Override
@@ -198,6 +239,10 @@ private static final long serialVersionUID = 0L;
       return message_.get(index);
     }
     /**
+     * <pre>
+     * repeated 代表可重复，可以理解为数组
+     * </pre>
+     *
      * <code>repeated .commontype.Message message = 2;</code>
      */
     @java.lang.Override
@@ -687,6 +732,10 @@ private static final long serialVersionUID = 0L;
           com.zachary.bifromq.type.Message, com.zachary.bifromq.type.Message.Builder, com.zachary.bifromq.type.MessageOrBuilder> messageBuilder_;
 
       /**
+       * <pre>
+       * repeated 代表可重复，可以理解为数组
+       * </pre>
+       *
        * <code>repeated .commontype.Message message = 2;</code>
        */
       public java.util.List<com.zachary.bifromq.type.Message> getMessageList() {
@@ -697,6 +746,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * repeated 代表可重复，可以理解为数组
+       * </pre>
+       *
        * <code>repeated .commontype.Message message = 2;</code>
        */
       public int getMessageCount() {
@@ -707,6 +760,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * repeated 代表可重复，可以理解为数组
+       * </pre>
+       *
        * <code>repeated .commontype.Message message = 2;</code>
        */
       public com.zachary.bifromq.type.Message getMessage(int index) {
@@ -717,6 +774,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * repeated 代表可重复，可以理解为数组
+       * </pre>
+       *
        * <code>repeated .commontype.Message message = 2;</code>
        */
       public Builder setMessage(
@@ -734,6 +795,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * repeated 代表可重复，可以理解为数组
+       * </pre>
+       *
        * <code>repeated .commontype.Message message = 2;</code>
        */
       public Builder setMessage(
@@ -748,6 +813,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * repeated 代表可重复，可以理解为数组
+       * </pre>
+       *
        * <code>repeated .commontype.Message message = 2;</code>
        */
       public Builder addMessage(com.zachary.bifromq.type.Message value) {
@@ -764,6 +833,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * repeated 代表可重复，可以理解为数组
+       * </pre>
+       *
        * <code>repeated .commontype.Message message = 2;</code>
        */
       public Builder addMessage(
@@ -781,6 +854,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * repeated 代表可重复，可以理解为数组
+       * </pre>
+       *
        * <code>repeated .commontype.Message message = 2;</code>
        */
       public Builder addMessage(
@@ -795,6 +872,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * repeated 代表可重复，可以理解为数组
+       * </pre>
+       *
        * <code>repeated .commontype.Message message = 2;</code>
        */
       public Builder addMessage(
@@ -809,6 +890,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * repeated 代表可重复，可以理解为数组
+       * </pre>
+       *
        * <code>repeated .commontype.Message message = 2;</code>
        */
       public Builder addAllMessage(
@@ -824,6 +909,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * repeated 代表可重复，可以理解为数组
+       * </pre>
+       *
        * <code>repeated .commontype.Message message = 2;</code>
        */
       public Builder clearMessage() {
@@ -837,6 +926,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * repeated 代表可重复，可以理解为数组
+       * </pre>
+       *
        * <code>repeated .commontype.Message message = 2;</code>
        */
       public Builder removeMessage(int index) {
@@ -850,6 +943,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * repeated 代表可重复，可以理解为数组
+       * </pre>
+       *
        * <code>repeated .commontype.Message message = 2;</code>
        */
       public com.zachary.bifromq.type.Message.Builder getMessageBuilder(
@@ -857,6 +954,10 @@ private static final long serialVersionUID = 0L;
         return getMessageFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * repeated 代表可重复，可以理解为数组
+       * </pre>
+       *
        * <code>repeated .commontype.Message message = 2;</code>
        */
       public com.zachary.bifromq.type.MessageOrBuilder getMessageOrBuilder(
@@ -867,6 +968,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * repeated 代表可重复，可以理解为数组
+       * </pre>
+       *
        * <code>repeated .commontype.Message message = 2;</code>
        */
       public java.util.List<? extends com.zachary.bifromq.type.MessageOrBuilder> 
@@ -878,6 +983,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * repeated 代表可重复，可以理解为数组
+       * </pre>
+       *
        * <code>repeated .commontype.Message message = 2;</code>
        */
       public com.zachary.bifromq.type.Message.Builder addMessageBuilder() {
@@ -885,6 +994,10 @@ private static final long serialVersionUID = 0L;
             com.zachary.bifromq.type.Message.getDefaultInstance());
       }
       /**
+       * <pre>
+       * repeated 代表可重复，可以理解为数组
+       * </pre>
+       *
        * <code>repeated .commontype.Message message = 2;</code>
        */
       public com.zachary.bifromq.type.Message.Builder addMessageBuilder(
@@ -893,6 +1006,10 @@ private static final long serialVersionUID = 0L;
             index, com.zachary.bifromq.type.Message.getDefaultInstance());
       }
       /**
+       * <pre>
+       * repeated 代表可重复，可以理解为数组
+       * </pre>
+       *
        * <code>repeated .commontype.Message message = 2;</code>
        */
       public java.util.List<com.zachary.bifromq.type.Message.Builder> 
@@ -980,6 +1097,10 @@ private static final long serialVersionUID = 0L;
   public static final int PUBLISHER_FIELD_NUMBER = 1;
   private com.zachary.bifromq.type.ClientInfo publisher_;
   /**
+   * <pre>
+   * 一个 客户端生产者
+   * </pre>
+   *
    * <code>.commontype.ClientInfo publisher = 1;</code>
    * @return Whether the publisher field is set.
    */
@@ -988,6 +1109,10 @@ private static final long serialVersionUID = 0L;
     return publisher_ != null;
   }
   /**
+   * <pre>
+   * 一个 客户端生产者
+   * </pre>
+   *
    * <code>.commontype.ClientInfo publisher = 1;</code>
    * @return The publisher.
    */
@@ -996,6 +1121,10 @@ private static final long serialVersionUID = 0L;
     return publisher_ == null ? com.zachary.bifromq.type.ClientInfo.getDefaultInstance() : publisher_;
   }
   /**
+   * <pre>
+   * 一个 客户端生产者
+   * </pre>
+   *
    * <code>.commontype.ClientInfo publisher = 1;</code>
    */
   @java.lang.Override
@@ -1007,6 +1136,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.zachary.bifromq.type.PublisherMessagePack.TopicPack> messagePack_;
   /**
+   * <pre>
+   * 多条 主题消息包
+   * </pre>
+   *
    * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
    */
   @java.lang.Override
@@ -1014,6 +1147,10 @@ private static final long serialVersionUID = 0L;
     return messagePack_;
   }
   /**
+   * <pre>
+   * 多条 主题消息包
+   * </pre>
+   *
    * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
    */
   @java.lang.Override
@@ -1022,6 +1159,10 @@ private static final long serialVersionUID = 0L;
     return messagePack_;
   }
   /**
+   * <pre>
+   * 多条 主题消息包
+   * </pre>
+   *
    * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
    */
   @java.lang.Override
@@ -1029,6 +1170,10 @@ private static final long serialVersionUID = 0L;
     return messagePack_.size();
   }
   /**
+   * <pre>
+   * 多条 主题消息包
+   * </pre>
+   *
    * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
    */
   @java.lang.Override
@@ -1036,6 +1181,10 @@ private static final long serialVersionUID = 0L;
     return messagePack_.get(index);
   }
   /**
+   * <pre>
+   * 多条 主题消息包
+   * </pre>
+   *
    * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
    */
   @java.lang.Override
@@ -1218,6 +1367,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   **
+   *消息发布者包: 一个 client，对应多个 topic 和 message
+   * </pre>
+   *
    * Protobuf type {@code commontype.PublisherMessagePack}
    */
   public static final class Builder extends
@@ -1456,6 +1610,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.zachary.bifromq.type.ClientInfo, com.zachary.bifromq.type.ClientInfo.Builder, com.zachary.bifromq.type.ClientInfoOrBuilder> publisherBuilder_;
     /**
+     * <pre>
+     * 一个 客户端生产者
+     * </pre>
+     *
      * <code>.commontype.ClientInfo publisher = 1;</code>
      * @return Whether the publisher field is set.
      */
@@ -1463,6 +1621,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * 一个 客户端生产者
+     * </pre>
+     *
      * <code>.commontype.ClientInfo publisher = 1;</code>
      * @return The publisher.
      */
@@ -1474,6 +1636,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * 一个 客户端生产者
+     * </pre>
+     *
      * <code>.commontype.ClientInfo publisher = 1;</code>
      */
     public Builder setPublisher(com.zachary.bifromq.type.ClientInfo value) {
@@ -1490,6 +1656,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 一个 客户端生产者
+     * </pre>
+     *
      * <code>.commontype.ClientInfo publisher = 1;</code>
      */
     public Builder setPublisher(
@@ -1504,6 +1674,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 一个 客户端生产者
+     * </pre>
+     *
      * <code>.commontype.ClientInfo publisher = 1;</code>
      */
     public Builder mergePublisher(com.zachary.bifromq.type.ClientInfo value) {
@@ -1523,6 +1697,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 一个 客户端生产者
+     * </pre>
+     *
      * <code>.commontype.ClientInfo publisher = 1;</code>
      */
     public Builder clearPublisher() {
@@ -1536,6 +1714,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 一个 客户端生产者
+     * </pre>
+     *
      * <code>.commontype.ClientInfo publisher = 1;</code>
      */
     public com.zachary.bifromq.type.ClientInfo.Builder getPublisherBuilder() {
@@ -1544,6 +1726,10 @@ private static final long serialVersionUID = 0L;
       return getPublisherFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * 一个 客户端生产者
+     * </pre>
+     *
      * <code>.commontype.ClientInfo publisher = 1;</code>
      */
     public com.zachary.bifromq.type.ClientInfoOrBuilder getPublisherOrBuilder() {
@@ -1555,6 +1741,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * 一个 客户端生产者
+     * </pre>
+     *
      * <code>.commontype.ClientInfo publisher = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1584,6 +1774,10 @@ private static final long serialVersionUID = 0L;
         com.zachary.bifromq.type.PublisherMessagePack.TopicPack, com.zachary.bifromq.type.PublisherMessagePack.TopicPack.Builder, com.zachary.bifromq.type.PublisherMessagePack.TopicPackOrBuilder> messagePackBuilder_;
 
     /**
+     * <pre>
+     * 多条 主题消息包
+     * </pre>
+     *
      * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
      */
     public java.util.List<com.zachary.bifromq.type.PublisherMessagePack.TopicPack> getMessagePackList() {
@@ -1594,6 +1788,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * 多条 主题消息包
+     * </pre>
+     *
      * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
      */
     public int getMessagePackCount() {
@@ -1604,6 +1802,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * 多条 主题消息包
+     * </pre>
+     *
      * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
      */
     public com.zachary.bifromq.type.PublisherMessagePack.TopicPack getMessagePack(int index) {
@@ -1614,6 +1816,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * 多条 主题消息包
+     * </pre>
+     *
      * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
      */
     public Builder setMessagePack(
@@ -1631,6 +1837,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 多条 主题消息包
+     * </pre>
+     *
      * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
      */
     public Builder setMessagePack(
@@ -1645,6 +1855,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 多条 主题消息包
+     * </pre>
+     *
      * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
      */
     public Builder addMessagePack(com.zachary.bifromq.type.PublisherMessagePack.TopicPack value) {
@@ -1661,6 +1875,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 多条 主题消息包
+     * </pre>
+     *
      * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
      */
     public Builder addMessagePack(
@@ -1678,6 +1896,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 多条 主题消息包
+     * </pre>
+     *
      * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
      */
     public Builder addMessagePack(
@@ -1692,6 +1914,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 多条 主题消息包
+     * </pre>
+     *
      * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
      */
     public Builder addMessagePack(
@@ -1706,6 +1932,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 多条 主题消息包
+     * </pre>
+     *
      * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
      */
     public Builder addAllMessagePack(
@@ -1721,6 +1951,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 多条 主题消息包
+     * </pre>
+     *
      * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
      */
     public Builder clearMessagePack() {
@@ -1734,6 +1968,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 多条 主题消息包
+     * </pre>
+     *
      * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
      */
     public Builder removeMessagePack(int index) {
@@ -1747,6 +1985,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 多条 主题消息包
+     * </pre>
+     *
      * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
      */
     public com.zachary.bifromq.type.PublisherMessagePack.TopicPack.Builder getMessagePackBuilder(
@@ -1754,6 +1996,10 @@ private static final long serialVersionUID = 0L;
       return getMessagePackFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * 多条 主题消息包
+     * </pre>
+     *
      * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
      */
     public com.zachary.bifromq.type.PublisherMessagePack.TopicPackOrBuilder getMessagePackOrBuilder(
@@ -1764,6 +2010,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * 多条 主题消息包
+     * </pre>
+     *
      * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
      */
     public java.util.List<? extends com.zachary.bifromq.type.PublisherMessagePack.TopicPackOrBuilder> 
@@ -1775,6 +2025,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * 多条 主题消息包
+     * </pre>
+     *
      * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
      */
     public com.zachary.bifromq.type.PublisherMessagePack.TopicPack.Builder addMessagePackBuilder() {
@@ -1782,6 +2036,10 @@ private static final long serialVersionUID = 0L;
           com.zachary.bifromq.type.PublisherMessagePack.TopicPack.getDefaultInstance());
     }
     /**
+     * <pre>
+     * 多条 主题消息包
+     * </pre>
+     *
      * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
      */
     public com.zachary.bifromq.type.PublisherMessagePack.TopicPack.Builder addMessagePackBuilder(
@@ -1790,6 +2048,10 @@ private static final long serialVersionUID = 0L;
           index, com.zachary.bifromq.type.PublisherMessagePack.TopicPack.getDefaultInstance());
     }
     /**
+     * <pre>
+     * 多条 主题消息包
+     * </pre>
+     *
      * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
      */
     public java.util.List<com.zachary.bifromq.type.PublisherMessagePack.TopicPack.Builder> 

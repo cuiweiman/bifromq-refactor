@@ -4,6 +4,11 @@
 package com.zachary.bifromq.type;
 
 /**
+ * <pre>
+ **
+ *客户端信息
+ * </pre>
+ *
  * Protobuf type {@code commontype.ClientInfo}
  */
 public final class ClientInfo extends
@@ -61,6 +66,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object tenantId_ = "";
   /**
+   * <pre>
+   * 属性 tenantId，类型为 string（protobuf类型），1 表示序号，不是值
+   * </pre>
+   *
    * <code>string tenantId = 1;</code>
    * @return The tenantId.
    */
@@ -78,6 +87,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * 属性 tenantId，类型为 string（protobuf类型），1 表示序号，不是值
+   * </pre>
+   *
    * <code>string tenantId = 1;</code>
    * @return The bytes for tenantId.
    */
@@ -101,6 +114,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object type_ = "";
   /**
    * <pre>
+   * 属性 type，类型为 string（protobuf类型），2 表示序号
+   * 调用 客户端 的类型 可以是 外部用户客户端 或 内部服务
    * the type of the calling client could be external user client or internal service
    * </pre>
    *
@@ -122,6 +137,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
+   * 属性 type，类型为 string（protobuf类型），2 表示序号
+   * 调用 客户端 的类型 可以是 外部用户客户端 或 内部服务
    * the type of the calling client could be external user client or internal service
    * </pre>
    *
@@ -172,6 +189,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * the metadata of the client
+   * 客户端的 元数据
    * </pre>
    *
    * <code>map&lt;string, string&gt; metadata = 3;</code>
@@ -193,6 +211,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * the metadata of the client
+   * 客户端的 元数据
    * </pre>
    *
    * <code>map&lt;string, string&gt; metadata = 3;</code>
@@ -204,6 +223,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * the metadata of the client
+   * 客户端的 元数据
    * </pre>
    *
    * <code>map&lt;string, string&gt; metadata = 3;</code>
@@ -222,6 +242,7 @@ java.lang.String defaultValue) {
   /**
    * <pre>
    * the metadata of the client
+   * 客户端的 元数据
    * </pre>
    *
    * <code>map&lt;string, string&gt; metadata = 3;</code>
@@ -425,6 +446,11 @@ java.lang.String defaultValue) {
     return builder;
   }
   /**
+   * <pre>
+   **
+   *客户端信息
+   * </pre>
+   *
    * Protobuf type {@code commontype.ClientInfo}
    */
   public static final class Builder extends
@@ -649,6 +675,10 @@ java.lang.String defaultValue) {
 
     private java.lang.Object tenantId_ = "";
     /**
+     * <pre>
+     * 属性 tenantId，类型为 string（protobuf类型），1 表示序号，不是值
+     * </pre>
+     *
      * <code>string tenantId = 1;</code>
      * @return The tenantId.
      */
@@ -665,6 +695,10 @@ java.lang.String defaultValue) {
       }
     }
     /**
+     * <pre>
+     * 属性 tenantId，类型为 string（protobuf类型），1 表示序号，不是值
+     * </pre>
+     *
      * <code>string tenantId = 1;</code>
      * @return The bytes for tenantId.
      */
@@ -682,6 +716,10 @@ java.lang.String defaultValue) {
       }
     }
     /**
+     * <pre>
+     * 属性 tenantId，类型为 string（protobuf类型），1 表示序号，不是值
+     * </pre>
+     *
      * <code>string tenantId = 1;</code>
      * @param value The tenantId to set.
      * @return This builder for chaining.
@@ -695,6 +733,10 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * 属性 tenantId，类型为 string（protobuf类型），1 表示序号，不是值
+     * </pre>
+     *
      * <code>string tenantId = 1;</code>
      * @return This builder for chaining.
      */
@@ -705,6 +747,10 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
+     * <pre>
+     * 属性 tenantId，类型为 string（protobuf类型），1 表示序号，不是值
+     * </pre>
+     *
      * <code>string tenantId = 1;</code>
      * @param value The bytes for tenantId to set.
      * @return This builder for chaining.
@@ -722,6 +768,8 @@ java.lang.String defaultValue) {
     private java.lang.Object type_ = "";
     /**
      * <pre>
+     * 属性 type，类型为 string（protobuf类型），2 表示序号
+     * 调用 客户端 的类型 可以是 外部用户客户端 或 内部服务
      * the type of the calling client could be external user client or internal service
      * </pre>
      *
@@ -742,6 +790,8 @@ java.lang.String defaultValue) {
     }
     /**
      * <pre>
+     * 属性 type，类型为 string（protobuf类型），2 表示序号
+     * 调用 客户端 的类型 可以是 外部用户客户端 或 内部服务
      * the type of the calling client could be external user client or internal service
      * </pre>
      *
@@ -763,6 +813,8 @@ java.lang.String defaultValue) {
     }
     /**
      * <pre>
+     * 属性 type，类型为 string（protobuf类型），2 表示序号
+     * 调用 客户端 的类型 可以是 外部用户客户端 或 内部服务
      * the type of the calling client could be external user client or internal service
      * </pre>
      *
@@ -780,6 +832,8 @@ java.lang.String defaultValue) {
     }
     /**
      * <pre>
+     * 属性 type，类型为 string（protobuf类型），2 表示序号
+     * 调用 客户端 的类型 可以是 外部用户客户端 或 内部服务
      * the type of the calling client could be external user client or internal service
      * </pre>
      *
@@ -794,6 +848,8 @@ java.lang.String defaultValue) {
     }
     /**
      * <pre>
+     * 属性 type，类型为 string（protobuf类型），2 表示序号
+     * 调用 客户端 的类型 可以是 外部用户客户端 或 内部服务
      * the type of the calling client could be external user client or internal service
      * </pre>
      *
@@ -840,6 +896,7 @@ java.lang.String defaultValue) {
     /**
      * <pre>
      * the metadata of the client
+     * 客户端的 元数据
      * </pre>
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>
@@ -861,6 +918,7 @@ java.lang.String defaultValue) {
     /**
      * <pre>
      * the metadata of the client
+     * 客户端的 元数据
      * </pre>
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>
@@ -872,6 +930,7 @@ java.lang.String defaultValue) {
     /**
      * <pre>
      * the metadata of the client
+     * 客户端的 元数据
      * </pre>
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>
@@ -890,6 +949,7 @@ java.lang.String defaultValue) {
     /**
      * <pre>
      * the metadata of the client
+     * 客户端的 元数据
      * </pre>
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>
@@ -914,6 +974,7 @@ java.lang.String defaultValue) {
     /**
      * <pre>
      * the metadata of the client
+     * 客户端的 元数据
      * </pre>
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>
@@ -937,6 +998,7 @@ java.lang.String defaultValue) {
     /**
      * <pre>
      * the metadata of the client
+     * 客户端的 元数据
      * </pre>
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>
@@ -954,6 +1016,7 @@ java.lang.String defaultValue) {
     /**
      * <pre>
      * the metadata of the client
+     * 客户端的 元数据
      * </pre>
      *
      * <code>map&lt;string, string&gt; metadata = 3;</code>

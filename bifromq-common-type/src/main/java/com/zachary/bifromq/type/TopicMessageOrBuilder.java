@@ -8,11 +8,19 @@ public interface TopicMessageOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * 发送或订阅的主题
+   * </pre>
+   *
    * <code>string topic = 1;</code>
    * @return The topic.
    */
   java.lang.String getTopic();
   /**
+   * <pre>
+   * 发送或订阅的主题
+   * </pre>
+   *
    * <code>string topic = 1;</code>
    * @return The bytes for topic.
    */
@@ -20,31 +28,55 @@ public interface TopicMessageOrBuilder extends
       getTopicBytes();
 
   /**
+   * <pre>
+   * 消息
+   * </pre>
+   *
    * <code>.commontype.Message message = 2;</code>
    * @return Whether the message field is set.
    */
   boolean hasMessage();
   /**
+   * <pre>
+   * 消息
+   * </pre>
+   *
    * <code>.commontype.Message message = 2;</code>
    * @return The message.
    */
   com.zachary.bifromq.type.Message getMessage();
   /**
+   * <pre>
+   * 消息
+   * </pre>
+   *
    * <code>.commontype.Message message = 2;</code>
    */
   com.zachary.bifromq.type.MessageOrBuilder getMessageOrBuilder();
 
   /**
+   * <pre>
+   * 客户端 发布者
+   * </pre>
+   *
    * <code>.commontype.ClientInfo publisher = 3;</code>
    * @return Whether the publisher field is set.
    */
   boolean hasPublisher();
   /**
+   * <pre>
+   * 客户端 发布者
+   * </pre>
+   *
    * <code>.commontype.ClientInfo publisher = 3;</code>
    * @return The publisher.
    */
   com.zachary.bifromq.type.ClientInfo getPublisher();
   /**
+   * <pre>
+   * 客户端 发布者
+   * </pre>
+   *
    * <code>.commontype.ClientInfo publisher = 3;</code>
    */
   com.zachary.bifromq.type.ClientInfoOrBuilder getPublisherOrBuilder();

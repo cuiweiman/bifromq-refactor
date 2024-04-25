@@ -20,6 +20,9 @@
         <module>base-hookloader</module>
         <module>base-env</module>
         <module>bifromq-sysprops</module>
+        <module>base-rpc</module>
+        <module>base-crdt</module>
+        <module>base-cluster</module>
     </modules>
 
     <developers>
@@ -129,6 +132,23 @@
             <dependency>
                 <groupId>com.zachary.bifromq</groupId>
                 <artifactId>base-env-provider</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!--
+                TODO 暂时跳过，未理解，需要学习论文
+                CRDT 分布式系统一致性实现方案
+                https://crdt.tech/papers.html
+                主要是 state-based crdt 的拓展 delta-state crdt，https://arxiv.org/abs/1603.01529
+                抽象代数里的概念
+            -->
+            <dependency>
+                <groupId>com.zachary.bifromq</groupId>
+                <artifactId>base-crdt-store</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zachary.bifromq</groupId>
+                <artifactId>base-cluster</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

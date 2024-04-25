@@ -4,6 +4,11 @@
 package com.zachary.bifromq.type;
 
 /**
+ * <pre>
+ **
+ *订阅者信息
+ * </pre>
+ *
  * Protobuf type {@code commontype.SubInfo}
  */
 public final class SubInfo extends
@@ -51,6 +56,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object tenantId_ = "";
   /**
+   * <pre>
+   * 订阅者的 租户ID
+   * </pre>
+   *
    * <code>string tenantId = 1;</code>
    * @return The tenantId.
    */
@@ -68,6 +77,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * 订阅者的 租户ID
+   * </pre>
+   *
    * <code>string tenantId = 1;</code>
    * @return The bytes for tenantId.
    */
@@ -128,6 +141,10 @@ private static final long serialVersionUID = 0L;
   public static final int SUBQOS_FIELD_NUMBER = 3;
   private int subQoS_ = 0;
   /**
+   * <pre>
+   * 订阅者的 QOS
+   * </pre>
+   *
    * <code>.commontype.QoS subQoS = 3;</code>
    * @return The enum numeric value on the wire for subQoS.
    */
@@ -135,6 +152,10 @@ private static final long serialVersionUID = 0L;
     return subQoS_;
   }
   /**
+   * <pre>
+   * 订阅者的 QOS
+   * </pre>
+   *
    * <code>.commontype.QoS subQoS = 3;</code>
    * @return The subQoS.
    */
@@ -147,6 +168,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object topicFilter_ = "";
   /**
+   * <pre>
+   * Topic 过滤
+   * </pre>
+   *
    * <code>string topicFilter = 4;</code>
    * @return The topicFilter.
    */
@@ -164,6 +189,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Topic 过滤
+   * </pre>
+   *
    * <code>string topicFilter = 4;</code>
    * @return The bytes for topicFilter.
    */
@@ -367,6 +396,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   **
+   *订阅者信息
+   * </pre>
+   *
    * Protobuf type {@code commontype.SubInfo}
    */
   public static final class Builder extends
@@ -578,6 +612,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object tenantId_ = "";
     /**
+     * <pre>
+     * 订阅者的 租户ID
+     * </pre>
+     *
      * <code>string tenantId = 1;</code>
      * @return The tenantId.
      */
@@ -594,6 +632,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * 订阅者的 租户ID
+     * </pre>
+     *
      * <code>string tenantId = 1;</code>
      * @return The bytes for tenantId.
      */
@@ -611,6 +653,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * 订阅者的 租户ID
+     * </pre>
+     *
      * <code>string tenantId = 1;</code>
      * @param value The tenantId to set.
      * @return This builder for chaining.
@@ -624,6 +670,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 订阅者的 租户ID
+     * </pre>
+     *
      * <code>string tenantId = 1;</code>
      * @return This builder for chaining.
      */
@@ -634,6 +684,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 订阅者的 租户ID
+     * </pre>
+     *
      * <code>string tenantId = 1;</code>
      * @param value The bytes for tenantId to set.
      * @return This builder for chaining.
@@ -722,6 +776,10 @@ private static final long serialVersionUID = 0L;
 
     private int subQoS_ = 0;
     /**
+     * <pre>
+     * 订阅者的 QOS
+     * </pre>
+     *
      * <code>.commontype.QoS subQoS = 3;</code>
      * @return The enum numeric value on the wire for subQoS.
      */
@@ -729,6 +787,10 @@ private static final long serialVersionUID = 0L;
       return subQoS_;
     }
     /**
+     * <pre>
+     * 订阅者的 QOS
+     * </pre>
+     *
      * <code>.commontype.QoS subQoS = 3;</code>
      * @param value The enum numeric value on the wire for subQoS to set.
      * @return This builder for chaining.
@@ -740,6 +802,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 订阅者的 QOS
+     * </pre>
+     *
      * <code>.commontype.QoS subQoS = 3;</code>
      * @return The subQoS.
      */
@@ -749,6 +815,10 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.zachary.bifromq.type.QoS.UNRECOGNIZED : result;
     }
     /**
+     * <pre>
+     * 订阅者的 QOS
+     * </pre>
+     *
      * <code>.commontype.QoS subQoS = 3;</code>
      * @param value The subQoS to set.
      * @return This builder for chaining.
@@ -763,6 +833,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * 订阅者的 QOS
+     * </pre>
+     *
      * <code>.commontype.QoS subQoS = 3;</code>
      * @return This builder for chaining.
      */
@@ -775,6 +849,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object topicFilter_ = "";
     /**
+     * <pre>
+     * Topic 过滤
+     * </pre>
+     *
      * <code>string topicFilter = 4;</code>
      * @return The topicFilter.
      */
@@ -791,6 +869,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Topic 过滤
+     * </pre>
+     *
      * <code>string topicFilter = 4;</code>
      * @return The bytes for topicFilter.
      */
@@ -808,6 +890,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Topic 过滤
+     * </pre>
+     *
      * <code>string topicFilter = 4;</code>
      * @param value The topicFilter to set.
      * @return This builder for chaining.
@@ -821,6 +907,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Topic 过滤
+     * </pre>
+     *
      * <code>string topicFilter = 4;</code>
      * @return This builder for chaining.
      */
@@ -831,6 +921,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Topic 过滤
+     * </pre>
+     *
      * <code>string topicFilter = 4;</code>
      * @param value The bytes for topicFilter to set.
      * @return This builder for chaining.

@@ -8,11 +8,19 @@ public interface TopicMessagePackOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * 一个消息主题
+   * </pre>
+   *
    * <code>string topic = 1;</code>
    * @return The topic.
    */
   java.lang.String getTopic();
   /**
+   * <pre>
+   * 一个消息主题
+   * </pre>
+   *
    * <code>string topic = 1;</code>
    * @return The bytes for topic.
    */
@@ -20,24 +28,44 @@ public interface TopicMessagePackOrBuilder extends
       getTopicBytes();
 
   /**
+   * <pre>
+   * 多个 客户端生产者 的 发布包
+   * </pre>
+   *
    * <code>repeated .commontype.TopicMessagePack.PublisherPack message = 2;</code>
    */
   java.util.List<com.zachary.bifromq.type.TopicMessagePack.PublisherPack> 
       getMessageList();
   /**
+   * <pre>
+   * 多个 客户端生产者 的 发布包
+   * </pre>
+   *
    * <code>repeated .commontype.TopicMessagePack.PublisherPack message = 2;</code>
    */
   com.zachary.bifromq.type.TopicMessagePack.PublisherPack getMessage(int index);
   /**
+   * <pre>
+   * 多个 客户端生产者 的 发布包
+   * </pre>
+   *
    * <code>repeated .commontype.TopicMessagePack.PublisherPack message = 2;</code>
    */
   int getMessageCount();
   /**
+   * <pre>
+   * 多个 客户端生产者 的 发布包
+   * </pre>
+   *
    * <code>repeated .commontype.TopicMessagePack.PublisherPack message = 2;</code>
    */
   java.util.List<? extends com.zachary.bifromq.type.TopicMessagePack.PublisherPackOrBuilder> 
       getMessageOrBuilderList();
   /**
+   * <pre>
+   * 多个 客户端生产者 的 发布包
+   * </pre>
+   *
    * <code>repeated .commontype.TopicMessagePack.PublisherPack message = 2;</code>
    */
   com.zachary.bifromq.type.TopicMessagePack.PublisherPackOrBuilder getMessageOrBuilder(

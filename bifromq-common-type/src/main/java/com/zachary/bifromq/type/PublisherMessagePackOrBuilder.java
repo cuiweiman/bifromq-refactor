@@ -8,39 +8,71 @@ public interface PublisherMessagePackOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * 一个 客户端生产者
+   * </pre>
+   *
    * <code>.commontype.ClientInfo publisher = 1;</code>
    * @return Whether the publisher field is set.
    */
   boolean hasPublisher();
   /**
+   * <pre>
+   * 一个 客户端生产者
+   * </pre>
+   *
    * <code>.commontype.ClientInfo publisher = 1;</code>
    * @return The publisher.
    */
   com.zachary.bifromq.type.ClientInfo getPublisher();
   /**
+   * <pre>
+   * 一个 客户端生产者
+   * </pre>
+   *
    * <code>.commontype.ClientInfo publisher = 1;</code>
    */
   com.zachary.bifromq.type.ClientInfoOrBuilder getPublisherOrBuilder();
 
   /**
+   * <pre>
+   * 多条 主题消息包
+   * </pre>
+   *
    * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
    */
   java.util.List<com.zachary.bifromq.type.PublisherMessagePack.TopicPack> 
       getMessagePackList();
   /**
+   * <pre>
+   * 多条 主题消息包
+   * </pre>
+   *
    * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
    */
   com.zachary.bifromq.type.PublisherMessagePack.TopicPack getMessagePack(int index);
   /**
+   * <pre>
+   * 多条 主题消息包
+   * </pre>
+   *
    * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
    */
   int getMessagePackCount();
   /**
+   * <pre>
+   * 多条 主题消息包
+   * </pre>
+   *
    * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
    */
   java.util.List<? extends com.zachary.bifromq.type.PublisherMessagePack.TopicPackOrBuilder> 
       getMessagePackOrBuilderList();
   /**
+   * <pre>
+   * 多条 主题消息包
+   * </pre>
+   *
    * <code>repeated .commontype.PublisherMessagePack.TopicPack messagePack = 2;</code>
    */
   com.zachary.bifromq.type.PublisherMessagePack.TopicPackOrBuilder getMessagePackOrBuilder(
