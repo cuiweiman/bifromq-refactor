@@ -22,6 +22,7 @@ public class AgentHostOptions {
 
     /**
      * The domain name of the agent host cluster
+     * 集群 节点名称
      */
     private String clusterDomainName;
 

@@ -16,6 +16,11 @@
             <groupId>com.zachary.bifromq</groupId>
             <artifactId>base-crdt-store</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.zachary.bifromq</groupId>
+            <artifactId>base-cluster</artifactId>
+        </dependency>
         <!--
         环境变量提供者
             1. Java 中根据 接口类型 获取 其实现类

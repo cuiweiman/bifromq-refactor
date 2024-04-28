@@ -10,6 +10,7 @@ import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 public interface IAgentHost {
+
     static IAgentHost newInstance(AgentHostOptions options) {
         return new AgentHost(options);
     }
@@ -18,6 +19,7 @@ public interface IAgentHost {
 
     /**
      * Join the cluster as a running node by communicating with some existing running node of the cluster as the seeds
+     * 通过 与作为种子的 集群中 现有的运行节点 进行通信，作为 运行节点 加入 集群
      *
      * @param seeds
      * @return
@@ -26,6 +28,7 @@ public interface IAgentHost {
 
     /**
      * An observable of the live membership of host cluster
+     * 集群中 成活 成员 的 观测器
      *
      * @return
      */
@@ -33,6 +36,7 @@ public interface IAgentHost {
 
     /**
      * Host an agent locally
+     * 在本地承载代理
      *
      * @param agentId
      * @return
@@ -41,6 +45,7 @@ public interface IAgentHost {
 
     /**
      * unhost the agent
+     * 取消托管代理
      *
      * @param agentId
      */

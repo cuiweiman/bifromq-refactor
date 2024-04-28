@@ -151,7 +151,11 @@
                 <artifactId>base-cluster</artifactId>
                 <version>${project.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.zachary.bifromq</groupId>
+                <artifactId>base-crdt-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 
             <!-- 三方依赖模块 -->
             <!-- JDK 的注释依赖 -->
