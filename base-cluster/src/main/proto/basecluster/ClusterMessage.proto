@@ -1,0 +1,42 @@
+syntax = "proto3";
+import "basecluster/fd/Ping.proto";
+import "basecluster/fd/PingReq.proto";
+import "basecluster/fd/Ack.proto";
+import "basecluster/fd/Nack.proto";
+import "basecluster/membership/Join.proto";
+import "basecluster/membership/Quit.proto";
+import "basecluster/membership/Doubt.proto";
+import "basecluster/membership/Fail.proto";
+import "basecluster/membership/Endorse.proto";
+import "basecluster/agent/AgentMessage.proto";
+import "basecrdt/CRDTStoreMessage.proto";
+
+package basecluster;
+
+option java_multiple_files = true;
+option java_package = "com.zachary.bifromq.basecluster.proto";
+option java_outer_classname = "ClusterMessageProtos";
+option optimize_for = SPEED;
+
+message ClusterMessage {
+  /**
+  oneof 字段表示 一个消息类型中，一个字段只允许设置成其中一个类型，且不能同时设置多个。
+  如以下 oneof ClusterMessageType 表示 ClusterMessageType 的字段可以是 fd.Ping/fd.PingReq/fd.Ack ... 中的其中一个。
+  类似于 Java 中的 枚举实例，只允许匹配其中一个 枚举值。
+  ClusterMessageType 在这里 表示 集群消息的类型。
+   */
+  oneof ClusterMessageType {
+    fd.Ping ping = 1;
+    fd.PingReq pingReq = 2;
+    fd.Ack ack = 3;
+    fd.Nack nack = 4;
+    membership.Join join = 5;
+    membership.Quit quit = 6;
+    membership.Fail fail = 7;
+    membership.Doubt doubt = 8;
+    membership.Endorse endorse = 9;
+    agent.AgentMessageEnvelope agentMessage = 10;
+    basecrdt.CRDTStoreMessage crdtStoreMessage = 11;
+  }
+}
+

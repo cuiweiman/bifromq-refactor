@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package basecluster.messenger;
+
+option java_multiple_files = true;
+option java_package = "com.zachary.bifromq.basecluster.messenger.proto";
+option java_outer_classname = "MessengerMessageProtos";
+option optimize_for = SPEED;
+
+/**
+  直接消息
+ */
+message DirectMessage {
+  bytes payload = 1;
+}
+
+/**
+ 流言消息；
+ Redis、Cassandra 也使用的 Gossip 最终一致性协议
+ */
+message GossipMessage {
+  string messageId = 1;
+  bytes payload = 2;
+}
+
+/**
+  oneof 表示
+  MessengerMessage 类型只能是 DirectMessage 和 GossipMessage 中的 其中一种
+ */
+message MessengerMessage {
+  oneof MessengerMessageType {
+    DirectMessage direct = 1;
+    GossipMessage gossip = 2;
+  }
+}
+
