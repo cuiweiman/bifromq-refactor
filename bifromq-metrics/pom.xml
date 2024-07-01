@@ -47,9 +47,9 @@
             <artifactId>jmh-generator-annprocess</artifactId>
         </dependency>
         <!--
-        接口自动化-使用 Awaitility 测试异步代码
-        该工具提供轮询的方式，判断操作是否完成，以最短的时间获取异步任务结果。
-        官方文档：https://github.com/awaitility/awaitility/wiki/Usage#usage-examples
+            接口自动化-使用 Awaitility 测试异步代码
+            该工具提供轮询的方式，判断操作是否完成，以最短的时间获取异步任务结果。
+            官方文档：https://github.com/awaitility/awaitility/wiki/Usage#usage-examples
         -->
         <dependency>
             <groupId>org.awaitility</groupId>

@@ -1,0 +1,2 @@
+com.zachary.bifromq.basekv.balance.TestRecoveryBalancerFactory
+com.zachary.bifromq.basekv.balance.TestReplicaCntBalancerFactory

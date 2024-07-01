@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.zachary.bifromq</groupId>
+        <artifactId>bifromq-refactor</artifactId>
+        <version>0.1</version>
+    </parent>
+
+    <artifactId>bifromq-plugin</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>bifromq-plugin-auth-provider</module>
+        <module>bifromq-plugin-event-collector-helper</module>
+        <module>bifromq-plugin-setting-provider</module>
+        <module>bifromq-plugin-auth-provider-helper</module>
+        <module>bifromq-plugin-event-collector</module>
+        <module>bifromq-plugin-manager</module>
+        <module>bifromq-plugin-setting-provider-helper</module>
+        <module>bifromq-plugin-sub-broker</module>
+        <module>bifromq-plugin-sub-broker-helper</module>
+    </modules>
+
+
+</project>

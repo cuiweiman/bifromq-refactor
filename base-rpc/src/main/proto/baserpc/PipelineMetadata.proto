@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package baserpc;
+
+option java_multiple_files = true;
+option java_package = "com.zachary.bifromq.baserpc.proto";
+option java_outer_classname = "PipelineMetadataProto";
+
+message PipelineMetadata{
+  map<string, string> entry = 1;
+}

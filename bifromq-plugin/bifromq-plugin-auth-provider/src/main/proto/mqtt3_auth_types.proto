@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package mqtt3authtypes;
+
+option java_multiple_files = true;
+option java_package = "com.zachary.bifromq.plugin.authprovider.type";
+option java_outer_classname = "MQTT3AuthTypesProto";
+option optimize_for = SPEED;
+
+message MQTT3AuthData{
+  bool isMQIsdp = 1; // MQIsdp is MQTT 3.1
+  optional string username = 2;
+  optional bytes password = 3;
+  optional bytes cert = 4;
+  optional string clientId = 5;
+  string remoteAddr = 6;
+  uint32 remotePort = 7;
+  string channelId = 8;
+}
+
+message Ok{
+  string tenantId = 1;
+  string userId = 2;
+}
+
+message Reject{
+  enum Code {
+    BadPass = 0;
+    NotAuthorized = 1;
+    Error = 2;
+  }
+  Code code = 1;
+  optional string reason = 2; // optional description
+}
+
+message MQTT3AuthResult {
+  oneof Type{
+    Ok ok = 1;
+    Reject reject = 2;
+  }
+}

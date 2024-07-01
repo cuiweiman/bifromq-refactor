@@ -1,0 +1,4 @@
+scheduleIntervalInMs: 1000
+balancers:
+  - com.zachary.bifromq.basekv.balance.TestRecoveryBalancerFactory
+  - com.zachary.bifromq.basekv.balance.TestReplicaCntBalancerFactory
