@@ -16,8 +16,6 @@ package com.zachary.bifromq.mqtt.handler.v3;
 
 import com.zachary.bifromq.mqtt.handler.BaseMQTTTest;
 import com.zachary.bifromq.sessiondict.rpc.proto.Quit;
-import com.zachary.bifromq.type.ClientInfo;
-import com.zachary.bifromq.type.QoS;
 import lombok.extern.slf4j.Slf4j;
 import org.testng.Assert;
 import org.testng.annotations.Test;

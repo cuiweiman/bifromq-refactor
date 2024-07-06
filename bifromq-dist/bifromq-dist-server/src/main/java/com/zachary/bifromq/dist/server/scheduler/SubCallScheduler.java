@@ -19,7 +19,6 @@ import com.zachary.bifromq.dist.rpc.proto.SubRequest;
 import com.zachary.bifromq.dist.rpc.proto.TopicFilterList;
 import com.zachary.bifromq.dist.rpc.proto.UnsubRequest;
 import com.zachary.bifromq.dist.rpc.proto.UpdateRequest;
-import com.zachary.bifromq.type.QoS;
 import com.google.common.collect.Maps;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;

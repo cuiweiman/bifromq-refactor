@@ -35,7 +35,7 @@ import java.lang.invoke.VarHandle;
  * <p>
  * 1. 满足逻辑时钟的因果一致性happened-before。
  * 2. 尽可能接近物理时钟PT，当物理时钟推进时，逻辑时钟部分被置零。
- * 3. 记录时间的因果关系，保证和物理时钟的偏差是bounded。
+ * 3. 记录时间的因果关系，保证和物理时钟的偏差是 bounded (范围内的) 。
  * 4. 消除中心节点，用本地的物理时间加上逻辑时间，为具备数据库定义的因果关系的事务排序。
  * 5. 可以替代wall time使用。
  *
@@ -73,6 +73,8 @@ public class HLC {
      * VarHandle 类还提供了一些方法，可以执行非原子性的访问，例如读取和写入操作，这些操作不需要保证线程安全性。
      * <p>
      * 静态代码块中，将 private long hlc 属性的反射信息 赋给了 CAE 变量。
+     * <p>
+     * 为了使用 {@link VarHandle#compareAndExchange(Object...)} 方法，确保 多线程 更新时 的 线程安全
      */
     private static final VarHandle CAE;
 
@@ -112,21 +114,40 @@ public class HLC {
     private HLC() {
     }
 
+    /**
+     * 获取一个 混合逻辑时钟
+     *
+     * @return 时间戳 + 自增偏移量
+     */
     public long get() {
         long now = hlc;
+        // hlc 初始化为 0, l 右移 16 位 依然是 0
         long l = logical(now);
+        // hlc 初始为 0, hlc & CAUSAL_MASK 65535 = 0
         long c = causal(now);
+        // 初始时 updateL = 当前时间戳
         long updateL = Math.max(l, System.currentTimeMillis());
         if (updateL == l) {
+            // 同一个时间戳内，自动偏移量
             c++;
         } else {
+            // 不同的时间戳，不需要偏移量
             c = 0;
         }
+        // 将 updateL 左移 16位, 加上 变量c, 类似于雪花算法的拼接
+        // 若 在同一个时间戳内, 则 c 自增1,
         long newHLC = toTimestamp(updateL, c);
+        // cas 操作 更新 hlc 值
         set(now, newHLC);
         return newHLC;
     }
 
+    /**
+     * 更新 hlc 值
+     *
+     * @param otherHLC
+     * @return
+     */
     public long update(long otherHLC) {
         long now = hlc;
         long l = logical(now);
@@ -162,6 +183,8 @@ public class HLC {
 
     /**
      * 将 hlc 右移 16 位
+     * 因为 hlc 旧值在计算时，向左偏移过，
+     * 重新计算 hlc 时，需要 右移 恢复 到 原值 再进行比较
      */
     private long logical(long hlc) {
         return hlc >> 16;
@@ -188,6 +211,7 @@ public class HLC {
             if (witness == expected || witness >= newHLC) {
                 break;
             } else {
+                // 更新失败，修改 excepted 期望值，重新 CAS 更新 hlc 值
                 expected = witness;
             }
         } while (true);

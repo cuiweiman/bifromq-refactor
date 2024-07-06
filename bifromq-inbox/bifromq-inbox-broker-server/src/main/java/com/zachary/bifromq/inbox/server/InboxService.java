@@ -24,8 +24,6 @@ import com.zachary.bifromq.inbox.server.scheduler.InboxTouchScheduler;
 import com.zachary.bifromq.inbox.storage.proto.Fetched;
 import com.zachary.bifromq.inbox.storage.proto.MessagePack;
 import com.zachary.bifromq.plugin.settingprovider.ISettingProvider;
-import com.zachary.bifromq.type.SubInfo;
-import com.zachary.bifromq.type.TopicMessagePack;
 import com.google.common.collect.Sets;
 import com.google.common.util.concurrent.RateLimiter;
 import io.grpc.stub.StreamObserver;

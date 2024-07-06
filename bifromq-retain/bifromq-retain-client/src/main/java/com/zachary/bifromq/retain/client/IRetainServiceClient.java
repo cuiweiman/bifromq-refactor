@@ -3,8 +3,6 @@ package com.zachary.bifromq.retain.client;
 import com.zachary.bifromq.baserpc.IRPCClient;
 import com.zachary.bifromq.retain.rpc.proto.MatchReply;
 import com.zachary.bifromq.retain.rpc.proto.RetainReply;
-import com.zachary.bifromq.type.ClientInfo;
-import com.zachary.bifromq.type.QoS;
 import io.reactivex.rxjava3.core.Observable;
 
 import java.nio.ByteBuffer;

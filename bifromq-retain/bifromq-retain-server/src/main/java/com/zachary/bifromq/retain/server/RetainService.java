@@ -20,7 +20,6 @@ import com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput;
 import com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcOutput;
 import com.zachary.bifromq.retain.rpc.proto.RetainServiceRWCoProcInput;
 import com.zachary.bifromq.retain.rpc.proto.RetainServiceRWCoProcOutput;
-import com.zachary.bifromq.type.ClientInfo;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
 import io.grpc.stub.StreamObserver;

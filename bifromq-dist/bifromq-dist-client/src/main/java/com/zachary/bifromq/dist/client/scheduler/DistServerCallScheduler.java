@@ -7,8 +7,6 @@ import com.zachary.bifromq.basescheduler.IBatchCall;
 import com.zachary.bifromq.dist.rpc.proto.DistReply;
 import com.zachary.bifromq.dist.rpc.proto.DistRequest;
 import com.zachary.bifromq.dist.rpc.proto.DistServiceGrpc;
-import com.zachary.bifromq.type.ClientInfo;
-import com.zachary.bifromq.type.PublisherMessagePack;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.extern.slf4j.Slf4j;

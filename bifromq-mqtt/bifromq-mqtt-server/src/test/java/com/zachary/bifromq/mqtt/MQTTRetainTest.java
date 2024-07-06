@@ -21,7 +21,6 @@ import com.zachary.bifromq.plugin.authprovider.type.MQTTAction;
 import com.zachary.bifromq.plugin.authprovider.type.Ok;
 import com.zachary.bifromq.plugin.eventcollector.Event;
 import com.zachary.bifromq.plugin.settingprovider.Setting;
-import com.zachary.bifromq.type.ClientInfo;
 import com.google.protobuf.ByteString;
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.observers.TestObserver;

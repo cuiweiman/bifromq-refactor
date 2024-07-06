@@ -11,9 +11,6 @@ import com.zachary.bifromq.plugin.eventcollector.distservice.DeliverError;
 import com.zachary.bifromq.plugin.eventcollector.distservice.DeliverNoInbox;
 import com.zachary.bifromq.plugin.eventcollector.distservice.Delivered;
 import com.zachary.bifromq.plugin.subbroker.ISubBrokerManager;
-import com.zachary.bifromq.type.ClientInfo;
-import com.zachary.bifromq.type.SubInfo;
-import com.zachary.bifromq.type.TopicMessagePack;
 import lombok.extern.slf4j.Slf4j;
 import org.jctools.queues.MpscBlockingConsumerArrayQueue;
 

@@ -16,7 +16,6 @@ import com.zachary.bifromq.inbox.storage.proto.InboxServiceRWCoProcOutput;
 import com.zachary.bifromq.inbox.storage.proto.MessagePack;
 import com.zachary.bifromq.inbox.storage.proto.UpdateRequest;
 import com.zachary.bifromq.inbox.util.KeyUtil;
-import com.zachary.bifromq.type.SubInfo;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
 import io.micrometer.core.instrument.DistributionSummary;

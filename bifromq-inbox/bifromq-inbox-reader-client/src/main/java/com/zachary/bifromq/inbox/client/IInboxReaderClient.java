@@ -5,8 +5,6 @@ import com.zachary.bifromq.inbox.rpc.proto.CommitReply;
 import com.zachary.bifromq.inbox.rpc.proto.CreateInboxReply;
 import com.zachary.bifromq.inbox.rpc.proto.DeleteInboxReply;
 import com.zachary.bifromq.inbox.storage.proto.Fetched;
-import com.zachary.bifromq.type.ClientInfo;
-import com.zachary.bifromq.type.QoS;
 import io.reactivex.rxjava3.core.Observable;
 
 import java.util.concurrent.CompletableFuture;

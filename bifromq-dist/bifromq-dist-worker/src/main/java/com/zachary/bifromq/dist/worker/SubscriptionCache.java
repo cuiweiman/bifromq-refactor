@@ -10,8 +10,6 @@ import com.zachary.bifromq.dist.entity.Matching;
 import com.zachary.bifromq.dist.entity.NormalMatching;
 import com.zachary.bifromq.dist.util.TopicFilterMatcher;
 import com.zachary.bifromq.dist.util.TopicTrie;
-import com.zachary.bifromq.type.ClientInfo;
-import com.zachary.bifromq.type.TopicMessage;
 import com.github.benmanes.caffeine.cache.AsyncLoadingCache;
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.CacheLoader;

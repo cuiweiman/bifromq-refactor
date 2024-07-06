@@ -1,8 +1,6 @@
 package com.zachary.bifromq.dist.entity;
 
 
-import com.zachary.bifromq.type.QoS;
-import com.zachary.bifromq.type.SubInfo;
 import com.google.common.base.Strings;
 import com.google.protobuf.ByteString;
 import lombok.EqualsAndHashCode;

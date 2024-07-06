@@ -13,8 +13,6 @@ import com.zachary.bifromq.inbox.storage.proto.InboxCommitRequest;
 import com.zachary.bifromq.inbox.storage.proto.InboxServiceRWCoProcInput;
 import com.zachary.bifromq.inbox.storage.proto.InboxServiceRWCoProcOutput;
 import com.zachary.bifromq.inbox.storage.proto.UpdateRequest;
-import com.zachary.bifromq.type.ClientInfo;
-import com.zachary.bifromq.type.QoS;
 import com.google.common.collect.Maps;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;

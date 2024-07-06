@@ -18,6 +18,7 @@ package com.zachary.bifromq.type;
  *需要确保每条消息到达，服务可以处理重复数据。
  *无法承受 QoS 2 的开销，QoS 1 传递消息的速度要比 QoS 2 快很多。
  *QoS 2 exactly once 恰好一次。
+ *一条 exactly once 的消息 需要 生产者 和 broker 两次交互:
  *1. 生产者发送消息 PUBLISH 成功后，等待 broker 的 PUBREC 响应。
  *2. broker 响应 PUBREC 表示收到。
  *3. 生产者若没有收到 PUBREC 会将消息 DUP 标志设为 true 并重新发送。直到接收到 broker 的 PUBREC 响应。

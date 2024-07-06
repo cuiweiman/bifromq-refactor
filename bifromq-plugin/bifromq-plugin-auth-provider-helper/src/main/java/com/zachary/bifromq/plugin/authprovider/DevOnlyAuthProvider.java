@@ -4,7 +4,6 @@ import com.zachary.bifromq.plugin.authprovider.type.MQTT3AuthData;
 import com.zachary.bifromq.plugin.authprovider.type.MQTT3AuthResult;
 import com.zachary.bifromq.plugin.authprovider.type.MQTTAction;
 import com.zachary.bifromq.plugin.authprovider.type.Ok;
-import com.zachary.bifromq.type.ClientInfo;
 import com.google.common.base.Strings;
 
 import java.util.concurrent.CompletableFuture;

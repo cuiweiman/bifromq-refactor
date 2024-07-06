@@ -2,10 +2,6 @@ package com.zachary.bifromq.dist.server;
 
 import com.zachary.bifromq.plugin.subbroker.DeliveryPack;
 import com.zachary.bifromq.plugin.subbroker.DeliveryResult;
-import com.zachary.bifromq.type.ClientInfo;
-import com.zachary.bifromq.type.QoS;
-import com.zachary.bifromq.type.SubInfo;
-import com.zachary.bifromq.type.TopicMessagePack;
 import com.google.common.collect.Sets;
 import com.google.protobuf.ByteString;
 import lombok.SneakyThrows;

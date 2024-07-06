@@ -8,11 +8,6 @@ import com.zachary.bifromq.plugin.eventcollector.mqttbroker.pushhandling.QoS0Dro
 import com.zachary.bifromq.plugin.eventcollector.mqttbroker.pushhandling.QoS0Pushed;
 import com.zachary.bifromq.plugin.eventcollector.mqttbroker.pushhandling.QoS1Dropped;
 import com.zachary.bifromq.plugin.eventcollector.mqttbroker.pushhandling.QoS2Dropped;
-import com.zachary.bifromq.type.ClientInfo;
-import com.zachary.bifromq.type.Message;
-import com.zachary.bifromq.type.QoS;
-import com.zachary.bifromq.type.SubInfo;
-import com.zachary.bifromq.type.TopicMessagePack;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.mqtt.MqttQoS;
 import io.netty.handler.codec.mqtt.MqttTopicSubscription;

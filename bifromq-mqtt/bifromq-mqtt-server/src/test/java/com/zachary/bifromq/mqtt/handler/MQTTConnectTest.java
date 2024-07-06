@@ -18,7 +18,6 @@ import com.zachary.bifromq.mqtt.utils.MQTTMessageUtils;
 import com.zachary.bifromq.plugin.authprovider.type.Reject;
 import com.zachary.bifromq.plugin.eventcollector.Event;
 import com.zachary.bifromq.plugin.eventcollector.EventType;
-import com.zachary.bifromq.type.ClientInfo;
 import io.netty.handler.codec.mqtt.MqttConnAckMessage;
 import io.netty.handler.codec.mqtt.MqttConnectMessage;
 import io.netty.handler.codec.mqtt.MqttMessage;

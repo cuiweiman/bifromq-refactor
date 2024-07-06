@@ -12,7 +12,6 @@ import com.zachary.bifromq.plugin.eventcollector.IEventCollector;
 import com.zachary.bifromq.plugin.settingprovider.ISettingProvider;
 import com.zachary.bifromq.retain.client.IRetainServiceClient;
 import com.zachary.bifromq.sessiondict.client.ISessionDictionaryClient;
-import com.zachary.bifromq.type.ClientInfo;
 import com.github.benmanes.caffeine.cache.Caffeine;
 import com.github.benmanes.caffeine.cache.LoadingCache;
 import com.github.benmanes.caffeine.cache.RemovalListener;

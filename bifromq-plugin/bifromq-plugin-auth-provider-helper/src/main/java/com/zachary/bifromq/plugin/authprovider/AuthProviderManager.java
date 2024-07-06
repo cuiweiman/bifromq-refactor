@@ -7,7 +7,6 @@ import com.zachary.bifromq.plugin.authprovider.type.Reject;
 import com.zachary.bifromq.plugin.eventcollector.IEventCollector;
 import com.zachary.bifromq.plugin.eventcollector.mqttbroker.accessctrl.AccessControlError;
 import com.zachary.bifromq.plugin.settingprovider.ISettingProvider;
-import com.zachary.bifromq.type.ClientInfo;
 import com.google.common.base.Preconditions;
 import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.Metrics;

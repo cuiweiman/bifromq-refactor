@@ -2,7 +2,6 @@ package com.zachary.bifromq.plugin.eventcollector.mqttbroker.clientconnected;
 
 import com.zachary.bifromq.plugin.eventcollector.ClientEvent;
 import com.zachary.bifromq.plugin.eventcollector.EventType;
-import com.zachary.bifromq.type.QoS;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

@@ -9,7 +9,6 @@ import com.zachary.bifromq.inbox.rpc.proto.SendResult;
 import com.zachary.bifromq.plugin.subbroker.DeliveryPack;
 import com.zachary.bifromq.plugin.subbroker.DeliveryResult;
 import com.zachary.bifromq.plugin.subbroker.IDeliverer;
-import com.zachary.bifromq.type.SubInfo;
 import com.google.common.collect.Iterables;
 
 import java.util.Map;

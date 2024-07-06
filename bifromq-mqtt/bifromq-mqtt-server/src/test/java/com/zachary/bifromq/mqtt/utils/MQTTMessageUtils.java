@@ -13,7 +13,6 @@
 
 package com.zachary.bifromq.mqtt.utils;
 
-import com.zachary.bifromq.type.QoS;
 import com.google.common.collect.Lists;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;

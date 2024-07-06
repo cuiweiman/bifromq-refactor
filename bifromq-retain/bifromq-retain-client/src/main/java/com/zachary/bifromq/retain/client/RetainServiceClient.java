@@ -6,8 +6,6 @@ import com.zachary.bifromq.retain.rpc.proto.MatchRequest;
 import com.zachary.bifromq.retain.rpc.proto.RetainReply;
 import com.zachary.bifromq.retain.rpc.proto.RetainRequest;
 import com.zachary.bifromq.retain.rpc.proto.RetainServiceGrpc;
-import com.zachary.bifromq.type.ClientInfo;
-import com.zachary.bifromq.type.QoS;
 import io.reactivex.rxjava3.core.Observable;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;

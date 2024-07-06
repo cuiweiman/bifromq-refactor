@@ -12,7 +12,6 @@ import com.zachary.bifromq.inbox.storage.proto.InboxMetadata;
 import com.zachary.bifromq.inbox.storage.proto.InboxServiceRWCoProcInput;
 import com.zachary.bifromq.inbox.storage.proto.UpdateRequest;
 import com.zachary.bifromq.plugin.eventcollector.IEventCollector;
-import com.zachary.bifromq.type.ClientInfo;
 import com.google.protobuf.ByteString;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;

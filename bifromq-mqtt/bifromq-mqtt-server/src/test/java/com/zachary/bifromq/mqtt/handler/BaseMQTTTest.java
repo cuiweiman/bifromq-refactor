@@ -42,8 +42,6 @@ import com.zachary.bifromq.retain.rpc.proto.RetainReply;
 import com.zachary.bifromq.sessiondict.client.ISessionDictionaryClient;
 import com.zachary.bifromq.sessiondict.rpc.proto.Ping;
 import com.zachary.bifromq.sessiondict.rpc.proto.Quit;
-import com.zachary.bifromq.type.ClientInfo;
-import com.zachary.bifromq.type.QoS;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.embedded.EmbeddedChannel;

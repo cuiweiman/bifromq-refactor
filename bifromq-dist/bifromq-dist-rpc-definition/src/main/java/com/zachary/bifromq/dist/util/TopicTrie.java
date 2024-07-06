@@ -1,7 +1,5 @@
 package com.zachary.bifromq.dist.util;
 
-import com.zachary.bifromq.type.TopicMessage;
-
 import java.util.List;
 
 public class TopicTrie {

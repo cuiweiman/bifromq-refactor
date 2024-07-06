@@ -6,7 +6,6 @@ import com.zachary.bifromq.plugin.authprovider.type.MQTTAction;
 import com.zachary.bifromq.plugin.authprovider.type.PubAction;
 import com.zachary.bifromq.plugin.authprovider.type.SubAction;
 import com.zachary.bifromq.plugin.authprovider.type.UnsubAction;
-import com.zachary.bifromq.type.QoS;
 import com.google.common.base.Strings;
 import io.netty.channel.Channel;
 import io.netty.handler.codec.mqtt.MqttConnectMessage;

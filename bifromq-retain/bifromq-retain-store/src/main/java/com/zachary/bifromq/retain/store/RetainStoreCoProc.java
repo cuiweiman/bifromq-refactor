@@ -21,8 +21,6 @@ import com.zachary.bifromq.retain.rpc.proto.RetainServiceRWCoProcOutput;
 import com.zachary.bifromq.retain.rpc.proto.RetainSetMetadata;
 import com.zachary.bifromq.retain.utils.KeyUtil;
 import com.zachary.bifromq.retain.utils.TopicUtil;
-import com.zachary.bifromq.type.Message;
-import com.zachary.bifromq.type.TopicMessage;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
 import lombok.SneakyThrows;

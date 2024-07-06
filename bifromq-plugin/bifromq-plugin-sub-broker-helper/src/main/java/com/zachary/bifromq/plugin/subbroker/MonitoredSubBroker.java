@@ -1,6 +1,5 @@
 package com.zachary.bifromq.plugin.subbroker;
 
-import com.zachary.bifromq.type.SubInfo;
 import com.google.common.base.Preconditions;
 import io.micrometer.core.instrument.Metrics;
 import io.micrometer.core.instrument.Timer;

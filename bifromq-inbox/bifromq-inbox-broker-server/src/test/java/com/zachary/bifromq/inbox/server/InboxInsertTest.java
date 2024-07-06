@@ -6,11 +6,6 @@ import com.zachary.bifromq.inbox.storage.proto.Fetched;
 import com.zachary.bifromq.plugin.subbroker.DeliveryPack;
 import com.zachary.bifromq.plugin.subbroker.DeliveryResult;
 import com.zachary.bifromq.plugin.subbroker.IDeliverer;
-import com.zachary.bifromq.type.ClientInfo;
-import com.zachary.bifromq.type.Message;
-import com.zachary.bifromq.type.QoS;
-import com.zachary.bifromq.type.SubInfo;
-import com.zachary.bifromq.type.TopicMessagePack;
 import org.testng.annotations.Test;
 
 import java.util.LinkedList;

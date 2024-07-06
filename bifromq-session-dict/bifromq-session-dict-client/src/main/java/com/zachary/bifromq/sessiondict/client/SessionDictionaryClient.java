@@ -7,7 +7,6 @@ import com.zachary.bifromq.sessiondict.rpc.proto.KillRequest;
 import com.zachary.bifromq.sessiondict.rpc.proto.Ping;
 import com.zachary.bifromq.sessiondict.rpc.proto.Quit;
 import com.zachary.bifromq.sessiondict.rpc.proto.SessionDictionaryServiceGrpc;
-import com.zachary.bifromq.type.ClientInfo;
 import io.reactivex.rxjava3.core.Observable;
 import lombok.extern.slf4j.Slf4j;
 

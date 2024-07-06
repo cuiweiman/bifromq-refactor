@@ -3,10 +3,6 @@ package com.zachary.bifromq.inbox.store;
 import com.zachary.bifromq.inbox.storage.proto.InboxFetchReply;
 import com.zachary.bifromq.inbox.storage.proto.MessagePack;
 import com.zachary.bifromq.inbox.util.KeyUtil;
-import com.zachary.bifromq.type.QoS;
-import com.zachary.bifromq.type.SubInfo;
-import com.zachary.bifromq.type.TopicMessagePack;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;

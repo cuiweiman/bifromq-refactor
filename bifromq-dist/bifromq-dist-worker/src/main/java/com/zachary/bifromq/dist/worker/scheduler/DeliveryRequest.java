@@ -1,7 +1,5 @@
 package com.zachary.bifromq.dist.worker.scheduler;
 
-import com.zachary.bifromq.type.SubInfo;
-
 public class DeliveryRequest {
     public final SubInfo subInfo;
     public final MessagePackWrapper msgPackWrapper;

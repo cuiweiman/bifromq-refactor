@@ -1,6 +1,5 @@
 package com.zachary.bifromq.inbox.util;
 
-import com.zachary.bifromq.type.ClientInfo;
 import lombok.SneakyThrows;
 
 import java.util.Base64;

@@ -15,7 +15,6 @@ package com.zachary.bifromq.mqtt.handler.v3;
 
 import com.zachary.bifromq.mqtt.handler.BaseMQTTTest;
 import com.zachary.bifromq.mqtt.utils.MQTTMessageUtils;
-import com.zachary.bifromq.type.QoS;
 import io.netty.handler.codec.mqtt.MqttSubAckMessage;
 import io.netty.handler.codec.mqtt.MqttSubscribeMessage;
 import lombok.extern.slf4j.Slf4j;

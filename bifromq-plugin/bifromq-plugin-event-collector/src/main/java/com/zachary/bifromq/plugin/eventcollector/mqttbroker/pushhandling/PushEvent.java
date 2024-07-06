@@ -1,7 +1,6 @@
 package com.zachary.bifromq.plugin.eventcollector.mqttbroker.pushhandling;
 
 import com.zachary.bifromq.plugin.eventcollector.ClientEvent;
-import com.zachary.bifromq.type.ClientInfo;
 import lombok.ToString;
 
 @ToString(callSuper = true)
