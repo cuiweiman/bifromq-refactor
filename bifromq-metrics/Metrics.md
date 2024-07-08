@@ -1,5 +1,7 @@
 - [micrometer 官方文档](https://docs.micrometer.io/micrometer/reference/)
 - [服务监控 | 万字长文详解Micrometer](https://www.cnblogs.com/cjsblog/p/11556029.html)
+- [Spring Boot 使用 Micrometer 集成 Prometheus 监控 Java 应用性能](https://blog.csdn.net/aixiaoyang168/article/details/100866159)
+- [springboot如何集成Prometheus如何暴露Histogram来获取P99等监控指标](https://blog.csdn.net/lp19861126/article/details/106309546)
 
 ## Registry
 
@@ -12,8 +14,8 @@ Registry 代表 度量 的注册器，每种监控软件都有对应的 MeterReg
     // 简单 注册表, 可以将 指标 注册到 注册表中, 纳管指标信息
     MeterRegistry registry=new SimpleMeterRegistry();
     ```
-- CompositeMeterRegistry: 复合注册器, 在维护 度量 信息的同时， 
-可以添加 其它监控注册器，同时将指标信息发布到多个 监控注册器中。
+- CompositeMeterRegistry: 复合注册器, 在维护 度量 信息的同时，
+  可以添加 其它监控注册器，同时将指标信息发布到多个 监控注册器中。
   ```java
   CompositeMeterRegistry composite = new CompositeMeterRegistry();
   Counter compositeCounter = composite.counter("counter");

@@ -30,7 +30,7 @@ import java.util.concurrent.TimeUnit;
  * 没完全看懂，暂时跳过。已知主要是测试 度量的性能。
  * <a href="https://blog.csdn.net/FeenixOne/article/details/128791863">JMH 方法的性能测试</a>
  * <p>
- * {@link Benchmark}标示 方法测试 类似 {@link org.testng.annotations.Test}，并生成详细的测试报告打印在控制台上。
+ * {@link Benchmark} 表示 方法测试， 类似 {@link org.testng.annotations.Test}，并生成详细的测试报告打印在控制台上。
  * 只使用{@link Benchmark}注解，默认生成的测试非常的长，测试时间也非常久，所以一般都会加上一些其它的注解指定测试的参数。
  * <p>
  * {@link BenchmarkMode} 基准测试模式。用的最多的就是{@link Mode#Throughput}模式，即吞吐量测试，指的是被测试的方法每秒钟能执行多少次。
@@ -60,9 +60,21 @@ public class TenantMeterBenchmark {
      * Prometheus 度量监控
      */
     private static PrometheusMeterRegistry registry;
+    /**
+     * 除了创建 Prometheus registry之外，还需要向Prometheus的scraper公开一个HTTP端点
+     * 在Spring环境中，一个Prometheus actuator endpoint是在Spring Boot Actuator存在的情况下自动配置的。
+     * 但是本项目 不需要使用 SpringBoot，因此 通过 com.sun.net.httpserver.HttpServer 来公布 scrape 端点：
+     */
     private static HttpServer prometheusExportServer;
     private static Thread serverThread;
 
+    /**
+     * 性能测试方法
+     * 基准测试模式 是 吞吐量，测试 每秒可以执行 该方法 多少次
+     * 预热的次数 为3，即正式记录性能前，先运行3次
+     * 控制压测的次数 为 4次，即 整个性能测试过程 重复4次
+     * 线程数量 为 4 线程，并行4个线程进行性能测试
+     */
     @Benchmark
     @BenchmarkMode(Mode.Throughput)
     @Warmup(iterations = 3)
@@ -70,7 +82,8 @@ public class TenantMeterBenchmark {
     @Threads(4)
     @Fork(0)
     public void timer(TenantMeterBenchmarkState state) {
-
+        // meter.timer 是 统计 qos=0 的 in 消息时延, record 表示 记录时延时间 是一个随机数, 单位 毫秒
+        // state 定义测试对象的作用域
         state.meter.timer(TenantMetric.MqttQoS0InternalLatency)
                 .record(ThreadLocalRandom.current().nextLong(0, 10000), TimeUnit.MILLISECONDS);
     }
@@ -112,7 +125,10 @@ public class TenantMeterBenchmark {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+        // 创建 JMH 框架需要测试的 方法命令，调用 Runner 触发 测试方法
         Options opt = new OptionsBuilder().include(TenantMeterBenchmark.class.getSimpleName()).build();
+        // Runner 通常用来 处理并发任务，提高程序的效率和性能
         new Runner(opt).run();
     }
 }
