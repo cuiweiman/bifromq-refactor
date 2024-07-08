@@ -1,5 +1,6 @@
 package com.zachary.bifromq.plugin.eventcollector;
 
+import com.zachary.bifromq.type.ClientInfo;
 import lombok.ToString;
 
 @ToString

@@ -3,6 +3,7 @@ package com.zachary.bifromq.plugin.authprovider;
 import com.zachary.bifromq.plugin.authprovider.type.MQTT3AuthData;
 import com.zachary.bifromq.plugin.authprovider.type.MQTT3AuthResult;
 import com.zachary.bifromq.plugin.authprovider.type.MQTTAction;
+import com.zachary.bifromq.type.ClientInfo;
 import org.pf4j.ExtensionPoint;
 
 import java.util.concurrent.CompletableFuture;

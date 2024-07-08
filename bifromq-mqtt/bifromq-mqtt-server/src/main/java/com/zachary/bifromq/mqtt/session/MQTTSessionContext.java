@@ -17,6 +17,7 @@ import com.github.benmanes.caffeine.cache.LoadingCache;
 import com.github.benmanes.caffeine.cache.RemovalListener;
 import com.github.benmanes.caffeine.cache.Scheduler;
 import com.google.common.base.Ticker;
+import com.zachary.bifromq.type.ClientInfo;
 import io.micrometer.core.instrument.Gauge;
 import io.micrometer.core.instrument.Metrics;
 import io.netty.channel.ChannelHandlerContext;

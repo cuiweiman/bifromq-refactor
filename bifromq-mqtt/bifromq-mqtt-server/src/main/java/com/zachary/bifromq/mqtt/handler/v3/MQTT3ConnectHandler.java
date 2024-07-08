@@ -23,6 +23,8 @@ import com.zachary.bifromq.plugin.eventcollector.mqttbroker.clientdisconnect.Inv
 import com.zachary.bifromq.plugin.eventcollector.mqttbroker.clientdisconnect.SessionCheckError;
 import com.zachary.bifromq.plugin.eventcollector.mqttbroker.clientdisconnect.SessionCleanupError;
 import com.zachary.bifromq.sysprops.parser.BifroMQSysProp;
+import com.zachary.bifromq.type.ClientInfo;
+import com.zachary.bifromq.type.QoS;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.mqtt.MqttConnectMessage;

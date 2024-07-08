@@ -10,6 +10,7 @@ import com.zachary.bifromq.sessiondict.rpc.proto.SessionDictionaryServiceGrpc;
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
 import com.github.benmanes.caffeine.cache.RemovalListener;
+import com.zachary.bifromq.type.ClientInfo;
 import io.grpc.stub.StreamObserver;
 import lombok.extern.slf4j.Slf4j;
 

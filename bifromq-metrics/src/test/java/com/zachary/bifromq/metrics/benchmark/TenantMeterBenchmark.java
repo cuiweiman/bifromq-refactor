@@ -28,15 +28,17 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 没完全看懂，暂时跳过。已知主要是测试 度量的性能。
- *
  * <a href="https://blog.csdn.net/FeenixOne/article/details/128791863">JMH 方法的性能测试</a>
  * <p>
- * {@link Benchmark}标示 方法测试 类似 {@link org.testng.annotations.Test}，并生成详细的测试报告打印在控制台上。只使用{@link Benchmark}注解，默认生成的测试非常的长，测试时间也非常久，所以一般都会加上一些其它的注解指定测试的参数。
+ * {@link Benchmark}标示 方法测试 类似 {@link org.testng.annotations.Test}，并生成详细的测试报告打印在控制台上。
+ * 只使用{@link Benchmark}注解，默认生成的测试非常的长，测试时间也非常久，所以一般都会加上一些其它的注解指定测试的参数。
  * <p>
- * {@link BenchmarkMode} 基准测试模式。用的最多的就是{@link Mode#Throughput}模式，即吞吐量测试，指的是被测试的方法每秒钟能执行多少次。当然也会有反过来，每执行一次需要耗时多少秒的模式。
+ * {@link BenchmarkMode} 基准测试模式。用的最多的就是{@link Mode#Throughput}模式，即吞吐量测试，指的是被测试的方法每秒钟能执行多少次。
+ * 当然也会有反过来，每执行一次需要耗时多少秒的模式。
  * {@link Mode#Throughput}: operations per unit of time. 吞吐量，每秒执行多少次。
  * {@link Mode#AverageTime}: average time per per operation. 每次操作平均耗费时间。
- * {@link Mode#SampleTime}: samples the time for each operation. 随机取样，最后输出取样结果的分布，例如"99%的调用在xxx毫秒以内，99.99%的调用在xxx毫秒以内"（sample）
+ * {@link Mode#SampleTime}: samples the time for each operation. 随机取样，最后输出取样结果的分布，
+ * 例如"99%的调用在xxx毫秒以内，99.99%的调用在xxx毫秒以内"（sample）
  * {@link Mode#SingleShotTime}: measures the time for a single operation. 只运行一次。往往同时把 warmup 次数设为0，用于测试冷启动时的性能。
  * {@link Mode#All}: 以上所有指标。
  * <p>

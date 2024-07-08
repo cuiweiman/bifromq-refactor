@@ -1,18 +1,7 @@
-/*
- * Copyright (c) 2023. Baidu, Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *    http://www.apache.org/licenses/LICENSE-2.0
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and limitations under the License.
- */
-
 package com.zachary.bifromq.mqtt;
 
+import com.google.common.collect.Sets;
+import com.google.common.util.concurrent.MoreExecutors;
 import com.zachary.bifromq.basecluster.AgentHostOptions;
 import com.zachary.bifromq.basecluster.IAgentHost;
 import com.zachary.bifromq.basecrdt.service.CRDTServiceOptions;
@@ -43,8 +32,6 @@ import com.zachary.bifromq.retain.server.IRetainServer;
 import com.zachary.bifromq.retain.store.IRetainStore;
 import com.zachary.bifromq.sessiondict.client.ISessionDictionaryClient;
 import com.zachary.bifromq.sessiondict.server.ISessionDictionaryServer;
-import com.google.common.collect.Sets;
-import com.google.common.util.concurrent.MoreExecutors;
 import io.reactivex.rxjava3.core.Observable;
 import lombok.extern.slf4j.Slf4j;
 import org.mockito.Mock;
@@ -116,21 +103,21 @@ abstract class MQTTTest {
         pluginMgr = new DefaultPluginManager();
         ioExecutor = newCachedThreadPool(EnvProvider.INSTANCE.newThreadFactory("MQTTTestExecutor"));
         bgTaskExecutor = new ScheduledThreadPoolExecutor(1,
-            EnvProvider.INSTANCE.newThreadFactory("bg-task-executor"));
+                EnvProvider.INSTANCE.newThreadFactory("bg-task-executor"));
         tickTaskExecutor = new ScheduledThreadPoolExecutor(2,
-            EnvProvider.INSTANCE.newThreadFactory("tick-task-executor"));
+                EnvProvider.INSTANCE.newThreadFactory("tick-task-executor"));
         queryExecutor = new ThreadPoolExecutor(2, 2, 10, TimeUnit.SECONDS,
-            new LinkedBlockingDeque<>(20_000),
-            EnvProvider.INSTANCE.newThreadFactory("query-executor"));
+                new LinkedBlockingDeque<>(20_000),
+                EnvProvider.INSTANCE.newThreadFactory("query-executor"));
         mutationExecutor = new ThreadPoolExecutor(2, 2, 10, TimeUnit.SECONDS,
-            new LinkedBlockingDeque<>(20_000),
-            EnvProvider.INSTANCE.newThreadFactory("mutation-executor"));
+                new LinkedBlockingDeque<>(20_000),
+                EnvProvider.INSTANCE.newThreadFactory("mutation-executor"));
         AgentHostOptions agentHostOpts = AgentHostOptions.builder()
-            .addr("127.0.0.1")
-            .baseProbeInterval(Duration.ofSeconds(10))
-            .joinRetryInSec(5)
-            .joinTimeout(Duration.ofMinutes(5))
-            .build();
+                .addr("127.0.0.1")
+                .baseProbeInterval(Duration.ofSeconds(10))
+                .joinRetryInSec(5)
+                .joinTimeout(Duration.ofMinutes(5))
+                .build();
         agentHost = IAgentHost.newInstance(agentHostOpts);
         agentHost.start();
         log.info("Agent host started");
@@ -143,128 +130,128 @@ abstract class MQTTTest {
         log.info("CRDT service started");
 
         onlineInboxBrokerClient = IMqttBrokerClient.inProcClientBuilder()
-            .executor(MoreExecutors.directExecutor())
-            .build();
+                .executor(MoreExecutors.directExecutor())
+                .build();
         sessionDictClient = ISessionDictionaryClient.inProcBuilder()
-            .executor(MoreExecutors.directExecutor())
-            .build();
+                .executor(MoreExecutors.directExecutor())
+                .build();
         sessionDictServer = ISessionDictionaryServer.inProcServerBuilder()
-            .executor(MoreExecutors.directExecutor())
-            .build();
+                .executor(MoreExecutors.directExecutor())
+                .build();
         inboxReaderClient = IInboxReaderClient.inProcClientBuilder()
-            .executor(MoreExecutors.directExecutor())
-            .build();
+                .executor(MoreExecutors.directExecutor())
+                .build();
         inboxWriterClient = IInboxBrokerClient.inProcClientBuilder()
-            .executor(MoreExecutors.directExecutor())
-            .build();
+                .executor(MoreExecutors.directExecutor())
+                .build();
         inboxStoreKVStoreClient = IBaseKVStoreClient.inProcClientBuilder()
-            .clusterId(IInboxStore.CLUSTER_NAME)
-            .crdtService(clientCrdtService)
-            .executor(MoreExecutors.directExecutor())
-            .build();
+                .clusterId(IInboxStore.CLUSTER_NAME)
+                .crdtService(clientCrdtService)
+                .executor(MoreExecutors.directExecutor())
+                .build();
         inboxStore = IInboxStore.inProcBuilder()
-            .agentHost(agentHost)
-            .crdtService(serverCrdtService)
-            .storeClient(inboxStoreKVStoreClient)
-            .eventCollector(eventCollector)
-            .ioExecutor(MoreExecutors.directExecutor())
-            .queryExecutor(queryExecutor)
-            .mutationExecutor(mutationExecutor)
-            .tickTaskExecutor(tickTaskExecutor)
-            .bgTaskExecutor(bgTaskExecutor)
-            .kvRangeStoreOptions(new KVRangeStoreOptions()
-                .setDataEngineConfigurator(new InMemoryKVEngineConfigurator())
-                .setWalEngineConfigurator(new InMemoryKVEngineConfigurator()))
-            .build();
+                .agentHost(agentHost)
+                .crdtService(serverCrdtService)
+                .storeClient(inboxStoreKVStoreClient)
+                .eventCollector(eventCollector)
+                .ioExecutor(MoreExecutors.directExecutor())
+                .queryExecutor(queryExecutor)
+                .mutationExecutor(mutationExecutor)
+                .tickTaskExecutor(tickTaskExecutor)
+                .bgTaskExecutor(bgTaskExecutor)
+                .kvRangeStoreOptions(new KVRangeStoreOptions()
+                        .setDataEngineConfigurator(new InMemoryKVEngineConfigurator())
+                        .setWalEngineConfigurator(new InMemoryKVEngineConfigurator()))
+                .build();
         inboxServer = IInboxServer.inProcBuilder()
-            .executor(MoreExecutors.directExecutor())
-            .settingProvider(settingProvider)
-            .storeClient(inboxStoreKVStoreClient)
-            .build();
+                .executor(MoreExecutors.directExecutor())
+                .settingProvider(settingProvider)
+                .storeClient(inboxStoreKVStoreClient)
+                .build();
         distClient = IDistClient.inProcClientBuilder()
-            .executor(MoreExecutors.directExecutor())
-            .build();
+                .executor(MoreExecutors.directExecutor())
+                .build();
 
         retainClient = IRetainServiceClient
-            .inProcClientBuilder()
-            .executor(MoreExecutors.directExecutor())
-            .build();
+                .inProcClientBuilder()
+                .executor(MoreExecutors.directExecutor())
+                .build();
         retainStoreKVStoreClient = IBaseKVStoreClient
-            .inProcClientBuilder()
-            .clusterId(IRetainStore.CLUSTER_NAME)
-            .crdtService(clientCrdtService)
-            .executor(MoreExecutors.directExecutor())
-            .build();
+                .inProcClientBuilder()
+                .clusterId(IRetainStore.CLUSTER_NAME)
+                .crdtService(clientCrdtService)
+                .executor(MoreExecutors.directExecutor())
+                .build();
         retainStore = IRetainStore
-            .inProcBuilder()
-            .agentHost(agentHost)
-            .crdtService(serverCrdtService)
-            .storeClient(retainStoreKVStoreClient)
-            .ioExecutor(MoreExecutors.directExecutor())
-            .queryExecutor(queryExecutor)
-            .mutationExecutor(mutationExecutor)
-            .tickTaskExecutor(tickTaskExecutor)
-            .bgTaskExecutor(bgTaskExecutor)
-            .kvRangeStoreOptions(new KVRangeStoreOptions()
-                .setDataEngineConfigurator(new InMemoryKVEngineConfigurator())
-                .setWalEngineConfigurator(new InMemoryKVEngineConfigurator()))
-            .build();
+                .inProcBuilder()
+                .agentHost(agentHost)
+                .crdtService(serverCrdtService)
+                .storeClient(retainStoreKVStoreClient)
+                .ioExecutor(MoreExecutors.directExecutor())
+                .queryExecutor(queryExecutor)
+                .mutationExecutor(mutationExecutor)
+                .tickTaskExecutor(tickTaskExecutor)
+                .bgTaskExecutor(bgTaskExecutor)
+                .kvRangeStoreOptions(new KVRangeStoreOptions()
+                        .setDataEngineConfigurator(new InMemoryKVEngineConfigurator())
+                        .setWalEngineConfigurator(new InMemoryKVEngineConfigurator()))
+                .build();
         retainServer = IRetainServer
-            .inProcBuilder()
-            .ioExecutor(MoreExecutors.directExecutor())
-            .settingProvider(settingProvider)
-            .storeClient(retainStoreKVStoreClient)
-            .build();
+                .inProcBuilder()
+                .ioExecutor(MoreExecutors.directExecutor())
+                .settingProvider(settingProvider)
+                .storeClient(retainStoreKVStoreClient)
+                .build();
 
         distWorkerStoreClient = IBaseKVStoreClient.inProcClientBuilder()
-            .clusterId(IDistWorker.CLUSTER_NAME)
-            .crdtService(clientCrdtService)
-            .executor(MoreExecutors.directExecutor())
-            .build();
+                .clusterId(IDistWorker.CLUSTER_NAME)
+                .crdtService(clientCrdtService)
+                .executor(MoreExecutors.directExecutor())
+                .build();
 
         inboxBrokerMgr = new SubBrokerManager(pluginMgr, onlineInboxBrokerClient, inboxWriterClient);
 
         KVRangeStoreOptions distWorkerOptions = new KVRangeStoreOptions();
         KVRangeBalanceControllerOptions balanceControllerOptions = new KVRangeBalanceControllerOptions();
         distWorker = IDistWorker.inProcBuilder()
-            .agentHost(agentHost)
-            .crdtService(serverCrdtService)
-            .settingProvider(settingProvider)
-            .eventCollector(eventCollector)
-            .distClient(distClient)
-            .storeClient(distWorkerStoreClient)
-            .ioExecutor(MoreExecutors.directExecutor())
-            .queryExecutor(queryExecutor)
-            .mutationExecutor(mutationExecutor)
-            .tickTaskExecutor(tickTaskExecutor)
-            .bgTaskExecutor(bgTaskExecutor)
-            .kvRangeStoreOptions(distWorkerOptions)
-            .balanceControllerOptions(balanceControllerOptions)
-            .subBrokerManager(inboxBrokerMgr)
-            .build();
+                .agentHost(agentHost)
+                .crdtService(serverCrdtService)
+                .settingProvider(settingProvider)
+                .eventCollector(eventCollector)
+                .distClient(distClient)
+                .storeClient(distWorkerStoreClient)
+                .ioExecutor(MoreExecutors.directExecutor())
+                .queryExecutor(queryExecutor)
+                .mutationExecutor(mutationExecutor)
+                .tickTaskExecutor(tickTaskExecutor)
+                .bgTaskExecutor(bgTaskExecutor)
+                .kvRangeStoreOptions(distWorkerOptions)
+                .balanceControllerOptions(balanceControllerOptions)
+                .subBrokerManager(inboxBrokerMgr)
+                .build();
         distServer = IDistServer.inProcBuilder()
-            .storeClient(distWorkerStoreClient)
-            .ioExecutor(MoreExecutors.directExecutor())
-            .settingProvider(settingProvider)
-            .eventCollector(eventCollector)
-            .crdtService(clientCrdtService)
-            .build();
+                .storeClient(distWorkerStoreClient)
+                .ioExecutor(MoreExecutors.directExecutor())
+                .settingProvider(settingProvider)
+                .eventCollector(eventCollector)
+                .crdtService(clientCrdtService)
+                .build();
 
         mqttBroker = IMQTTBroker.inProcBrokerBuilder()
-            .host("127.0.0.1")
-            .bossGroup(NettyUtil.createEventLoopGroup(1))
-            .workerGroup(NettyUtil.createEventLoopGroup())
-            .ioExecutor(MoreExecutors.directExecutor())
-            .authProvider(authProvider)
-            .eventCollector(eventCollector)
-            .settingProvider(settingProvider)
-            .distClient(distClient)
-            .inboxReader(inboxReaderClient)
-            .sessionDictClient(sessionDictClient)
-            .retainClient(retainClient)
-            .buildTcpConnListener()
-            .buildListener()
-            .build();
+                .host("127.0.0.1")
+                .bossGroup(NettyUtil.createEventLoopGroup(1))
+                .workerGroup(NettyUtil.createEventLoopGroup())
+                .ioExecutor(MoreExecutors.directExecutor())
+                .authProvider(authProvider)
+                .eventCollector(eventCollector)
+                .settingProvider(settingProvider)
+                .distClient(distClient)
+                .inboxReader(inboxReaderClient)
+                .sessionDictClient(sessionDictClient)
+                .retainClient(retainClient)
+                .buildTcpConnListener()
+                .buildListener()
+                .build();
 
         sessionDictServer.start();
         log.info("Session dict server started");
@@ -289,25 +276,25 @@ abstract class MQTTTest {
         log.info("Mqtt broker started");
 
         Observable.combineLatest(
-                sessionDictClient.connState(),
-                retainClient.connState(),
-                inboxReaderClient.connState(),
-                distClient.connState(),
-                (s1, s2, s3, s4) -> Sets.newHashSet(s1, s2, s3, s4)
-            )
-            .mapOptional(states -> {
-                if (states.size() > 1) {
-                    return Optional.empty();
-                }
-                return states.stream().findFirst();
-            })
-            .filter(state -> state == IRPCClient.ConnState.READY)
-            .blockingFirst();
+                        sessionDictClient.connState(),
+                        retainClient.connState(),
+                        inboxReaderClient.connState(),
+                        distClient.connState(),
+                        (s1, s2, s3, s4) -> Sets.newHashSet(s1, s2, s3, s4)
+                )
+                .mapOptional(states -> {
+                    if (states.size() > 1) {
+                        return Optional.empty();
+                    }
+                    return states.stream().findFirst();
+                })
+                .filter(state -> state == IRPCClient.ConnState.READY)
+                .blockingFirst();
         lenient().when(settingProvider.provide(any(), anyString()))
-            .thenAnswer(invocation -> {
-                Setting setting = invocation.getArgument(0);
-                return setting.current(invocation.getArgument(1));
-            });
+                .thenAnswer(invocation -> {
+                    Setting setting = invocation.getArgument(0);
+                    return setting.current(invocation.getArgument(1));
+                });
     }
 
     @AfterMethod(groups = "integration")

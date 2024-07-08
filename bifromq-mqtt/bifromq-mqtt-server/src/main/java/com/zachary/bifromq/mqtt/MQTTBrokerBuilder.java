@@ -182,26 +182,26 @@ public abstract class MQTTBrokerBuilder<T extends MQTTBrokerBuilder<?>> {
         @Override
         public IMQTTBroker build() {
             return new MQTTBroker(host,
-                bossGroup,
-                workerGroup,
-                options,
-                authProvider,
-                eventCollector,
-                settingProvider,
-                distClient,
-                inboxClient,
-                retainClient,
-                sessionDictClient,
-                tcpListenerBuilder.orElse(null),
-                tlsListenerBuilder.orElse(null),
-                wsListenerBuilder.orElse(null),
-                wssListenerBuilder.orElse(null)
+                    bossGroup,
+                    workerGroup,
+                    options,
+                    authProvider,
+                    eventCollector,
+                    settingProvider,
+                    distClient,
+                    inboxClient,
+                    retainClient,
+                    sessionDictClient,
+                    tcpListenerBuilder.orElse(null),
+                    tlsListenerBuilder.orElse(null),
+                    wsListenerBuilder.orElse(null),
+                    wssListenerBuilder.orElse(null)
             ) {
                 @Override
                 protected ILocalSessionBrokerServer buildLocalSessionBroker() {
                     return ILocalSessionBrokerServer.inProcBrokerBuilder()
-                        .executor(ioExecutor)
-                        .build();
+                            .executor(ioExecutor)
+                            .build();
                 }
             };
         }
@@ -250,32 +250,32 @@ public abstract class MQTTBrokerBuilder<T extends MQTTBrokerBuilder<?>> {
         @Override
         public IMQTTBroker build() {
             return new MQTTBroker(host,
-                bossGroup,
-                workerGroup,
-                options,
-                authProvider,
-                eventCollector,
-                settingProvider,
-                distClient,
-                inboxClient,
-                retainClient,
-                sessionDictClient,
-                tcpListenerBuilder.orElse(null),
-                tlsListenerBuilder.orElse(null),
-                wsListenerBuilder.orElse(null),
-                wssListenerBuilder.orElse(null)
+                    bossGroup,
+                    workerGroup,
+                    options,
+                    authProvider,
+                    eventCollector,
+                    settingProvider,
+                    distClient,
+                    inboxClient,
+                    retainClient,
+                    sessionDictClient,
+                    tcpListenerBuilder.orElse(null),
+                    tlsListenerBuilder.orElse(null),
+                    wsListenerBuilder.orElse(null),
+                    wssListenerBuilder.orElse(null)
             ) {
                 @Override
                 protected ILocalSessionBrokerServer buildLocalSessionBroker() {
                     return ILocalSessionBrokerServer.nonSSLBrokerBuilder()
-                        .serverId(serverId)
-                        .host(rpcBindAddr)
-                        .port(port)
-                        .executor(ioExecutor)
-                        .bossEventLoopGroup(bossGroup)
-                        .workerEventLoopGroup(rpcWorkerGroup)
-                        .crdtService(crdtService)
-                        .build();
+                            .serverId(serverId)
+                            .host(rpcBindAddr)
+                            .port(port)
+                            .executor(ioExecutor)
+                            .bossEventLoopGroup(bossGroup)
+                            .workerEventLoopGroup(rpcWorkerGroup)
+                            .crdtService(crdtService)
+                            .build();
                 }
             };
         }
@@ -306,35 +306,35 @@ public abstract class MQTTBrokerBuilder<T extends MQTTBrokerBuilder<?>> {
         @Override
         public IMQTTBroker build() {
             return new MQTTBroker(host,
-                bossGroup,
-                workerGroup,
-                options,
-                authProvider,
-                eventCollector,
-                settingProvider,
-                distClient,
-                inboxClient,
-                retainClient,
-                sessionDictClient,
-                tcpListenerBuilder.orElse(null),
-                tlsListenerBuilder.orElse(null),
-                wsListenerBuilder.orElse(null),
-                wssListenerBuilder.orElse(null)
+                    bossGroup,
+                    workerGroup,
+                    options,
+                    authProvider,
+                    eventCollector,
+                    settingProvider,
+                    distClient,
+                    inboxClient,
+                    retainClient,
+                    sessionDictClient,
+                    tcpListenerBuilder.orElse(null),
+                    tlsListenerBuilder.orElse(null),
+                    wsListenerBuilder.orElse(null),
+                    wssListenerBuilder.orElse(null)
             ) {
                 @Override
                 protected ILocalSessionBrokerServer buildLocalSessionBroker() {
                     return ILocalSessionBrokerServer.sslBrokerBuilder()
-                        .serverId(serverId)
-                        .host(rpcBindAddr)
-                        .port(port)
-                        .executor(ioExecutor)
-                        .bossEventLoopGroup(bossGroup)
-                        .workerEventLoopGroup(rpcWorkerGroup)
-                        .crdtService(crdtService)
-                        .serviceIdentityCertFile(serviceIdentityCertFile)
-                        .privateKeyFile(privateKeyFile)
-                        .trustCertsFile(trustCertsFile)
-                        .build();
+                            .serverId(serverId)
+                            .host(rpcBindAddr)
+                            .port(port)
+                            .executor(ioExecutor)
+                            .bossEventLoopGroup(bossGroup)
+                            .workerEventLoopGroup(rpcWorkerGroup)
+                            .crdtService(crdtService)
+                            .serviceIdentityCertFile(serviceIdentityCertFile)
+                            .privateKeyFile(privateKeyFile)
+                            .trustCertsFile(trustCertsFile)
+                            .build();
                 }
             };
         }

@@ -1,5 +1,7 @@
 package com.zachary.bifromq.mqtt.utils;
 
+import com.zachary.bifromq.type.Message;
+
 public class MQTTMessageSizer {
     public static int sizePublishMsg(String topic, Message msg) {
         return sizePublishMsg(topic, msg.getPayload().size());

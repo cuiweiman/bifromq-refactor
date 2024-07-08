@@ -1,21 +1,10 @@
-/*
- * Copyright (c) 2023. Baidu, Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *    http://www.apache.org/licenses/LICENSE-2.0
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and limitations under the License.
- */
-
 package com.zachary.bifromq.mqtt.handler.v3;
 
 
 import com.zachary.bifromq.mqtt.handler.BaseMQTTTest;
 import com.zachary.bifromq.mqtt.utils.MQTTMessageUtils;
+import com.zachary.bifromq.type.ClientInfo;
+import com.zachary.bifromq.type.QoS;
 import io.netty.handler.codec.mqtt.MqttMessage;
 import io.netty.handler.codec.mqtt.MqttMessageIdVariableHeader;
 import io.netty.handler.codec.mqtt.MqttMessageType;
@@ -67,7 +56,7 @@ public class MQTTC2SPubTest extends BaseMQTTTest {
         channel.writeInbound(publishMessage);
         verifyEvent(1, CLIENT_CONNECTED);
         verify(distClient, times(1)).pub(anyLong(), anyString(), any(QoS.class), any(ByteBuffer.class), anyInt(),
-            any(ClientInfo.class));
+                any(ClientInfo.class));
     }
 
 
@@ -154,7 +143,7 @@ public class MQTTC2SPubTest extends BaseMQTTTest {
         mockAuthCheck(true);
         CompletableFuture<Void> distResult = new CompletableFuture<>();
         when(distClient.pub(anyLong(), anyString(), any(QoS.class), any(ByteBuffer.class), anyInt(),
-            any(ClientInfo.class))).thenReturn(distResult);
+                any(ClientInfo.class))).thenReturn(distResult);
         MqttPublishMessage publishMessage = MQTTMessageUtils.publishQoS1Message("testTopic", 123);
         channel.writeInbound(publishMessage);
         // make channel unWritable
@@ -227,7 +216,7 @@ public class MQTTC2SPubTest extends BaseMQTTTest {
         mockAuthCheck(true);
         CompletableFuture<Void> distResult = new CompletableFuture<>();
         when(distClient.pub(anyLong(), anyString(), any(QoS.class), any(ByteBuffer.class), anyInt(),
-            any(ClientInfo.class))).thenReturn(distResult);
+                any(ClientInfo.class))).thenReturn(distResult);
         channel.writeInbound(MQTTMessageUtils.publishQoS2Message("testTopic", 123));
 
         // make channel unWritable and drop PubRec

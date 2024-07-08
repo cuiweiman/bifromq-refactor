@@ -7,6 +7,7 @@ import com.zachary.bifromq.plugin.authprovider.type.PubAction;
 import com.zachary.bifromq.plugin.authprovider.type.SubAction;
 import com.zachary.bifromq.plugin.authprovider.type.UnsubAction;
 import com.google.common.base.Strings;
+import com.zachary.bifromq.type.QoS;
 import io.netty.channel.Channel;
 import io.netty.handler.codec.mqtt.MqttConnectMessage;
 import lombok.SneakyThrows;

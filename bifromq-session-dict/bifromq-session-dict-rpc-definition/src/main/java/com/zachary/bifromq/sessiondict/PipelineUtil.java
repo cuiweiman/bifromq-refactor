@@ -1,5 +1,6 @@
 package com.zachary.bifromq.sessiondict;
 
+import com.zachary.bifromq.type.ClientInfo;
 import lombok.SneakyThrows;
 
 import java.util.Base64;

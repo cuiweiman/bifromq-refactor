@@ -20,9 +20,10 @@ import java.util.concurrent.ConcurrentMap;
 import java.util.function.Supplier;
 
 /**
- * @description: Micrometer 度量 服务监控注册类
+ * @description: Micrometer 度量 服务监控注册类 + 服务度量资源 的 回收逻辑
  * @author: cuiweiman
  * @date: 2024/3/29 14:38
+ * @see com.zachary.bifromq.metrics.basetest.CleanerTest2 可以参考 资源回收 业务的 实现
  */
 @Slf4j
 public class TenantMeter {
@@ -46,6 +47,11 @@ public class TenantMeter {
      */
     private static final Cleaner CLEANER = Cleaner.create();
 
+    /**
+     * State 线程任务 的作用:
+     * 1. 内置缓存，存储并注册 各类 度量
+     * 2. 作为监听对象, 结合 Cleaner 类, 当 State 的引用变为 虚引用(不可到达)时, 调用执行 State#run 方法中的清理任务
+     */
     static class State implements Runnable {
 
         final Map<TenantMetric, Meter> meters = new HashMap<>();

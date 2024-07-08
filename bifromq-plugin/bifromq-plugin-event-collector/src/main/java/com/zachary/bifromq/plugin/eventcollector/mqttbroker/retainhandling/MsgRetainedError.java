@@ -1,6 +1,7 @@
 package com.zachary.bifromq.plugin.eventcollector.mqttbroker.retainhandling;
 
 import com.zachary.bifromq.plugin.eventcollector.EventType;
+import com.zachary.bifromq.type.QoS;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;

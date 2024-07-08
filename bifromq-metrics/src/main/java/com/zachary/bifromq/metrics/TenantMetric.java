@@ -43,15 +43,18 @@ public enum TenantMetric {
      * 例如，记录 http 服务器上的 请求响应大小。
      */
     MqttQoS0IngressBytes("mqtt.ingress.qos0.bytes", Meter.Type.DISTRIBUTION_SUMMARY),
-    MqttQoS0DistBytes("mqtt.dist.qos0.bytes", Meter.Type.DISTRIBUTION_SUMMARY),
     MqttQoS1IngressBytes("mqtt.ingress.qos1.bytes", Meter.Type.DISTRIBUTION_SUMMARY),
-    MqttQoS1DistBytes("mqtt.dist.qos1.bytes", Meter.Type.DISTRIBUTION_SUMMARY),
     MqttQoS2IngressBytes("mqtt.ingress.qos2.bytes", Meter.Type.DISTRIBUTION_SUMMARY),
+
+    MqttQoS0DistBytes("mqtt.dist.qos0.bytes", Meter.Type.DISTRIBUTION_SUMMARY),
+    MqttQoS1DistBytes("mqtt.dist.qos1.bytes", Meter.Type.DISTRIBUTION_SUMMARY),
     MqttQoS2DistBytes("mqtt.dist.qos2.bytes", Meter.Type.DISTRIBUTION_SUMMARY),
+
     MqttQoS0EgressBytes("mqtt.egress.qos0.bytes", Meter.Type.DISTRIBUTION_SUMMARY),
     MqttQoS1EgressBytes("mqtt.egress.qos1.bytes", Meter.Type.DISTRIBUTION_SUMMARY),
-    MqttQoS1DeliverBytes("mqtt.deliver.qos1.bytes", Meter.Type.DISTRIBUTION_SUMMARY),
     MqttQoS2EgressBytes("mqtt.egress.qos2.bytes", Meter.Type.DISTRIBUTION_SUMMARY),
+
+    MqttQoS1DeliverBytes("mqtt.deliver.qos1.bytes", Meter.Type.DISTRIBUTION_SUMMARY),
     MqttQoS2DeliverBytes("mqtt.deliver.qos2.bytes", Meter.Type.DISTRIBUTION_SUMMARY),
 
     /**
@@ -64,9 +67,11 @@ public enum TenantMetric {
      */
     MqttQoS0InternalLatency("mqtt.in.qos0.latency", Meter.Type.TIMER),
     MqttQoS1InternalLatency("mqtt.in.qos1.latency", Meter.Type.TIMER),
-    MqttQoS1ExternalLatency("mqtt.ex.qos1.latency", Meter.Type.TIMER),
     MqttQoS2InternalLatency("mqtt.in.qos2.latency", Meter.Type.TIMER),
+
+    MqttQoS1ExternalLatency("mqtt.ex.qos1.latency", Meter.Type.TIMER),
     MqttQoS2ExternalLatency("mqtt.ex.qos2.latency", Meter.Type.TIMER),
+
     MqttChannelLatency("mqtt.channel.latency", Meter.Type.TIMER),
     DistSubInfoSizeGauge("dist.sub.size.gauge", Meter.Type.GAUGE),
     InboxFetcherGauge("inbox.fetcher.num.gauge", Meter.Type.GAUGE);

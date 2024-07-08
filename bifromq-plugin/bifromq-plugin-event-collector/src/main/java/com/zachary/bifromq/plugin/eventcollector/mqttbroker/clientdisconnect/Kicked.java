@@ -1,6 +1,7 @@
 package com.zachary.bifromq.plugin.eventcollector.mqttbroker.clientdisconnect;
 
 import com.zachary.bifromq.plugin.eventcollector.EventType;
+import com.zachary.bifromq.type.ClientInfo;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

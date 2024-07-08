@@ -1,21 +1,10 @@
-/*
- * Copyright (c) 2023. Baidu, Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *    http://www.apache.org/licenses/LICENSE-2.0
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and limitations under the License.
- */
-
 package com.zachary.bifromq.mqtt.handler.v3;
 
 
 import com.zachary.bifromq.mqtt.handler.BaseMQTTTest;
 import com.zachary.bifromq.sessiondict.rpc.proto.Quit;
+import com.zachary.bifromq.type.ClientInfo;
+import com.zachary.bifromq.type.QoS;
 import lombok.extern.slf4j.Slf4j;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -57,30 +46,30 @@ public class MQTTWillMessageTest extends BaseMQTTTest {
         verifyEvent(3, CLIENT_CONNECTED, IDLE, WILL_DISTED);
     }
 
-//    @Test
-//    public void willWhenSelfKick() {
-//        connectAndVerify(true, false, 30, true, false);
-//        mockAuthCheck(CheckResult.Type.ALLOW);
-//        mockDistDist(true);
-//        kickSubject.onNext(
-//            Quit.newBuilder()
-//                .setKiller(
-//                    ClientInfo.newBuilder()
-//                        .setTenantId(trafficId)
-//                        .setUserId(userId)
-//                        .setMqtt3ClientInfo(
-//                            MQTT3ClientInfo.newBuilder()
-//                                .setClientId(clientId)
-//                                .build()
-//                        )
-//                        .build()
-//                )
-//                .build()
-//        );
-//        channel.runPendingTasks();
-//        Assert.assertFalse(channel.isActive());
-//        verifyEvent(3, ClientConnected, Kicked, WillDisted);
-//    }
+    //    @Test
+    //    public void willWhenSelfKick() {
+    //        connectAndVerify(true, false, 30, true, false);
+    //        mockAuthCheck(CheckResult.Type.ALLOW);
+    //        mockDistDist(true);
+    //        kickSubject.onNext(
+    //            Quit.newBuilder()
+    //                .setKiller(
+    //                    ClientInfo.newBuilder()
+    //                        .setTenantId(trafficId)
+    //                        .setUserId(userId)
+    //                        .setMqtt3ClientInfo(
+    //                            MQTT3ClientInfo.newBuilder()
+    //                                .setClientId(clientId)
+    //                                .build()
+    //                        )
+    //                        .build()
+    //                )
+    //                .build()
+    //        );
+    //        channel.runPendingTasks();
+    //        Assert.assertFalse(channel.isActive());
+    //        verifyEvent(3, ClientConnected, Kicked, WillDisted);
+    //    }
 
     @Test
     public void willWhenNotSelfKick() {
@@ -88,15 +77,15 @@ public class MQTTWillMessageTest extends BaseMQTTTest {
         mockAuthCheck(true);
         mockDistDist(true);
         kickSubject.onNext(
-            Quit.newBuilder()
-                .setKiller(
-                    ClientInfo.newBuilder()
-                        .setTenantId("sys")
-                        .putMetadata("agent", "sys")
-                        .putMetadata("clientId", clientId)
+                Quit.newBuilder()
+                        .setKiller(
+                                ClientInfo.newBuilder()
+                                        .setTenantId("sys")
+                                        .putMetadata("agent", "sys")
+                                        .putMetadata("clientId", clientId)
+                                        .build()
+                        )
                         .build()
-                )
-                .build()
         );
         channel.runPendingTasks();
         Assert.assertFalse(channel.isActive());
@@ -113,7 +102,7 @@ public class MQTTWillMessageTest extends BaseMQTTTest {
         Assert.assertFalse(channel.isActive());
         verifyEvent(3, CLIENT_CONNECTED, IDLE, PUB_ACTION_DISALLOW);
         verify(distClient, times(0)).pub(anyLong(), anyString(), any(QoS.class), any(ByteBuffer.class), anyInt(),
-            any(ClientInfo.class));
+                any(ClientInfo.class));
     }
 
     @Test

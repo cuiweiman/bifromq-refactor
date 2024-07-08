@@ -1,25 +1,16 @@
-/*
- * Copyright (c) 2023. Baidu, Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *    http://www.apache.org/licenses/LICENSE-2.0
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and limitations under the License.
- */
-
 package com.zachary.bifromq.mqtt.handler.v3;
 
 
+import com.google.protobuf.ByteString;
 import com.zachary.bifromq.mqtt.handler.BaseMQTTTest;
 import com.zachary.bifromq.mqtt.utils.MQTTMessageUtils;
 import com.zachary.bifromq.retain.rpc.proto.MatchReply;
 import com.zachary.bifromq.retain.rpc.proto.MatchReply.Builder;
 import com.zachary.bifromq.retain.rpc.proto.MatchReply.Result;
-import com.google.protobuf.ByteString;
+import com.zachary.bifromq.type.ClientInfo;
+import com.zachary.bifromq.type.Message;
+import com.zachary.bifromq.type.QoS;
+import com.zachary.bifromq.type.TopicMessage;
 import io.netty.handler.codec.mqtt.MqttPublishMessage;
 import io.netty.handler.codec.mqtt.MqttSubAckMessage;
 import io.netty.handler.codec.mqtt.MqttSubscribeMessage;
@@ -50,7 +41,7 @@ public class MQTTRetainMatchTest extends BaseMQTTTest {
     @AfterMethod
     public void clean() {
         when(distClient.clear(anyLong(), anyString(), anyString(), anyString(), anyInt()))
-            .thenReturn(CompletableFuture.completedFuture(null));
+                .thenReturn(CompletableFuture.completedFuture(null));
         channel.close();
         verify(distClient).clear(anyLong(), anyString(), anyString(), anyString(), anyInt());
     }
@@ -139,14 +130,14 @@ public class MQTTRetainMatchTest extends BaseMQTTTest {
         mockAuthCheck(true);
         mockDistSub(QoS.AT_MOST_ONCE, true);
         when(retainClient.match(anyLong(), anyString(), anyString(), anyInt(), any(ClientInfo.class)))
-            .thenReturn(CompletableFuture.completedFuture(
-                MatchReply.newBuilder().setResult(Result.ERROR).build()
-            ));
+                .thenReturn(CompletableFuture.completedFuture(
+                        MatchReply.newBuilder().setResult(Result.ERROR).build()
+                ));
         int[] qos = {0, 0, 0};
         MqttSubscribeMessage subMessage = MQTTMessageUtils.qoSMqttSubMessages(qos);
         channel.writeInbound(subMessage);
         MqttSubAckMessage subAckMessage = channel.readOutbound();
-        verifySubAck(subAckMessage, new int[] {128, 128, 128});
+        verifySubAck(subAckMessage, new int[]{128, 128, 128});
         verifyEvent(5, CLIENT_CONNECTED, MATCH_RETAIN_ERROR, MATCH_RETAIN_ERROR, MATCH_RETAIN_ERROR, SUB_ACKED);
     }
 
@@ -161,23 +152,23 @@ public class MQTTRetainMatchTest extends BaseMQTTTest {
         Builder builder = MatchReply.newBuilder();
         for (int i = 0; i < count; i++) {
             builder.setResult(Result.OK)
-                .addMessages(
-                    TopicMessage.newBuilder()
-                        .setTopic("testTopic")
-                        .setMessage(
-                            Message.newBuilder()
-                                .setMessageId(1)
-                                .setPayload(ByteString.copyFromUtf8("payload"))
-                                .setTimestamp(System.currentTimeMillis())
-                                .setPubQoS(QoS.EXACTLY_ONCE)
-                                .build()
-                        )
-                        .setPublisher(ClientInfo.newBuilder().build())
-                        .build()
-                );
+                    .addMessages(
+                            TopicMessage.newBuilder()
+                                    .setTopic("testTopic")
+                                    .setMessage(
+                                            Message.newBuilder()
+                                                    .setMessageId(1)
+                                                    .setPayload(ByteString.copyFromUtf8("payload"))
+                                                    .setTimestamp(System.currentTimeMillis())
+                                                    .setPubQoS(QoS.EXACTLY_ONCE)
+                                                    .build()
+                                    )
+                                    .setPublisher(ClientInfo.newBuilder().build())
+                                    .build()
+                    );
         }
         when(retainClient.match(anyLong(), anyString(), anyString(), anyInt(), any(ClientInfo.class)))
-            .thenReturn(CompletableFuture.completedFuture(builder.build()));
+                .thenReturn(CompletableFuture.completedFuture(builder.build()));
     }
 
 }

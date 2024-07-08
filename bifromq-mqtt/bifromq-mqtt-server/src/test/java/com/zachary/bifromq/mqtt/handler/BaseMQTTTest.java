@@ -1,16 +1,3 @@
-/*
- * Copyright (c) 2023. Baidu, Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *    http://www.apache.org/licenses/LICENSE-2.0
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and limitations under the License.
- */
-
 package com.zachary.bifromq.mqtt.handler;
 
 import com.zachary.bifromq.baserpc.IRPCClient;
@@ -24,7 +11,6 @@ import com.zachary.bifromq.inbox.rpc.proto.DeleteInboxReply;
 import com.zachary.bifromq.inbox.storage.proto.Fetched;
 import com.zachary.bifromq.mqtt.service.ILocalSessionBrokerServer;
 import com.zachary.bifromq.mqtt.session.MQTTSessionContext;
-import com.zachary.bifromq.mqtt.utils.MQTTMessageUtils;
 import com.zachary.bifromq.mqtt.utils.TestTicker;
 import com.zachary.bifromq.plugin.authprovider.IAuthProvider;
 import com.zachary.bifromq.plugin.authprovider.type.MQTT3AuthData;
@@ -42,6 +28,9 @@ import com.zachary.bifromq.retain.rpc.proto.RetainReply;
 import com.zachary.bifromq.sessiondict.client.ISessionDictionaryClient;
 import com.zachary.bifromq.sessiondict.rpc.proto.Ping;
 import com.zachary.bifromq.sessiondict.rpc.proto.Quit;
+import com.zachary.bifromq.type.ClientInfo;
+import com.zachary.bifromq.type.QoS;
+import com.zachary.bifromq.mqtt.utils.MQTTMessageUtils;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.embedded.EmbeddedChannel;
@@ -91,6 +80,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
+import static org.testng.internal.junit.ArrayAsserts.assertArrayEquals;
 
 public abstract class BaseMQTTTest {
 
@@ -137,20 +127,20 @@ public abstract class BaseMQTTTest {
         sessionBrokerServer = ILocalSessionBrokerServer.inProcBrokerBuilder().build();
         testTicker = new TestTicker();
         sessionContext = MQTTSessionContext.builder()
-            .authProvider(authProvider)
-            .eventCollector(eventCollector)
-            .settingProvider(settingProvider)
-            .distClient(distClient)
-            .inboxClient(inboxClient)
-            .retainClient(retainClient)
-            .sessionDictClient(sessionDictClient)
-            .brokerServer(sessionBrokerServer)
-            .maxResendTimes(2)
-            .resendDelayMillis(100)
-            .defaultKeepAliveTimeSeconds(300)
-            .qos2ConfirmWindowSeconds(300)
-            .ticker(testTicker)
-            .build();
+                .authProvider(authProvider)
+                .eventCollector(eventCollector)
+                .settingProvider(settingProvider)
+                .distClient(distClient)
+                .inboxClient(inboxClient)
+                .retainClient(retainClient)
+                .sessionDictClient(sessionDictClient)
+                .brokerServer(sessionBrokerServer)
+                .maxResendTimes(2)
+                .resendDelayMillis(100)
+                .defaultKeepAliveTimeSeconds(300)
+                .qos2ConfirmWindowSeconds(300)
+                .ticker(testTicker)
+                .build();
         channel = new EmbeddedChannel(true, true, channelInitializer());
         channel.freezeTime();
         // common mocks
@@ -197,73 +187,73 @@ public abstract class BaseMQTTTest {
 
     protected void mockAuthPass() {
         when(authProvider.auth(any(MQTT3AuthData.class)))
-            .thenReturn(CompletableFuture.completedFuture(MQTT3AuthResult.newBuilder()
-                .setOk(Ok.newBuilder()
-                    .setTenantId(tenantId)
-                    .setUserId(userId)
-                    .build())
-                .build()));
+                .thenReturn(CompletableFuture.completedFuture(MQTT3AuthResult.newBuilder()
+                        .setOk(Ok.newBuilder()
+                                .setTenantId(tenantId)
+                                .setUserId(userId)
+                                .build())
+                        .build()));
     }
 
     protected void mockAuthReject(Reject.Code code, String reason) {
         when(authProvider.auth(any(MQTT3AuthData.class)))
-            .thenReturn(CompletableFuture.completedFuture(MQTT3AuthResult.newBuilder()
-                .setReject(Reject.newBuilder()
-                    .setCode(code)
-                    .setReason(reason)
-                    .build())
-                .build()));
+                .thenReturn(CompletableFuture.completedFuture(MQTT3AuthResult.newBuilder()
+                        .setReject(Reject.newBuilder()
+                                .setCode(code)
+                                .setReason(reason)
+                                .build())
+                        .build()));
     }
 
     protected void mockAuthCheck(boolean allow) {
         when(authProvider.check(any(ClientInfo.class), any()))
-            .thenReturn(CompletableFuture.completedFuture(allow));
+                .thenReturn(CompletableFuture.completedFuture(allow));
     }
 
     protected void mockCheckError(String message) {
         when(authProvider.check(any(ClientInfo.class), any()))
-            .thenReturn(CompletableFuture.failedFuture(new RuntimeException(message)));
+                .thenReturn(CompletableFuture.failedFuture(new RuntimeException(message)));
     }
 
     protected void mockInboxHas(boolean success) {
         when(inboxClient.has(anyLong(), anyString(), any(ClientInfo.class)))
-            .thenReturn(CompletableFuture.completedFuture(success));
+                .thenReturn(CompletableFuture.completedFuture(success));
     }
 
     protected void mockInboxCreate(boolean success) {
         when(inboxClient.create(anyLong(), anyString(), any(ClientInfo.class)))
-            .thenReturn(
-                CompletableFuture.completedFuture(CreateInboxReply.newBuilder()
-                    .setResult(success ? CreateInboxReply.Result.OK : CreateInboxReply.Result.ERROR)
-                    .build())
-            );
+                .thenReturn(
+                        CompletableFuture.completedFuture(CreateInboxReply.newBuilder()
+                                .setResult(success ? CreateInboxReply.Result.OK : CreateInboxReply.Result.ERROR)
+                                .build())
+                );
     }
 
     protected void mockInboxDelete(boolean success) {
         when(inboxClient.delete(anyLong(), anyString(), any(ClientInfo.class)))
-            .thenReturn(
-                CompletableFuture.completedFuture(DeleteInboxReply.newBuilder()
-                    .setResult(success ? DeleteInboxReply.Result.OK : DeleteInboxReply.Result.ERROR)
-                    .build())
-            );
+                .thenReturn(
+                        CompletableFuture.completedFuture(DeleteInboxReply.newBuilder()
+                                .setResult(success ? DeleteInboxReply.Result.OK : DeleteInboxReply.Result.ERROR)
+                                .build())
+                );
     }
 
     protected void mockInboxCommit(QoS qoS) {
         when(inboxReader.commit(anyLong(), eq(qoS), anyLong()))
-            .thenReturn(
-                CompletableFuture.completedFuture(
-                    CommitReply.newBuilder().setResult(CommitReply.Result.OK).build()
-                )
-            );
+                .thenReturn(
+                        CompletableFuture.completedFuture(
+                                CommitReply.newBuilder().setResult(CommitReply.Result.OK).build()
+                        )
+                );
     }
 
     protected void mockDistClear(boolean success) {
         when(inboxClient.getDelivererKey(anyString(), any(ClientInfo.class))).thenReturn(delivererKey);
         when(distClient.clear(anyLong(), anyString(), anyString(), anyString(), anyInt()))
-            .thenReturn(
-                success ? CompletableFuture.completedFuture(null) :
-                    CompletableFuture.failedFuture(new RuntimeException("Mock error"))
-            );
+                .thenReturn(
+                        success ? CompletableFuture.completedFuture(null) :
+                                CompletableFuture.failedFuture(new RuntimeException("Mock error"))
+                );
     }
 
     protected void mockDistSub(QoS qos, boolean success) {
@@ -274,17 +264,17 @@ public abstract class BaseMQTTTest {
             subResult = 0x80;
         }
         when(distClient.sub(anyLong(), anyString(), anyString(), eq(qos), anyString(), anyString(), anyInt()))
-            .thenReturn(CompletableFuture.completedFuture(subResult));
+                .thenReturn(CompletableFuture.completedFuture(subResult));
     }
 
     protected void mockDistUnSub(boolean... success) {
         CompletableFuture<Boolean>[] unsubResults = new CompletableFuture[success.length];
         for (int i = 0; i < success.length; i++) {
             unsubResults[i] = success[i] ? CompletableFuture.completedFuture(true)
-                : CompletableFuture.failedFuture(new RuntimeException("InternalError"));
+                    : CompletableFuture.failedFuture(new RuntimeException("InternalError"));
         }
         OngoingStubbing<CompletableFuture<Boolean>> ongoingStubbing =
-            when(distClient.unsub(anyLong(), anyString(), anyString(), anyString(), anyString(), anyInt()));
+                when(distClient.unsub(anyLong(), anyString(), anyString(), anyString(), anyString(), anyInt()));
         for (CompletableFuture<Boolean> result : unsubResults) {
             ongoingStubbing = ongoingStubbing.thenReturn(result);
         }
@@ -292,15 +282,15 @@ public abstract class BaseMQTTTest {
 
     protected void mockDistDist(boolean success) {
         when(distClient.pub(anyLong(), anyString(), any(QoS.class), any(ByteBuffer.class), anyInt(),
-            any(ClientInfo.class)))
-            .thenReturn(success ? CompletableFuture.completedFuture(null) :
-                CompletableFuture.failedFuture(new RuntimeException("Mock error")));
+                any(ClientInfo.class)))
+                .thenReturn(success ? CompletableFuture.completedFuture(null) :
+                        CompletableFuture.failedFuture(new RuntimeException("Mock error")));
     }
 
     protected void mockDistDrop() {
         when(distClient.pub(anyLong(), anyString(), any(QoS.class), any(ByteBuffer.class), anyInt(),
-            any(ClientInfo.class)))
-            .thenReturn(CompletableFuture.failedFuture(DropException.EXCEED_LIMIT));
+                any(ClientInfo.class)))
+                .thenReturn(CompletableFuture.failedFuture(DropException.EXCEED_LIMIT));
     }
 
     protected void mockSessionReg() {
@@ -323,15 +313,15 @@ public abstract class BaseMQTTTest {
 
     protected void mockRetainMatch() {
         when(retainClient.match(anyLong(), anyString(), anyString(), anyInt(), any(ClientInfo.class)))
-            .thenReturn(CompletableFuture.completedFuture(
-                MatchReply.newBuilder().setResult(MatchReply.Result.OK).build()
-            ));
+                .thenReturn(CompletableFuture.completedFuture(
+                        MatchReply.newBuilder().setResult(MatchReply.Result.OK).build()
+                ));
     }
 
     protected void mockRetainPipeline(RetainReply.Result result) {
         when(retainClient.open(any(ClientInfo.class))).thenReturn(retainPipeline);
         when(retainPipeline.retain(anyLong(), anyString(), any(QoS.class), any(ByteBuffer.class), anyInt()))
-            .thenReturn(CompletableFuture.completedFuture(RetainReply.newBuilder().setResult(result).build()));
+                .thenReturn(CompletableFuture.completedFuture(RetainReply.newBuilder().setResult(result).build()));
     }
 
     protected void verifyEvent(int count, EventType... types) {

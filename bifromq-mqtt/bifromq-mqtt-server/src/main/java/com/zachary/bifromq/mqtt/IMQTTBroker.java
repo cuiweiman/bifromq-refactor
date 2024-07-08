@@ -1,6 +1,7 @@
 package com.zachary.bifromq.mqtt;
 
 public interface IMQTTBroker {
+
     static MQTTBrokerBuilder.InProcBrokerBuilder inProcBrokerBuilder() {
         return new MQTTBrokerBuilder.InProcBrokerBuilder();
     }

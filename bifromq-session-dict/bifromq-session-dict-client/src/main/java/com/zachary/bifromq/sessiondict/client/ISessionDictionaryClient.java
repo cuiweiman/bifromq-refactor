@@ -4,6 +4,7 @@ import com.zachary.bifromq.baserpc.IRPCClient;
 import com.zachary.bifromq.sessiondict.rpc.proto.KillReply;
 import com.zachary.bifromq.sessiondict.rpc.proto.Ping;
 import com.zachary.bifromq.sessiondict.rpc.proto.Quit;
+import com.zachary.bifromq.type.ClientInfo;
 import io.reactivex.rxjava3.core.Observable;
 
 import java.util.concurrent.CompletableFuture;
