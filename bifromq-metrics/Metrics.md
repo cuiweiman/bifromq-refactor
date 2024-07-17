@@ -5,6 +5,9 @@
 
 ## Registry
 
+> Micrometer 中核心两个内容便是 meter 和 registry，注册表用于将各种 meter 注册到自身中进行管理，而 meter 就是各种监控的工具，比如计数器，计量器，计时器等等。不同的监控系统会有不同的注册表实现，其基类都是 MeterRegistry，对应于 Prometheus 的注册表是 PrometheusMeterRegistry。
+
+
 Registry 代表 度量 的注册器，每种监控软件都有对应的 MeterRegistry 实现。
 
 如果还没有首选的监控系统(Prometheus 或 Grafana )，则可以使用简单的注册表开始使用 度量
