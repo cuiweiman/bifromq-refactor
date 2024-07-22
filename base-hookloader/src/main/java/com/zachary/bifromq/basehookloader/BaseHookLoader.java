@@ -44,7 +44,7 @@ public class BaseHookLoader {
                 throw new IllegalStateException("Anonymous implementation is not allowed");
             }
             log.info("Loaded {} implelation: {}", hookInterface.getSimpleName(), className);
-            // 当 className 存在是，返回已存在的 value, 当 className 不存在时，map缓存 (className,impl), 并返回 null
+            // 当 className 存在时，返回已存在的 value, 当 className 不存在时，map缓存 (className,impl), 并返回 null
             // 即 Map#putIfAbsent 返回内容 非空，表明 存在 重复的 className
             if (Objects.nonNull(loadedFactories.putIfAbsent(className, impl))) {
                 // 接口 hookInterface 的实现类, 其 class name 存在重复

@@ -136,6 +136,7 @@
                 <artifactId>base-env-provider-spi</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <!-- base-env-provider-spi 的实现 -->
             <dependency>
                 <groupId>com.zachary.bifromq</groupId>
                 <artifactId>base-env-provider</artifactId>

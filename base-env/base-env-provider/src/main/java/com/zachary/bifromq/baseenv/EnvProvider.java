@@ -26,6 +26,9 @@ public class EnvProvider implements IEnvProvider {
 
     public static final IEnvProvider INSTANCE;
 
+    /*
+     * 构造 EnvProvider 的 INSTANCE 唯一实例，类似于 Spring 中的 Bean 含义
+     */
     static {
         // 加载 IEnvProvider 接口的 所有实现类
         Map<String, IEnvProvider> envProviderMap = BaseHookLoader.load(IEnvProvider.class);
@@ -34,7 +37,7 @@ public class EnvProvider implements IEnvProvider {
             log.info("No custom env provider found, fallback to default behavior");
             INSTANCE = new EnvProvider();
         } else {
-            // 只获取 首个 IEnvProvider 的实现类
+            // 只获取 首个 IEnvProvider 的实现类，只允许一个 实现类
             Map.Entry<String, IEnvProvider> firstFound = envProviderMap.entrySet().stream().findFirst().get();
             log.info("Custom env provider is loaded: {}", firstFound.getKey());
             INSTANCE = firstFound.getValue();
