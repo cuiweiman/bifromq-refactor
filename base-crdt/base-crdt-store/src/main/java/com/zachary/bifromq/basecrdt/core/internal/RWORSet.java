@@ -8,6 +8,11 @@ import com.zachary.bifromq.basecrdt.proto.Replica;
 
 import java.util.Iterator;
 
+/**
+ * @description: 删除获胜优化的观察删除集，允许添加和删除
+ * @author: cuiweiman
+ * @date: 2024/9/23 18:11
+ */
 class RWORSet extends CausalCRDT<IDotMap, RWORSetOperation> implements IRWORSet {
     public static final ByteString TRUE = ByteString.copyFrom(new byte[]{(byte) 0xFF});
     public static final ByteString FALSE = ByteString.copyFrom(new byte[]{(byte) 0x00});

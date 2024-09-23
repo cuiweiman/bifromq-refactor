@@ -7,7 +7,9 @@ import lombok.ToString;
 
 
 /**
- * @description:
+ * 带有启用/禁用的标志。禁用胜利（受到 Riak Flag 启发）
+ *
+ * @description: Flag with enable/disable. Disable wins (Riak Flag inspired)
  * @author: cuiweiman
  * @date: 2024/4/20 17:39
  */
@@ -18,6 +20,9 @@ public final class DWFlagOperation implements ICRDTOperation {
     private static final DWFlagOperation ENABLE = new DWFlagOperation(Type.Enable);
 
     public enum Type {
+        /**
+         * 禁用、启用 操作类型
+         */
         Disable, Enable
     }
 

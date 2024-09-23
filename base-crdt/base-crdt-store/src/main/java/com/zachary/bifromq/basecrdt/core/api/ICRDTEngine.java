@@ -12,6 +12,11 @@ import java.util.NavigableMap;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
+/**
+ * @description:  CRDT Engine 接口
+ * @author: cuiweiman
+ * @date: 2024/9/23 17:50
+ */
 public interface ICRDTEngine {
     /**
      * 创建实例

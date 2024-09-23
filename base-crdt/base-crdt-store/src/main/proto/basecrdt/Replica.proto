@@ -8,6 +8,8 @@ option optimize_for = SPEED;
 
 
 message Replica{
+  //副本 uri
   string uri = 1; // user provided uri of the CRDT
+  // 副本 id
   bytes id = 2; // global unique id of the CRDT replica
 }

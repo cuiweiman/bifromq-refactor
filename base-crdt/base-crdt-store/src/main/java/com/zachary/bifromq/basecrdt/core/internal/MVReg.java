@@ -7,6 +7,11 @@ import com.zachary.bifromq.basecrdt.proto.Replica;
 
 import java.util.Iterator;
 
+/**
+ * @description: 优化的多值寄存器
+ * @author: cuiweiman
+ * @date: 2024/9/23 18:11
+ */
 class MVReg extends CausalCRDT<IDotFunc, MVRegOperation> implements IMVReg {
     MVReg(Replica replica, DotStoreAccessor<IDotFunc> dotStoreAccessor,
           CRDTOperationExecutor<MVRegOperation> executor) {

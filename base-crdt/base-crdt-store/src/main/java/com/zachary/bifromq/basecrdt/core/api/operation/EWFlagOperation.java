@@ -6,7 +6,9 @@ import lombok.AllArgsConstructor;
 import lombok.ToString;
 
 /**
- * @description:
+ * EWFlag：带有启用/禁用的标志。弃用胜利（受到 Riak Flag 启发）
+ *
+ * @description: EWFlag: Flag with enable/disable. Enable wins (Riak Flag inspired)
  * @author: cuiweiman
  * @date: 2024/4/20 17:40
  */
@@ -19,6 +21,9 @@ public final class EWFlagOperation implements ICRDTOperation {
     private static final EWFlagOperation RESET = new EWFlagOperation(Type.Reset);
 
     public enum Type {
+        /**
+         * 禁用、启用、重置
+         */
         Disable, Enable, Reset
     }
 

@@ -13,8 +13,18 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
+/**
+ * @description: 因果CRDT
+ * @author: cuiweiman
+ * @date: 2024/9/23 17:59
+ */
 @Slf4j
 abstract class CausalCRDT<T extends IDotStore, O extends ICRDTOperation> implements ICausalCRDT<O> {
+    /**
+     * 点存储访问器
+     *
+     * @param <T> 泛型
+     */
     interface DotStoreAccessor<T extends IDotStore> {
         T fetch();
     }

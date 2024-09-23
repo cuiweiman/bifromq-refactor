@@ -23,6 +23,7 @@ public class Log {
 
     public static void error(Logger log, String format, Object... args) {
         if (log.isErrorEnabled()) {
+            // 检查是否启用了 error 级别的日志记录，避免不必要的日志记录操作，从而提高程序的性能‌
             log.error(format, stringify(args));
         }
     }
@@ -35,6 +36,7 @@ public class Log {
 
     public static void warn(Logger log, String format, Object... args) {
         if (log.isWarnEnabled()) {
+            // 检查是否启用了 warn 级别的日志记录，避免不必要的日志记录操作，从而提高程序的性能‌
             log.error(format, stringify(args));
         }
     }
@@ -47,6 +49,7 @@ public class Log {
 
     public static void info(Logger log, String format, Object... args) {
         if (log.isInfoEnabled()) {
+            // 检查是否启用了 info 级别的日志记录，避免不必要的日志记录操作，从而提高程序的性能‌
             log.error(format, stringify(args));
         }
     }
@@ -59,6 +62,7 @@ public class Log {
 
     public static void debug(Logger log, String format, Object... args) {
         if (log.isDebugEnabled()) {
+            // 检查是否启用了 debug 级别的日志记录，避免不必要的日志记录操作，从而提高程序的性能‌
             log.error(format, stringify(args));
         }
     }
@@ -71,6 +75,7 @@ public class Log {
 
     public static void trace(Logger log, String format, Object... args) {
         if (log.isTraceEnabled()) {
+            // 检查是否启用了 trace 级别的日志记录，避免不必要的日志记录操作，从而提高程序的性能‌
             log.error(format, stringify(args));
         }
     }

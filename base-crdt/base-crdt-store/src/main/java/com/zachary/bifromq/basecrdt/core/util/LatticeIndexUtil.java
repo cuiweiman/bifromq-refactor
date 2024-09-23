@@ -19,7 +19,7 @@ import java.util.function.BiFunction;
  * 2. 当 newValue 为空时，若key存在则移除 key 缓存；若key不存在则不做任何处理。
  * 3. 当 newValue 不为空时，不论当前 key 是否存在，添加或更新 key-newValue 并返回 newValue。
  *
- * @description: 格子索引工具
+ * @description: 格子索引工具、格点索引工具
  * @author: cuiweiman
  * @date: 2024/4/11 22:15
  */

@@ -5,8 +5,18 @@ import com.zachary.bifromq.basecrdt.core.api.ICRDTOperation;
 import com.zachary.bifromq.basecrdt.core.api.enums.CausalCRDTType;
 import lombok.ToString;
 
+/**
+ * 因果 CRDT 的键映射。
+ *
+ * @description: Map of keys to causal CRDTs. (spec in common with the Riak Map)
+ * @author: cuiweiman
+ * @date: 2024/9/23 16:55
+ */
 @ToString
 public abstract class ORMapOperation implements ICRDTOperation {
+    /**
+     * 更新操作接口
+     */
     public interface ORMapUpdater {
         ORMapUpdate with(AWORSetOperation op);
 
@@ -23,11 +33,20 @@ public abstract class ORMapOperation implements ICRDTOperation {
         ORMapUpdate with(ORMapOperation op);
     }
 
+    /**
+     * 移除操作接口
+     */
     public interface ORMapRemover {
         ORMapRemove of(CausalCRDTType valueType);
     }
 
+    /**
+     * 操作类型
+     */
     public enum Type {
+        /**
+         * 更新、移除、清空
+         */
         UpdateKey,
         RemoveKey,
         Clear
@@ -41,6 +60,9 @@ public abstract class ORMapOperation implements ICRDTOperation {
         this.keyPath = keyPath;
     }
 
+    /**
+     * 移除操作接口 方法实现
+     */
     public static ORMapRemover remove(ByteString... keyPath) {
         return new ORMapRemover() {
             @Override
@@ -50,6 +72,9 @@ public abstract class ORMapOperation implements ICRDTOperation {
         };
     }
 
+    /**
+     * 更新操作接口 方法实现
+     */
     public static ORMapUpdater update(ByteString... keyPath) {
         return new ORMapUpdater() {
             @Override
@@ -90,6 +115,10 @@ public abstract class ORMapOperation implements ICRDTOperation {
         };
     }
 
+    /**
+     * 继承抽象类 ORMapOperation
+     * 更新操作
+     */
     public static class ORMapUpdate extends ORMapOperation {
         public final ICRDTOperation valueOp;
 
@@ -99,6 +128,10 @@ public abstract class ORMapOperation implements ICRDTOperation {
         }
     }
 
+    /**
+     * 继承抽象类 ORMapOperation
+     * 移除操作
+     */
     public static class ORMapRemove extends ORMapOperation {
         public CausalCRDTType valueType;
 

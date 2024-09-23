@@ -7,7 +7,13 @@ package com.zachary.bifromq.basecrdt.core.exception;
  */
 public class CRDTEngineException extends RuntimeException {
 
+    /**
+     * CRDT 引擎关闭异常
+     */
     public static final CRDTEngineException CRDT_IS_CLOSE = new CRDTEngineException("CRDT is closed");
+    /**
+     * CRDT 引擎未找到 异常
+     */
     public static final CRDTEngineException CRDT_NOT_FOUND = new CRDTEngineException("CRDT NotFound");
 
 

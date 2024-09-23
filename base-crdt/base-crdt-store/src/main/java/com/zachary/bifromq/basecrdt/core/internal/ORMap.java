@@ -36,6 +36,11 @@ import static com.zachary.bifromq.basecrdt.core.api.enums.CausalCRDTType.ormap;
 import static com.zachary.bifromq.basecrdt.core.api.enums.CausalCRDTType.rworset;
 
 
+/**
+ * @description: 因果 CRDT 的键映射
+ * @author: cuiweiman
+ * @date: 2024/9/23 18:11
+ */
 @Slf4j
 class ORMap extends CausalCRDT<IDotMap, ORMapOperation> implements IORMap {
     private final Cache<ByteString, CausalCRDT> subCRDTMap = Caffeine.newBuilder().weakValues().build();

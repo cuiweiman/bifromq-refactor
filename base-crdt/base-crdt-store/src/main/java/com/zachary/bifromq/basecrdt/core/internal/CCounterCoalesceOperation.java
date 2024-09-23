@@ -11,6 +11,11 @@ import com.zachary.bifromq.basecrdt.proto.Replacement;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+/**
+ * @description: CCounter 合并操作
+ * @author: cuiweiman
+ * @date: 2024/9/23 18:09
+ */
 class CCounterCoalesceOperation extends CoalesceOperation<IDotMap, CCounterOperation> {
 
     private long inc;
@@ -48,26 +53,26 @@ class CCounterCoalesceOperation extends CoalesceOperation<IDotMap, CCounterOpera
         long now = preset ? inc : getPartialCount(current.subDotFunc(replicaId).orElse(DotFunc.BOTTOM)) + inc;
         if (preset && inc == 0) {
             return zeroOut(eventGenerator.nextEvent(),
-                current, Sets.union(zeroOutReplicaIds, Sets.<ByteString>newHashSet(replicaId)));
+                    current, Sets.union(zeroOutReplicaIds, Sets.<ByteString>newHashSet(replicaId)));
         }
         long ver = eventGenerator.nextEvent();
         if (zeroOutReplicaIds.isEmpty()) {
             return ProtoUtils.replacements(ProtoUtils.dot(replicaId, ver,
-                    ProtoUtils.singleMap(replicaId,
-                        ProtoUtils.singleValue(replicaId, ver, Varint.encodeLong(now)))),
-                current.subDotFunc(replicaId).orElse(DotFunc.BOTTOM));
+                            ProtoUtils.singleMap(replicaId,
+                                    ProtoUtils.singleValue(replicaId, ver, Varint.encodeLong(now)))),
+                    current.subDotFunc(replicaId).orElse(DotFunc.BOTTOM));
         }
         return Iterables.concat(ProtoUtils.replacements(
-                ProtoUtils.dot(replicaId, ver, ProtoUtils.singleMap(replicaId,
-                    ProtoUtils.singleValue(replicaId, ver, Varint.encodeLong(now)))),
-                current.subDotFunc(replicaId).orElse(DotFunc.BOTTOM)),
-            zeroOut(eventGenerator.nextEvent(), current, zeroOutReplicaIds));
+                        ProtoUtils.dot(replicaId, ver, ProtoUtils.singleMap(replicaId,
+                                ProtoUtils.singleValue(replicaId, ver, Varint.encodeLong(now)))),
+                        current.subDotFunc(replicaId).orElse(DotFunc.BOTTOM)),
+                zeroOut(eventGenerator.nextEvent(), current, zeroOutReplicaIds));
     }
 
     private Iterable<Replacement> zeroOut(long ver, IDotMap current, Set<ByteString> replicaIds) {
         return ProtoUtils.replacements(ProtoUtils.dot(replicaId, ver), Iterables.concat(replicaIds.stream()
-            .map(r -> current.subDotFunc(r).orElse(DotFunc.BOTTOM))
-            .collect(Collectors.toSet())));
+                .map(r -> current.subDotFunc(r).orElse(DotFunc.BOTTOM))
+                .collect(Collectors.toSet())));
     }
 
     private long getPartialCount(IDotFunc df) {

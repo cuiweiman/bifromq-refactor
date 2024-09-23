@@ -7,13 +7,14 @@ import io.reactivex.rxjava3.core.Observable;
 import java.util.concurrent.CompletableFuture;
 
 /**
- * @description:
+ * @description: 因果 CRDT 接口
  * @author: cuiweiman
  * @date: 2024/4/20 17:08
  */
 public interface ICausalCRDT<O extends ICRDTOperation> {
 
     /**
+     * CRDT 副本的ID
      * The identity of the CRDT replica
      */
     Replica id();

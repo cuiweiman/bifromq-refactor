@@ -10,6 +10,13 @@ import com.zachary.bifromq.basecrdt.proto.Replacement;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+/**
+ * 合并操作
+ *
+ * @description: 添加获胜优化的观察删除集，允许添加和删除
+ * @author: cuiweiman
+ * @date: 2024/9/23 18:06
+ */
 class AWORSetCoalesceOperation extends CoalesceOperation<IDotMap, AWORSetOperation> {
     private boolean clearAtFirst = false;
     private final Set<ByteString> adds = Sets.newConcurrentHashSet();
@@ -43,18 +50,18 @@ class AWORSetCoalesceOperation extends CoalesceOperation<IDotMap, AWORSetOperati
     @Override
     public Iterable<Replacement> delta(IDotMap current, ICoalesceOperation.IEventGenerator eventGenerator) {
         Iterable<Replacement> addDots = adds.stream().map(e -> {
-                long ver = eventGenerator.nextEvent();
-                return ProtoUtils.replacement(ProtoUtils.dot(replicaId, ver,
-                    ProtoUtils.singleMap(e, ProtoUtils.singleDot(replicaId, ver))));
-            })
-            .collect(Collectors.toSet());
+                    long ver = eventGenerator.nextEvent();
+                    return ProtoUtils.replacement(ProtoUtils.dot(replicaId, ver,
+                            ProtoUtils.singleMap(e, ProtoUtils.singleDot(replicaId, ver))));
+                })
+                .collect(Collectors.toSet());
         if (clearAtFirst && !current.isBottom()) {
             return Iterables.concat(addDots,
-                ProtoUtils.replacements(ProtoUtils.dot(replicaId, eventGenerator.nextEvent()), current));
+                    ProtoUtils.replacements(ProtoUtils.dot(replicaId, eventGenerator.nextEvent()), current));
         } else {
             return Iterables.concat(addDots, Iterables.transform(Iterables.concat(rems.stream()
-                .map(e -> current.subDotSet(e).orElse(DotSet.BOTTOM))
-                .collect(Collectors.toSet())), ProtoUtils::replacement));
+                    .map(e -> current.subDotSet(e).orElse(DotSet.BOTTOM))
+                    .collect(Collectors.toSet())), ProtoUtils::replacement));
         }
     }
 }

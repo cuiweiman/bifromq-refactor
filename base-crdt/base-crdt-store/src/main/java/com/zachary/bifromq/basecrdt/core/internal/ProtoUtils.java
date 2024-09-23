@@ -17,7 +17,7 @@ import static com.google.protobuf.UnsafeByteOperations.unsafeWrap;
 import static java.util.Collections.singleton;
 
 /**
- * @description:
+ * @description: Proto 工具
  * @author: cuiweiman
  * @date: 2024/4/20 18:00
  */

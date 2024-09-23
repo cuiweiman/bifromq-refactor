@@ -7,7 +7,7 @@ import com.zachary.bifromq.basecrdt.core.api.operation.ORMapOperation;
 import java.util.Iterator;
 
 /**
- * @description:
+ * @description: 因果 CRDT 的键映射 接口
  * @author: cuiweiman
  * @date: 2024/4/20 17:37
  */

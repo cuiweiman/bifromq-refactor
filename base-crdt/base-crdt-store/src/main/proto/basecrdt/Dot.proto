@@ -22,6 +22,9 @@ message SingleMap{
   StateLattice val = 2;
 }
 
+/**
+oneof 定义多个字段，但只能选择一个进行赋值的结构，设置了其中一个成员，其他成员将被自动清除。
+ */
 message StateLattice{
   oneof StateType{
     SingleDot singleDot = 1;
@@ -33,9 +36,11 @@ message StateLattice{
 message Dot{
   bytes replicaId = 1;
   uint64 ver = 2;
+  // optional 标识字段是可选的，proto3 移除了(所有字段都是可选的)
   optional StateLattice lattice = 3;
 }
 
 message Replacement{
+  // repeated 可重复，表示数组
   repeated Dot dots = 1; // dots in replacing order
 }

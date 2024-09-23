@@ -7,6 +7,8 @@ import java.nio.ByteBuffer;
 import static com.google.protobuf.UnsafeByteOperations.unsafeWrap;
 
 /**
+ * 该文件来自 bazel 项目
+ *
  * @description: this file is from bazel project
  * @author: cuiweiman
  * @date: 2024/4/20 18:07

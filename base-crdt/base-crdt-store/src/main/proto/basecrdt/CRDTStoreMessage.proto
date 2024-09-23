@@ -8,22 +8,29 @@ option java_multiple_files = true;
 option java_package = "com.zachary.bifromq.basecrdt.store.proto";
 option optimize_for = SPEED;
 
+// Delta 消息
 message DeltaMessage{
   uint64 seqNo = 1;
   repeated Replacement replacement = 2;
 }
 
+// 事件标识
 message EventIndex{
   bytes replicaId = 1;
   map<uint64, uint64> ranges = 2;
 }
 
+// 响应
 message AckMessage{
   uint64 seqNo = 1;
+  // 覆盖格点事件的索引
   repeated EventIndex latticeEvents = 2; // the index of covered lattice events
+  // 涵盖的历史事件索引
   repeated EventIndex historyEvents = 3; // the index of covered history events
 }
 
+// 消息报文, oneof 表示 只能是其中的一个字段赋值，后赋值的将覆盖。
+// 如下 两个字段 delta 和 ack，只能赋值其中一个字段
 message MessagePayload {
   oneof MsgType{
     DeltaMessage delta = 1;
@@ -31,6 +38,7 @@ message MessagePayload {
   }
 }
 
+// CRDT 消息存储体
 message CRDTStoreMessage{
   string uri = 1; // the CRDT URI
   bytes sender = 2; // addr of sender replica

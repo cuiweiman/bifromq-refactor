@@ -8,7 +8,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 
 /**
- * @description:
+ * @description: 共享通胀执行者
  * @author: cuiweiman
  * @date: 2024/4/20 17:58
  */
