@@ -34,6 +34,12 @@ class ProtoUtils {
         return Dot.newBuilder().setReplicaId(replicaId).setVer(ver).setLattice(lattice).build();
     }
 
+    /**
+     * 将 Dot 数组 封装到 protobuf 对象 Replacement 中
+     *
+     * @param dots dot 数组
+     * @return protobuf Dot 数组
+     */
     static Replacement replacement(Dot... dots) {
         Replacement.Builder builder = Replacement.newBuilder();
         for (Dot dot : dots) {
@@ -42,6 +48,13 @@ class ProtoUtils {
         return builder.build();
     }
 
+    /**
+     * replacingDots 不为空时，则 {@link #replacement}进行转换，否则只转换 Dot
+     *
+     * @param dot           dot
+     * @param replacingDots replacingDots
+     * @return Iterable<Replacement>
+     */
     static Iterable<Replacement> replacements(Dot dot, Iterable<Dot> replacingDots) {
         return replacingDots.iterator().hasNext() ?
                 Iterables.transform(replacingDots, replacingDot -> replacement(dot, replacingDot)) :

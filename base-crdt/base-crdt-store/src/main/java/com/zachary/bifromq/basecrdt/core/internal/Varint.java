@@ -110,6 +110,7 @@ public class Varint {
 
     /**
      * Returns the encoding size in bytes of its input value.
+     * 返回输入值的编码大小（以字节为单位）。
      *
      * @param v the long to be measured
      * @return the encoding size in bytes of a given long value.
@@ -118,7 +119,9 @@ public class Varint {
         int result = 0;
         do {
             result++;
+            // v = v >>> 7; 二进制向右移动 7 位数，左边超出的位将被丢弃，用0填充
             v >>>= 7;
+            // System.out.printf("result = %d, v = %d%n", result, v);
         } while (v != 0);
         return result;
     }
@@ -126,6 +129,7 @@ public class Varint {
     /**
      * Reads an up to 64 bit long varint from the current position of the given ByteBuffer and returns the decoded value
      * as long.
+     * 从给定 ByteBuffer 的当前位置读取最多 64 位长的 varint，并以长整型形式返回解码后的值。
      *
      * <p>The position of the buffer is advanced to the first byte after the
      * decoded varint.
@@ -185,6 +189,7 @@ public class Varint {
 
     /**
      * Encodes a long integer in a variable-length encoding, 7 bits per byte, to a ByteBuffer sink.
+     * 将长整数以可变长度编码（每字节 7 位）编码到 ByteBuffer 接收器。
      *
      * @param v    the value to encode
      * @param sink the ByteBuffer to add the encoded value
@@ -201,6 +206,12 @@ public class Varint {
         }
     }
 
+    /**
+     * 从给定 ByteBuffer 的当前位置读取最多 64 位长的 varint，并以长整型形式返回解码后的值。
+     *
+     * @param src src
+     * @return long
+     */
     public static long decodeLong(ByteString src) {
         return getVarLong(src.asReadOnlyByteBuffer());
     }

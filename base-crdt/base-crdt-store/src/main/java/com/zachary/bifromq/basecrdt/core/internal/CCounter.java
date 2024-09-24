@@ -13,6 +13,8 @@ import java.util.Iterator;
 import java.util.Map;
 
 /**
+ * Causal Counter 因果计数器
+ *
  * @description: 用于映射嵌入的（因果）计数器（对 Riak EMCounter 的优化）
  * @author: cuiweiman
  * @date: 2024/9/23 18:08

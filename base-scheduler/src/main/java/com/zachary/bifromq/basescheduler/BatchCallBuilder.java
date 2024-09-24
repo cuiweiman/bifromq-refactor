@@ -21,6 +21,9 @@ import java.util.concurrent.locks.StampedLock;
 public abstract class BatchCallBuilder<Req, Resp> {
     private static final int PREFLIGHT_BATCHES = 1024;
     private final StampedLock rwLock = new StampedLock();
+    /**
+     * 限流器
+     */
     private final Gradient2Limit inflightLimiter;
     private final AtomicInteger inflightCalls = new AtomicInteger();
     private final AtomicBoolean calling = new AtomicBoolean();

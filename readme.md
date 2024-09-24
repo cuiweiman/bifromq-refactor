@@ -16,5 +16,14 @@
 - CRDT 分布式系统一致性实现方案
 - base-hlc  混合逻辑时钟
 
+## 编译打包
+```bash
+cd bifromq
+mvn wrapper:wrapper
+./mvnw -U clean package
+```
+构建输出是两个 tar.gz 和一个 zip 文件，位于 /build/build-bifromq-starters/target/
 
-
+- bifromq-xxx-all.tar.gz：适用于 Linux 和 macOS 的 standalone 集群部署 tar.gz 包
+- bifromq-xxx-standalone.tar.gz：适用于 Linux 和 macOS 的 standalone 部署 tar.gz 包
+- bifromq-xxx-windows-standalone.zip：适用于 Windows 的 standalone 部署的 zip 包

@@ -11,6 +11,7 @@
 
     <artifactId>base-crdt</artifactId>
     <packaging>pom</packaging>
+    <description>Delta-CRDT 存储和服务</description>
 
     <modules>
         <module>base-crdt-service</module>

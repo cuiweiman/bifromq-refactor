@@ -56,6 +56,7 @@ class AWORSetCoalesceOperation extends CoalesceOperation<IDotMap, AWORSetOperati
                 })
                 .collect(Collectors.toSet());
         if (clearAtFirst && !current.isBottom()) {
+            // Iterables.concat 将多个 list 中的元素 合并到 一个 list 中
             return Iterables.concat(addDots,
                     ProtoUtils.replacements(ProtoUtils.dot(replicaId, eventGenerator.nextEvent()), current));
         } else {

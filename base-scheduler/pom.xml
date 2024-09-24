@@ -20,6 +20,11 @@
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
         </dependency>
+        <!--
+           自适应限流神器，应对高并发的手段之一。从 Guava 的 RateLimiter 到 Hystrix，以及 Sentinel 都可作为限流的工具。
+           自适应限流不需要手动指定限流阈值，也不需要去预估系统的容量，并且阈值能够随着系统相关指标变化而变化。
+           自适应限流算法借鉴了TCP拥塞算法，根据各种指标预估限流的阈值，并且不断进行调整。
+           -->
         <dependency>
             <groupId>com.netflix.concurrency-limits</groupId>
             <artifactId>concurrency-limits-core</artifactId>

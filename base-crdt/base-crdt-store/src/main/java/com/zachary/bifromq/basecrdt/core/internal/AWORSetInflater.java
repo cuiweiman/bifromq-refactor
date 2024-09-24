@@ -8,7 +8,7 @@ import java.time.Duration;
 import java.util.concurrent.ScheduledExecutorService;
 
 /**
- * @description: 
+ * @description:
  * @author: cuiweiman
  * @date: 2024/9/23 18:06
  */
@@ -24,6 +24,12 @@ class AWORSetInflater extends CausalCRDTInflater<IDotMap, AWORSetOperation, AWOR
         return new AWORSet(replica, () -> dotStore, executor);
     }
 
+    /**
+     * 开始合并
+     *
+     * @param op AWORSetOperation
+     * @return 合并结果
+     */
     @Override
     protected ICoalesceOperation<IDotMap, AWORSetOperation> startCoalescing(AWORSetOperation op) {
         return new AWORSetCoalesceOperation(id().getId(), op);
