@@ -1,6 +1,7 @@
 package com.zachary.bifromq.dist.util;
 
 import com.google.common.collect.Lists;
+import com.zachary.bifromq.type.TopicMessage;
 
 import java.util.LinkedList;
 import java.util.List;

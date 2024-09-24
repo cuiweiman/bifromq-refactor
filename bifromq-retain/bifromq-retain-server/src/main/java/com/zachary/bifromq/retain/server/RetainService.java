@@ -22,6 +22,7 @@ import com.zachary.bifromq.retain.rpc.proto.RetainServiceRWCoProcInput;
 import com.zachary.bifromq.retain.rpc.proto.RetainServiceRWCoProcOutput;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
+import com.zachary.bifromq.type.ClientInfo;
 import io.grpc.stub.StreamObserver;
 import lombok.extern.slf4j.Slf4j;
 

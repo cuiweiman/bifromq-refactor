@@ -4,6 +4,10 @@
 package com.zachary.bifromq.basecrdt.store.proto;
 
 /**
+ * <pre>
+ * 事件标识
+ * </pre>
+ *
  * Protobuf type {@code basecrdt.EventIndex}
  */
 public final class EventIndex extends
@@ -322,6 +326,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * 事件标识
+   * </pre>
+   *
    * Protobuf type {@code basecrdt.EventIndex}
    */
   public static final class Builder extends

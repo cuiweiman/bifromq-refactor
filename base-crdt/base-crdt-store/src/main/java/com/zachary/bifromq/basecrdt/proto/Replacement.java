@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.zachary.bifromq.basecrdt.proto.Dot> dots_;
   /**
    * <pre>
-   * dots in replacing order
+   * repeated 可重复，表示数组
    * </pre>
    *
    * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -60,7 +60,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * dots in replacing order
+   * repeated 可重复，表示数组
    * </pre>
    *
    * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -72,7 +72,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * dots in replacing order
+   * repeated 可重复，表示数组
    * </pre>
    *
    * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -83,7 +83,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * dots in replacing order
+   * repeated 可重复，表示数组
    * </pre>
    *
    * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -94,7 +94,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * dots in replacing order
+   * repeated 可重复，表示数组
    * </pre>
    *
    * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -491,7 +491,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * dots in replacing order
+     * repeated 可重复，表示数组
      * </pre>
      *
      * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -505,7 +505,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dots in replacing order
+     * repeated 可重复，表示数组
      * </pre>
      *
      * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -519,7 +519,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dots in replacing order
+     * repeated 可重复，表示数组
      * </pre>
      *
      * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -533,7 +533,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dots in replacing order
+     * repeated 可重复，表示数组
      * </pre>
      *
      * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -554,7 +554,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dots in replacing order
+     * repeated 可重复，表示数组
      * </pre>
      *
      * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -572,7 +572,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dots in replacing order
+     * repeated 可重复，表示数组
      * </pre>
      *
      * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -592,7 +592,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dots in replacing order
+     * repeated 可重复，表示数组
      * </pre>
      *
      * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -613,7 +613,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dots in replacing order
+     * repeated 可重复，表示数组
      * </pre>
      *
      * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -631,7 +631,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dots in replacing order
+     * repeated 可重复，表示数组
      * </pre>
      *
      * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -649,7 +649,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dots in replacing order
+     * repeated 可重复，表示数组
      * </pre>
      *
      * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -668,7 +668,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dots in replacing order
+     * repeated 可重复，表示数组
      * </pre>
      *
      * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -685,7 +685,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dots in replacing order
+     * repeated 可重复，表示数组
      * </pre>
      *
      * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -702,7 +702,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dots in replacing order
+     * repeated 可重复，表示数组
      * </pre>
      *
      * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -713,7 +713,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dots in replacing order
+     * repeated 可重复，表示数组
      * </pre>
      *
      * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -727,7 +727,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dots in replacing order
+     * repeated 可重复，表示数组
      * </pre>
      *
      * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -742,7 +742,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dots in replacing order
+     * repeated 可重复，表示数组
      * </pre>
      *
      * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -753,7 +753,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dots in replacing order
+     * repeated 可重复，表示数组
      * </pre>
      *
      * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -765,7 +765,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * dots in replacing order
+     * repeated 可重复，表示数组
      * </pre>
      *
      * <code>repeated .basecrdt.Dot dots = 1;</code>

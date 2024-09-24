@@ -8,6 +8,7 @@ import com.zachary.bifromq.inbox.rpc.proto.DeleteInboxRequest;
 import com.zachary.bifromq.inbox.rpc.proto.HasInboxReply;
 import com.zachary.bifromq.inbox.rpc.proto.HasInboxRequest;
 import com.zachary.bifromq.inbox.rpc.proto.InboxServiceGrpc;
+import com.zachary.bifromq.type.ClientInfo;
 import io.reactivex.rxjava3.core.Observable;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;

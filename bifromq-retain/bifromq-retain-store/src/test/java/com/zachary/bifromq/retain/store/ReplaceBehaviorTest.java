@@ -2,6 +2,7 @@ package com.zachary.bifromq.retain.store;
 
 import com.zachary.bifromq.retain.rpc.proto.MatchCoProcReply;
 import com.zachary.bifromq.retain.rpc.proto.RetainCoProcReply;
+import com.zachary.bifromq.type.TopicMessage;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;

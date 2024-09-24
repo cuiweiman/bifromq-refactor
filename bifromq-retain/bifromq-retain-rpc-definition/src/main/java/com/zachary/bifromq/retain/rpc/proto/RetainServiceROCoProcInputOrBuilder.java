@@ -16,11 +16,11 @@ public interface RetainServiceROCoProcInputOrBuilder extends
    * <code>.retainservice.MatchCoProcRequest matchRequest = 1;</code>
    * @return The matchRequest.
    */
-  MatchCoProcRequest getMatchRequest();
+  com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest getMatchRequest();
   /**
    * <code>.retainservice.MatchCoProcRequest matchRequest = 1;</code>
    */
-  MatchCoProcRequestOrBuilder getMatchRequestOrBuilder();
+  com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequestOrBuilder getMatchRequestOrBuilder();
 
-  public RetainServiceROCoProcInput.TypeCase getTypeCase();
+  public com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput.TypeCase getTypeCase();
 }

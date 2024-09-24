@@ -32,15 +32,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return RetainCoProcProtos.internal_static_retainservice_RetainServiceROCoProcInput_descriptor;
+    return com.zachary.bifromq.retain.rpc.proto.RetainCoProcProtos.internal_static_retainservice_RetainServiceROCoProcInput_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return RetainCoProcProtos.internal_static_retainservice_RetainServiceROCoProcInput_fieldAccessorTable
+    return com.zachary.bifromq.retain.rpc.proto.RetainCoProcProtos.internal_static_retainservice_RetainServiceROCoProcInput_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            RetainServiceROCoProcInput.class, RetainServiceROCoProcInput.Builder.class);
+            com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput.class, com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput.Builder.class);
   }
 
   private int typeCase_ = 0;
@@ -96,21 +96,21 @@ private static final long serialVersionUID = 0L;
    * @return The matchRequest.
    */
   @java.lang.Override
-  public MatchCoProcRequest getMatchRequest() {
+  public com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest getMatchRequest() {
     if (typeCase_ == 1) {
-       return (MatchCoProcRequest) type_;
+       return (com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest) type_;
     }
-    return MatchCoProcRequest.getDefaultInstance();
+    return com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest.getDefaultInstance();
   }
   /**
    * <code>.retainservice.MatchCoProcRequest matchRequest = 1;</code>
    */
   @java.lang.Override
-  public MatchCoProcRequestOrBuilder getMatchRequestOrBuilder() {
+  public com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequestOrBuilder getMatchRequestOrBuilder() {
     if (typeCase_ == 1) {
-       return (MatchCoProcRequest) type_;
+       return (com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest) type_;
     }
-    return MatchCoProcRequest.getDefaultInstance();
+    return com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -128,7 +128,7 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (typeCase_ == 1) {
-      output.writeMessage(1, (MatchCoProcRequest) type_);
+      output.writeMessage(1, (com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest) type_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -141,7 +141,7 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (typeCase_ == 1) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, (MatchCoProcRequest) type_);
+        .computeMessageSize(1, (com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest) type_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -153,10 +153,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof RetainServiceROCoProcInput)) {
+    if (!(obj instanceof com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput)) {
       return super.equals(obj);
     }
-    RetainServiceROCoProcInput other = (RetainServiceROCoProcInput) obj;
+    com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput other = (com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput) obj;
 
     if (!getTypeCase().equals(other.getTypeCase())) return false;
     switch (typeCase_) {
@@ -191,69 +191,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static RetainServiceROCoProcInput parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static RetainServiceROCoProcInput parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static RetainServiceROCoProcInput parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static RetainServiceROCoProcInput parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static RetainServiceROCoProcInput parseFrom(byte[] data)
+  public static com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static RetainServiceROCoProcInput parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static RetainServiceROCoProcInput parseFrom(java.io.InputStream input)
+  public static com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static RetainServiceROCoProcInput parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static RetainServiceROCoProcInput parseDelimitedFrom(java.io.InputStream input)
+  public static com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static RetainServiceROCoProcInput parseDelimitedFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static RetainServiceROCoProcInput parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static RetainServiceROCoProcInput parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -266,7 +266,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(RetainServiceROCoProcInput prototype) {
+  public static Builder newBuilder(com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -287,18 +287,18 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:retainservice.RetainServiceROCoProcInput)
-          RetainServiceROCoProcInputOrBuilder {
+      com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInputOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return RetainCoProcProtos.internal_static_retainservice_RetainServiceROCoProcInput_descriptor;
+      return com.zachary.bifromq.retain.rpc.proto.RetainCoProcProtos.internal_static_retainservice_RetainServiceROCoProcInput_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return RetainCoProcProtos.internal_static_retainservice_RetainServiceROCoProcInput_fieldAccessorTable
+      return com.zachary.bifromq.retain.rpc.proto.RetainCoProcProtos.internal_static_retainservice_RetainServiceROCoProcInput_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              RetainServiceROCoProcInput.class, RetainServiceROCoProcInput.Builder.class);
+              com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput.class, com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput.Builder.class);
     }
 
     // Construct using com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput.newBuilder()
@@ -326,17 +326,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return RetainCoProcProtos.internal_static_retainservice_RetainServiceROCoProcInput_descriptor;
+      return com.zachary.bifromq.retain.rpc.proto.RetainCoProcProtos.internal_static_retainservice_RetainServiceROCoProcInput_descriptor;
     }
 
     @java.lang.Override
-    public RetainServiceROCoProcInput getDefaultInstanceForType() {
-      return RetainServiceROCoProcInput.getDefaultInstance();
+    public com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput getDefaultInstanceForType() {
+      return com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput.getDefaultInstance();
     }
 
     @java.lang.Override
-    public RetainServiceROCoProcInput build() {
-      RetainServiceROCoProcInput result = buildPartial();
+    public com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput build() {
+      com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -344,19 +344,19 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public RetainServiceROCoProcInput buildPartial() {
-      RetainServiceROCoProcInput result = new RetainServiceROCoProcInput(this);
+    public com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput buildPartial() {
+      com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput result = new com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(RetainServiceROCoProcInput result) {
+    private void buildPartial0(com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput result) {
       int from_bitField0_ = bitField0_;
     }
 
-    private void buildPartialOneofs(RetainServiceROCoProcInput result) {
+    private void buildPartialOneofs(com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput result) {
       result.typeCase_ = typeCase_;
       result.type_ = this.type_;
       if (typeCase_ == 1 &&
@@ -399,16 +399,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof RetainServiceROCoProcInput) {
-        return mergeFrom((RetainServiceROCoProcInput)other);
+      if (other instanceof com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput) {
+        return mergeFrom((com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(RetainServiceROCoProcInput other) {
-      if (other == RetainServiceROCoProcInput.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput other) {
+      if (other == com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput.getDefaultInstance()) return this;
       switch (other.getTypeCase()) {
         case MATCHREQUEST: {
           mergeMatchRequest(other.getMatchRequest());
@@ -484,7 +484,7 @@ private static final long serialVersionUID = 0L;
     private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
-            MatchCoProcRequest, MatchCoProcRequest.Builder, MatchCoProcRequestOrBuilder> matchRequestBuilder_;
+        com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest, com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest.Builder, com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequestOrBuilder> matchRequestBuilder_;
     /**
      * <code>.retainservice.MatchCoProcRequest matchRequest = 1;</code>
      * @return Whether the matchRequest field is set.
@@ -498,23 +498,23 @@ private static final long serialVersionUID = 0L;
      * @return The matchRequest.
      */
     @java.lang.Override
-    public MatchCoProcRequest getMatchRequest() {
+    public com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest getMatchRequest() {
       if (matchRequestBuilder_ == null) {
         if (typeCase_ == 1) {
-          return (MatchCoProcRequest) type_;
+          return (com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest) type_;
         }
-        return MatchCoProcRequest.getDefaultInstance();
+        return com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest.getDefaultInstance();
       } else {
         if (typeCase_ == 1) {
           return matchRequestBuilder_.getMessage();
         }
-        return MatchCoProcRequest.getDefaultInstance();
+        return com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest.getDefaultInstance();
       }
     }
     /**
      * <code>.retainservice.MatchCoProcRequest matchRequest = 1;</code>
      */
-    public Builder setMatchRequest(MatchCoProcRequest value) {
+    public Builder setMatchRequest(com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest value) {
       if (matchRequestBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -531,7 +531,7 @@ private static final long serialVersionUID = 0L;
      * <code>.retainservice.MatchCoProcRequest matchRequest = 1;</code>
      */
     public Builder setMatchRequest(
-        MatchCoProcRequest.Builder builderForValue) {
+        com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest.Builder builderForValue) {
       if (matchRequestBuilder_ == null) {
         type_ = builderForValue.build();
         onChanged();
@@ -544,11 +544,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.retainservice.MatchCoProcRequest matchRequest = 1;</code>
      */
-    public Builder mergeMatchRequest(MatchCoProcRequest value) {
+    public Builder mergeMatchRequest(com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest value) {
       if (matchRequestBuilder_ == null) {
         if (typeCase_ == 1 &&
-            type_ != MatchCoProcRequest.getDefaultInstance()) {
-          type_ = MatchCoProcRequest.newBuilder((MatchCoProcRequest) type_)
+            type_ != com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest.getDefaultInstance()) {
+          type_ = com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest.newBuilder((com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest) type_)
               .mergeFrom(value).buildPartial();
         } else {
           type_ = value;
@@ -586,36 +586,36 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.retainservice.MatchCoProcRequest matchRequest = 1;</code>
      */
-    public MatchCoProcRequest.Builder getMatchRequestBuilder() {
+    public com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest.Builder getMatchRequestBuilder() {
       return getMatchRequestFieldBuilder().getBuilder();
     }
     /**
      * <code>.retainservice.MatchCoProcRequest matchRequest = 1;</code>
      */
     @java.lang.Override
-    public MatchCoProcRequestOrBuilder getMatchRequestOrBuilder() {
+    public com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequestOrBuilder getMatchRequestOrBuilder() {
       if ((typeCase_ == 1) && (matchRequestBuilder_ != null)) {
         return matchRequestBuilder_.getMessageOrBuilder();
       } else {
         if (typeCase_ == 1) {
-          return (MatchCoProcRequest) type_;
+          return (com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest) type_;
         }
-        return MatchCoProcRequest.getDefaultInstance();
+        return com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest.getDefaultInstance();
       }
     }
     /**
      * <code>.retainservice.MatchCoProcRequest matchRequest = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-            MatchCoProcRequest, MatchCoProcRequest.Builder, MatchCoProcRequestOrBuilder>
+        com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest, com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest.Builder, com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequestOrBuilder> 
         getMatchRequestFieldBuilder() {
       if (matchRequestBuilder_ == null) {
         if (!(typeCase_ == 1)) {
-          type_ = MatchCoProcRequest.getDefaultInstance();
+          type_ = com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest.getDefaultInstance();
         }
         matchRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                MatchCoProcRequest, MatchCoProcRequest.Builder, MatchCoProcRequestOrBuilder>(
-                (MatchCoProcRequest) type_,
+            com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest, com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest.Builder, com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequestOrBuilder>(
+                (com.zachary.bifromq.retain.rpc.proto.MatchCoProcRequest) type_,
                 getParentForChildren(),
                 isClean());
         type_ = null;
@@ -641,12 +641,12 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:retainservice.RetainServiceROCoProcInput)
-  private static final RetainServiceROCoProcInput DEFAULT_INSTANCE;
+  private static final com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new RetainServiceROCoProcInput();
+    DEFAULT_INSTANCE = new com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput();
   }
 
-  public static RetainServiceROCoProcInput getDefaultInstance() {
+  public static com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -682,7 +682,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public RetainServiceROCoProcInput getDefaultInstanceForType() {
+  public com.zachary.bifromq.retain.rpc.proto.RetainServiceROCoProcInput getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

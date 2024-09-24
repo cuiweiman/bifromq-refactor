@@ -35,15 +35,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return RetainServiceProtos.internal_static_retainservice_RetainRequest_descriptor;
+    return com.zachary.bifromq.retain.rpc.proto.RetainServiceProtos.internal_static_retainservice_RetainRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return RetainServiceProtos.internal_static_retainservice_RetainRequest_fieldAccessorTable
+    return com.zachary.bifromq.retain.rpc.proto.RetainServiceProtos.internal_static_retainservice_RetainRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            RetainRequest.class, RetainRequest.Builder.class);
+            com.zachary.bifromq.retain.rpc.proto.RetainRequest.class, com.zachary.bifromq.retain.rpc.proto.RetainRequest.Builder.class);
   }
 
   public static final int REQID_FIELD_NUMBER = 1;
@@ -225,10 +225,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof RetainRequest)) {
+    if (!(obj instanceof com.zachary.bifromq.retain.rpc.proto.RetainRequest)) {
       return super.equals(obj);
     }
-    RetainRequest other = (RetainRequest) obj;
+    com.zachary.bifromq.retain.rpc.proto.RetainRequest other = (com.zachary.bifromq.retain.rpc.proto.RetainRequest) obj;
 
     if (getReqId()
         != other.getReqId()) return false;
@@ -272,69 +272,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static RetainRequest parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.RetainRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static RetainRequest parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.RetainRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static RetainRequest parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.RetainRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static RetainRequest parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.RetainRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static RetainRequest parseFrom(byte[] data)
+  public static com.zachary.bifromq.retain.rpc.proto.RetainRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static RetainRequest parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.RetainRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static RetainRequest parseFrom(java.io.InputStream input)
+  public static com.zachary.bifromq.retain.rpc.proto.RetainRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static RetainRequest parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.RetainRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static RetainRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.zachary.bifromq.retain.rpc.proto.RetainRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static RetainRequest parseDelimitedFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.RetainRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static RetainRequest parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.RetainRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static RetainRequest parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.RetainRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -347,7 +347,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(RetainRequest prototype) {
+  public static Builder newBuilder(com.zachary.bifromq.retain.rpc.proto.RetainRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -368,18 +368,18 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:retainservice.RetainRequest)
-          RetainRequestOrBuilder {
+      com.zachary.bifromq.retain.rpc.proto.RetainRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return RetainServiceProtos.internal_static_retainservice_RetainRequest_descriptor;
+      return com.zachary.bifromq.retain.rpc.proto.RetainServiceProtos.internal_static_retainservice_RetainRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return RetainServiceProtos.internal_static_retainservice_RetainRequest_fieldAccessorTable
+      return com.zachary.bifromq.retain.rpc.proto.RetainServiceProtos.internal_static_retainservice_RetainRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              RetainRequest.class, RetainRequest.Builder.class);
+              com.zachary.bifromq.retain.rpc.proto.RetainRequest.class, com.zachary.bifromq.retain.rpc.proto.RetainRequest.Builder.class);
     }
 
     // Construct using com.zachary.bifromq.retain.rpc.proto.RetainRequest.newBuilder()
@@ -408,17 +408,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return RetainServiceProtos.internal_static_retainservice_RetainRequest_descriptor;
+      return com.zachary.bifromq.retain.rpc.proto.RetainServiceProtos.internal_static_retainservice_RetainRequest_descriptor;
     }
 
     @java.lang.Override
-    public RetainRequest getDefaultInstanceForType() {
-      return RetainRequest.getDefaultInstance();
+    public com.zachary.bifromq.retain.rpc.proto.RetainRequest getDefaultInstanceForType() {
+      return com.zachary.bifromq.retain.rpc.proto.RetainRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public RetainRequest build() {
-      RetainRequest result = buildPartial();
+    public com.zachary.bifromq.retain.rpc.proto.RetainRequest build() {
+      com.zachary.bifromq.retain.rpc.proto.RetainRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -426,14 +426,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public RetainRequest buildPartial() {
-      RetainRequest result = new RetainRequest(this);
+    public com.zachary.bifromq.retain.rpc.proto.RetainRequest buildPartial() {
+      com.zachary.bifromq.retain.rpc.proto.RetainRequest result = new com.zachary.bifromq.retain.rpc.proto.RetainRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(RetainRequest result) {
+    private void buildPartial0(com.zachary.bifromq.retain.rpc.proto.RetainRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.reqId_ = reqId_;
@@ -489,16 +489,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof RetainRequest) {
-        return mergeFrom((RetainRequest)other);
+      if (other instanceof com.zachary.bifromq.retain.rpc.proto.RetainRequest) {
+        return mergeFrom((com.zachary.bifromq.retain.rpc.proto.RetainRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(RetainRequest other) {
-      if (other == RetainRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.zachary.bifromq.retain.rpc.proto.RetainRequest other) {
+      if (other == com.zachary.bifromq.retain.rpc.proto.RetainRequest.getDefaultInstance()) return this;
       if (other.getReqId() != 0L) {
         setReqId(other.getReqId());
       }
@@ -873,12 +873,12 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:retainservice.RetainRequest)
-  private static final RetainRequest DEFAULT_INSTANCE;
+  private static final com.zachary.bifromq.retain.rpc.proto.RetainRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new RetainRequest();
+    DEFAULT_INSTANCE = new com.zachary.bifromq.retain.rpc.proto.RetainRequest();
   }
 
-  public static RetainRequest getDefaultInstance() {
+  public static com.zachary.bifromq.retain.rpc.proto.RetainRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -914,7 +914,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public RetainRequest getDefaultInstanceForType() {
+  public com.zachary.bifromq.retain.rpc.proto.RetainRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

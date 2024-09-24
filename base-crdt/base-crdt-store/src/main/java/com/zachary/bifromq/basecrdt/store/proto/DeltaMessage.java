@@ -4,6 +4,10 @@
 package com.zachary.bifromq.basecrdt.store.proto;
 
 /**
+ * <pre>
+ * Delta 消息
+ * </pre>
+ *
  * Protobuf type {@code basecrdt.DeltaMessage}
  */
 public final class DeltaMessage extends
@@ -266,6 +270,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Delta 消息
+   * </pre>
+   *
    * Protobuf type {@code basecrdt.DeltaMessage}
    */
   public static final class Builder extends

@@ -22,6 +22,7 @@ import com.zachary.bifromq.dist.rpc.proto.UpdateRequest;
 import com.google.common.collect.Maps;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
+import com.zachary.bifromq.type.QoS;
 import lombok.extern.slf4j.Slf4j;
 import org.jctools.maps.NonBlockingHashMap;
 import org.jctools.maps.NonBlockingHashSet;

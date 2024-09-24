@@ -1,5 +1,6 @@
 package com.zachary.bifromq.dist.server.scheduler;
 
+import com.zachary.bifromq.type.PublisherMessagePack;
 import lombok.AllArgsConstructor;
 
 import java.util.List;

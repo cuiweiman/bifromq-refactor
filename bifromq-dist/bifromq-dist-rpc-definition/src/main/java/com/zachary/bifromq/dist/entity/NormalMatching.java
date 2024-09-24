@@ -3,6 +3,8 @@ package com.zachary.bifromq.dist.entity;
 
 import com.google.common.base.Strings;
 import com.google.protobuf.ByteString;
+import com.zachary.bifromq.type.QoS;
+import com.zachary.bifromq.type.SubInfo;
 import lombok.EqualsAndHashCode;
 
 import java.nio.charset.StandardCharsets;

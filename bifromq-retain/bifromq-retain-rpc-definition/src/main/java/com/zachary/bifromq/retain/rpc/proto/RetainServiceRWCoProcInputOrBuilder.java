@@ -16,11 +16,11 @@ public interface RetainServiceRWCoProcInputOrBuilder extends
    * <code>.retainservice.RetainCoProcRequest retainRequest = 1;</code>
    * @return The retainRequest.
    */
-  RetainCoProcRequest getRetainRequest();
+  com.zachary.bifromq.retain.rpc.proto.RetainCoProcRequest getRetainRequest();
   /**
    * <code>.retainservice.RetainCoProcRequest retainRequest = 1;</code>
    */
-  RetainCoProcRequestOrBuilder getRetainRequestOrBuilder();
+  com.zachary.bifromq.retain.rpc.proto.RetainCoProcRequestOrBuilder getRetainRequestOrBuilder();
 
   /**
    * <code>.retainservice.GCRequest gcRequest = 2;</code>
@@ -31,11 +31,11 @@ public interface RetainServiceRWCoProcInputOrBuilder extends
    * <code>.retainservice.GCRequest gcRequest = 2;</code>
    * @return The gcRequest.
    */
-  GCRequest getGcRequest();
+  com.zachary.bifromq.retain.rpc.proto.GCRequest getGcRequest();
   /**
    * <code>.retainservice.GCRequest gcRequest = 2;</code>
    */
-  GCRequestOrBuilder getGcRequestOrBuilder();
+  com.zachary.bifromq.retain.rpc.proto.GCRequestOrBuilder getGcRequestOrBuilder();
 
-  public RetainServiceRWCoProcInput.TypeCase getTypeCase();
+  public com.zachary.bifromq.retain.rpc.proto.RetainServiceRWCoProcInput.TypeCase getTypeCase();
 }

@@ -6,6 +6,8 @@ import com.zachary.bifromq.inbox.rpc.proto.CommitRequest;
 import com.zachary.bifromq.inbox.rpc.proto.FetchHint;
 import com.zachary.bifromq.inbox.rpc.proto.InboxServiceGrpc;
 import com.zachary.bifromq.inbox.storage.proto.Fetched;
+import com.zachary.bifromq.type.ClientInfo;
+import com.zachary.bifromq.type.QoS;
 import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import lombok.extern.slf4j.Slf4j;
 

@@ -2,6 +2,7 @@ package com.zachary.bifromq.dist.util;
 
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
+import com.zachary.bifromq.type.TopicMessage;
 
 import java.util.Collections;
 import java.util.Comparator;

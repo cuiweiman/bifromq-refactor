@@ -1,6 +1,7 @@
 package com.zachary.bifromq.plugin.subbroker;
 
 import com.google.common.base.Preconditions;
+import com.zachary.bifromq.type.SubInfo;
 import io.micrometer.core.instrument.Metrics;
 import io.micrometer.core.instrument.Timer;
 import lombok.NonNull;

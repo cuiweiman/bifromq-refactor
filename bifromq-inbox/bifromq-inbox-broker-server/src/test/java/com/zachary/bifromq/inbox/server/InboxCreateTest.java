@@ -2,6 +2,7 @@ package com.zachary.bifromq.inbox.server;
 
 import com.zachary.bifromq.inbox.rpc.proto.CreateInboxReply;
 import com.zachary.bifromq.inbox.rpc.proto.DeleteInboxReply;
+import com.zachary.bifromq.type.ClientInfo;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;

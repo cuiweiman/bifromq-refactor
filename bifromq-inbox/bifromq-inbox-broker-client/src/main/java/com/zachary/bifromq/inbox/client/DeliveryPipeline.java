@@ -10,6 +10,7 @@ import com.zachary.bifromq.plugin.subbroker.DeliveryPack;
 import com.zachary.bifromq.plugin.subbroker.DeliveryResult;
 import com.zachary.bifromq.plugin.subbroker.IDeliverer;
 import com.google.common.collect.Iterables;
+import com.zachary.bifromq.type.SubInfo;
 
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;

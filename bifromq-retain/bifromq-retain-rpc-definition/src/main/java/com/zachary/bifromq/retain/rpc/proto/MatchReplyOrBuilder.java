@@ -22,7 +22,7 @@ public interface MatchReplyOrBuilder extends
    * <code>.retainservice.MatchReply.Result result = 2;</code>
    * @return The result.
    */
-  MatchReply.Result getResult();
+  com.zachary.bifromq.retain.rpc.proto.MatchReply.Result getResult();
 
   /**
    * <code>repeated .commontype.TopicMessage messages = 3;</code>

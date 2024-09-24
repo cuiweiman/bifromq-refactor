@@ -19,6 +19,8 @@ import com.zachary.bifromq.plugin.subbroker.DeliveryResult;
 import com.zachary.bifromq.plugin.subbroker.IDeliverer;
 import com.zachary.bifromq.plugin.subbroker.ISubBroker;
 import com.zachary.bifromq.plugin.subbroker.ISubBrokerManager;
+import com.zachary.bifromq.type.ClientInfo;
+import com.zachary.bifromq.type.SubInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.openjdk.jmh.annotations.Level;
 import org.openjdk.jmh.annotations.Scope;

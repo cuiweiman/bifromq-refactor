@@ -4,6 +4,11 @@
 package com.zachary.bifromq.basecrdt.store.proto;
 
 /**
+ * <pre>
+ * 消息报文, oneof 表示 只能是其中的一个字段赋值，后赋值的将覆盖。
+ * 如下 两个字段 delta 和 ack，只能赋值其中一个字段
+ * </pre>
+ *
  * Protobuf type {@code basecrdt.MessagePayload}
  */
 public final class MessagePayload extends
@@ -330,6 +335,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * 消息报文, oneof 表示 只能是其中的一个字段赋值，后赋值的将覆盖。
+   * 如下 两个字段 delta 和 ack，只能赋值其中一个字段
+   * </pre>
+   *
    * Protobuf type {@code basecrdt.MessagePayload}
    */
   public static final class Builder extends

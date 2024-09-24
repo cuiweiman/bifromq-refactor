@@ -1,5 +1,7 @@
 package com.zachary.bifromq.dist.util;
 
+import com.zachary.bifromq.type.TopicMessage;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

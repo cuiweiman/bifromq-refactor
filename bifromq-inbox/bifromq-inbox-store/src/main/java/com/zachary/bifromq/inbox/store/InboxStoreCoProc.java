@@ -43,6 +43,11 @@ import com.zachary.bifromq.plugin.eventcollector.IEventCollector;
 import com.zachary.bifromq.plugin.eventcollector.inboxservice.Overflowed;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
+import com.zachary.bifromq.type.Message;
+import com.zachary.bifromq.type.QoS;
+import com.zachary.bifromq.type.SubInfo;
+import com.zachary.bifromq.type.TopicMessage;
+import com.zachary.bifromq.type.TopicMessagePack;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 

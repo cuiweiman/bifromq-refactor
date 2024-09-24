@@ -1,6 +1,7 @@
 package com.zachary.bifromq.inbox.store.benchmark;
 
 import com.zachary.bifromq.inbox.storage.proto.InboxInsertReply;
+import com.zachary.bifromq.type.Message;
 import lombok.extern.slf4j.Slf4j;
 import org.openjdk.jmh.annotations.Scope;
 import org.openjdk.jmh.annotations.State;

@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object uri_ = "";
   /**
    * <pre>
-   * user provided uri of the CRDT
+   *副本 uri
    * </pre>
    *
    * <code>string uri = 1;</code>
@@ -71,7 +71,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * user provided uri of the CRDT
+   *副本 uri
    * </pre>
    *
    * <code>string uri = 1;</code>
@@ -96,7 +96,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.ByteString id_ = com.google.protobuf.ByteString.EMPTY;
   /**
    * <pre>
-   * global unique id of the CRDT replica
+   * 副本 id
    * </pre>
    *
    * <code>bytes id = 2;</code>
@@ -457,7 +457,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object uri_ = "";
     /**
      * <pre>
-     * user provided uri of the CRDT
+     *副本 uri
      * </pre>
      *
      * <code>string uri = 1;</code>
@@ -477,7 +477,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * user provided uri of the CRDT
+     *副本 uri
      * </pre>
      *
      * <code>string uri = 1;</code>
@@ -498,7 +498,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * user provided uri of the CRDT
+     *副本 uri
      * </pre>
      *
      * <code>string uri = 1;</code>
@@ -515,7 +515,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * user provided uri of the CRDT
+     *副本 uri
      * </pre>
      *
      * <code>string uri = 1;</code>
@@ -529,7 +529,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * user provided uri of the CRDT
+     *副本 uri
      * </pre>
      *
      * <code>string uri = 1;</code>
@@ -549,7 +549,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.ByteString id_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <pre>
-     * global unique id of the CRDT replica
+     * 副本 id
      * </pre>
      *
      * <code>bytes id = 2;</code>
@@ -561,7 +561,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * global unique id of the CRDT replica
+     * 副本 id
      * </pre>
      *
      * <code>bytes id = 2;</code>
@@ -577,7 +577,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * global unique id of the CRDT replica
+     * 副本 id
      * </pre>
      *
      * <code>bytes id = 2;</code>

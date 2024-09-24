@@ -9,7 +9,7 @@ public interface ReplicaOrBuilder extends
 
   /**
    * <pre>
-   * user provided uri of the CRDT
+   *副本 uri
    * </pre>
    *
    * <code>string uri = 1;</code>
@@ -18,7 +18,7 @@ public interface ReplicaOrBuilder extends
   java.lang.String getUri();
   /**
    * <pre>
-   * user provided uri of the CRDT
+   *副本 uri
    * </pre>
    *
    * <code>string uri = 1;</code>
@@ -29,7 +29,7 @@ public interface ReplicaOrBuilder extends
 
   /**
    * <pre>
-   * global unique id of the CRDT replica
+   * 副本 id
    * </pre>
    *
    * <code>bytes id = 2;</code>

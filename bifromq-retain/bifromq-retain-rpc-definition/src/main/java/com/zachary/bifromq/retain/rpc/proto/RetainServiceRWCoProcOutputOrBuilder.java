@@ -16,11 +16,11 @@ public interface RetainServiceRWCoProcOutputOrBuilder extends
    * <code>.retainservice.RetainCoProcReply retainReply = 1;</code>
    * @return The retainReply.
    */
-  RetainCoProcReply getRetainReply();
+  com.zachary.bifromq.retain.rpc.proto.RetainCoProcReply getRetainReply();
   /**
    * <code>.retainservice.RetainCoProcReply retainReply = 1;</code>
    */
-  RetainCoProcReplyOrBuilder getRetainReplyOrBuilder();
+  com.zachary.bifromq.retain.rpc.proto.RetainCoProcReplyOrBuilder getRetainReplyOrBuilder();
 
   /**
    * <code>.retainservice.GCReply gcReply = 2;</code>
@@ -31,11 +31,11 @@ public interface RetainServiceRWCoProcOutputOrBuilder extends
    * <code>.retainservice.GCReply gcReply = 2;</code>
    * @return The gcReply.
    */
-  GCReply getGcReply();
+  com.zachary.bifromq.retain.rpc.proto.GCReply getGcReply();
   /**
    * <code>.retainservice.GCReply gcReply = 2;</code>
    */
-  GCReplyOrBuilder getGcReplyOrBuilder();
+  com.zachary.bifromq.retain.rpc.proto.GCReplyOrBuilder getGcReplyOrBuilder();
 
-  public RetainServiceRWCoProcOutput.TypeCase getTypeCase();
+  public com.zachary.bifromq.retain.rpc.proto.RetainServiceRWCoProcOutput.TypeCase getTypeCase();
 }

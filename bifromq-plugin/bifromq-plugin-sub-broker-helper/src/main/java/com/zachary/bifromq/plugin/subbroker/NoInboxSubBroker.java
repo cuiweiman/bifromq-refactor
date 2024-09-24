@@ -1,5 +1,6 @@
 package com.zachary.bifromq.plugin.subbroker;
 
+import com.zachary.bifromq.type.SubInfo;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

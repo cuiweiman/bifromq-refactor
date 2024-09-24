@@ -22,7 +22,7 @@ public interface MatchCoProcReplyOrBuilder extends
    * <code>.retainservice.MatchCoProcReply.Result result = 2;</code>
    * @return The result.
    */
-  MatchCoProcReply.Result getResult();
+  com.zachary.bifromq.retain.rpc.proto.MatchCoProcReply.Result getResult();
 
   /**
    * <code>repeated .commontype.TopicMessage messages = 3;</code>

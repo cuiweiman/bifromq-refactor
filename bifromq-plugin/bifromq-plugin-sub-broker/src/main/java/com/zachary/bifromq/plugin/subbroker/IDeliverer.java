@@ -1,5 +1,7 @@
 package com.zachary.bifromq.plugin.subbroker;
 
+import com.zachary.bifromq.type.SubInfo;
+
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 

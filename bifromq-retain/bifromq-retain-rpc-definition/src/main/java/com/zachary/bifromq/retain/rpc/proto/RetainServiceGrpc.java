@@ -15,29 +15,29 @@ public final class RetainServiceGrpc {
   public static final String SERVICE_NAME = "retainservice.RetainService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<RetainRequest,
-          RetainReply> getRetainMethod;
+  private static volatile io.grpc.MethodDescriptor<com.zachary.bifromq.retain.rpc.proto.RetainRequest,
+      com.zachary.bifromq.retain.rpc.proto.RetainReply> getRetainMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "retain",
-      requestType = RetainRequest.class,
-      responseType = RetainReply.class,
+      requestType = com.zachary.bifromq.retain.rpc.proto.RetainRequest.class,
+      responseType = com.zachary.bifromq.retain.rpc.proto.RetainReply.class,
       methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
-  public static io.grpc.MethodDescriptor<RetainRequest,
-          RetainReply> getRetainMethod() {
-    io.grpc.MethodDescriptor<RetainRequest, RetainReply> getRetainMethod;
+  public static io.grpc.MethodDescriptor<com.zachary.bifromq.retain.rpc.proto.RetainRequest,
+      com.zachary.bifromq.retain.rpc.proto.RetainReply> getRetainMethod() {
+    io.grpc.MethodDescriptor<com.zachary.bifromq.retain.rpc.proto.RetainRequest, com.zachary.bifromq.retain.rpc.proto.RetainReply> getRetainMethod;
     if ((getRetainMethod = RetainServiceGrpc.getRetainMethod) == null) {
       synchronized (RetainServiceGrpc.class) {
         if ((getRetainMethod = RetainServiceGrpc.getRetainMethod) == null) {
           RetainServiceGrpc.getRetainMethod = getRetainMethod =
-              io.grpc.MethodDescriptor.<RetainRequest, RetainReply>newBuilder()
+              io.grpc.MethodDescriptor.<com.zachary.bifromq.retain.rpc.proto.RetainRequest, com.zachary.bifromq.retain.rpc.proto.RetainReply>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "retain"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  RetainRequest.getDefaultInstance()))
+                  com.zachary.bifromq.retain.rpc.proto.RetainRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  RetainReply.getDefaultInstance()))
+                  com.zachary.bifromq.retain.rpc.proto.RetainReply.getDefaultInstance()))
               .setSchemaDescriptor(new RetainServiceMethodDescriptorSupplier("retain"))
               .build();
         }
@@ -46,29 +46,29 @@ public final class RetainServiceGrpc {
     return getRetainMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<MatchRequest,
-          MatchReply> getMatchMethod;
+  private static volatile io.grpc.MethodDescriptor<com.zachary.bifromq.retain.rpc.proto.MatchRequest,
+      com.zachary.bifromq.retain.rpc.proto.MatchReply> getMatchMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "match",
-      requestType = MatchRequest.class,
-      responseType = MatchReply.class,
+      requestType = com.zachary.bifromq.retain.rpc.proto.MatchRequest.class,
+      responseType = com.zachary.bifromq.retain.rpc.proto.MatchReply.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<MatchRequest,
-          MatchReply> getMatchMethod() {
-    io.grpc.MethodDescriptor<MatchRequest, MatchReply> getMatchMethod;
+  public static io.grpc.MethodDescriptor<com.zachary.bifromq.retain.rpc.proto.MatchRequest,
+      com.zachary.bifromq.retain.rpc.proto.MatchReply> getMatchMethod() {
+    io.grpc.MethodDescriptor<com.zachary.bifromq.retain.rpc.proto.MatchRequest, com.zachary.bifromq.retain.rpc.proto.MatchReply> getMatchMethod;
     if ((getMatchMethod = RetainServiceGrpc.getMatchMethod) == null) {
       synchronized (RetainServiceGrpc.class) {
         if ((getMatchMethod = RetainServiceGrpc.getMatchMethod) == null) {
           RetainServiceGrpc.getMatchMethod = getMatchMethod =
-              io.grpc.MethodDescriptor.<MatchRequest, MatchReply>newBuilder()
+              io.grpc.MethodDescriptor.<com.zachary.bifromq.retain.rpc.proto.MatchRequest, com.zachary.bifromq.retain.rpc.proto.MatchReply>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "match"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  MatchRequest.getDefaultInstance()))
+                  com.zachary.bifromq.retain.rpc.proto.MatchRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  MatchReply.getDefaultInstance()))
+                  com.zachary.bifromq.retain.rpc.proto.MatchReply.getDefaultInstance()))
               .setSchemaDescriptor(new RetainServiceMethodDescriptorSupplier("match"))
               .build();
         }
@@ -127,15 +127,15 @@ public final class RetainServiceGrpc {
 
     /**
      */
-    public io.grpc.stub.StreamObserver<RetainRequest> retain(
-        io.grpc.stub.StreamObserver<RetainReply> responseObserver) {
+    public io.grpc.stub.StreamObserver<com.zachary.bifromq.retain.rpc.proto.RetainRequest> retain(
+        io.grpc.stub.StreamObserver<com.zachary.bifromq.retain.rpc.proto.RetainReply> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getRetainMethod(), responseObserver);
     }
 
     /**
      */
-    public void match(MatchRequest request,
-                      io.grpc.stub.StreamObserver<MatchReply> responseObserver) {
+    public void match(com.zachary.bifromq.retain.rpc.proto.MatchRequest request,
+        io.grpc.stub.StreamObserver<com.zachary.bifromq.retain.rpc.proto.MatchReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMatchMethod(), responseObserver);
     }
 
@@ -145,15 +145,15 @@ public final class RetainServiceGrpc {
             getRetainMethod(),
             io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
               new MethodHandlers<
-                      RetainRequest,
-                      RetainReply>(
+                com.zachary.bifromq.retain.rpc.proto.RetainRequest,
+                com.zachary.bifromq.retain.rpc.proto.RetainReply>(
                   this, METHODID_RETAIN)))
           .addMethod(
             getMatchMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                      MatchRequest,
-                      MatchReply>(
+                com.zachary.bifromq.retain.rpc.proto.MatchRequest,
+                com.zachary.bifromq.retain.rpc.proto.MatchReply>(
                   this, METHODID_MATCH)))
           .build();
     }
@@ -175,16 +175,16 @@ public final class RetainServiceGrpc {
 
     /**
      */
-    public io.grpc.stub.StreamObserver<RetainRequest> retain(
-        io.grpc.stub.StreamObserver<RetainReply> responseObserver) {
+    public io.grpc.stub.StreamObserver<com.zachary.bifromq.retain.rpc.proto.RetainRequest> retain(
+        io.grpc.stub.StreamObserver<com.zachary.bifromq.retain.rpc.proto.RetainReply> responseObserver) {
       return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
           getChannel().newCall(getRetainMethod(), getCallOptions()), responseObserver);
     }
 
     /**
      */
-    public void match(MatchRequest request,
-                      io.grpc.stub.StreamObserver<MatchReply> responseObserver) {
+    public void match(com.zachary.bifromq.retain.rpc.proto.MatchRequest request,
+        io.grpc.stub.StreamObserver<com.zachary.bifromq.retain.rpc.proto.MatchReply> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMatchMethod(), getCallOptions()), request, responseObserver);
     }
@@ -206,7 +206,7 @@ public final class RetainServiceGrpc {
 
     /**
      */
-    public MatchReply match(MatchRequest request) {
+    public com.zachary.bifromq.retain.rpc.proto.MatchReply match(com.zachary.bifromq.retain.rpc.proto.MatchRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMatchMethod(), getCallOptions(), request);
     }
@@ -228,8 +228,8 @@ public final class RetainServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<MatchReply> match(
-        MatchRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.zachary.bifromq.retain.rpc.proto.MatchReply> match(
+        com.zachary.bifromq.retain.rpc.proto.MatchRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMatchMethod(), getCallOptions()), request);
     }
@@ -256,8 +256,8 @@ public final class RetainServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_MATCH:
-          serviceImpl.match((MatchRequest) request,
-              (io.grpc.stub.StreamObserver<MatchReply>) responseObserver);
+          serviceImpl.match((com.zachary.bifromq.retain.rpc.proto.MatchRequest) request,
+              (io.grpc.stub.StreamObserver<com.zachary.bifromq.retain.rpc.proto.MatchReply>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -271,7 +271,7 @@ public final class RetainServiceGrpc {
       switch (methodId) {
         case METHODID_RETAIN:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.retain(
-              (io.grpc.stub.StreamObserver<RetainReply>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.zachary.bifromq.retain.rpc.proto.RetainReply>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -284,7 +284,7 @@ public final class RetainServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return RetainServiceProtos.getDescriptor();
+      return com.zachary.bifromq.retain.rpc.proto.RetainServiceProtos.getDescriptor();
     }
 
     @java.lang.Override

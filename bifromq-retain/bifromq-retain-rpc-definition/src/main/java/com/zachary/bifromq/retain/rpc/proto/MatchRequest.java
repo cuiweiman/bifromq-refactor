@@ -33,15 +33,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return RetainServiceProtos.internal_static_retainservice_MatchRequest_descriptor;
+    return com.zachary.bifromq.retain.rpc.proto.RetainServiceProtos.internal_static_retainservice_MatchRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return RetainServiceProtos.internal_static_retainservice_MatchRequest_fieldAccessorTable
+    return com.zachary.bifromq.retain.rpc.proto.RetainServiceProtos.internal_static_retainservice_MatchRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            MatchRequest.class, MatchRequest.Builder.class);
+            com.zachary.bifromq.retain.rpc.proto.MatchRequest.class, com.zachary.bifromq.retain.rpc.proto.MatchRequest.Builder.class);
   }
 
   public static final int REQID_FIELD_NUMBER = 1;
@@ -158,10 +158,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof MatchRequest)) {
+    if (!(obj instanceof com.zachary.bifromq.retain.rpc.proto.MatchRequest)) {
       return super.equals(obj);
     }
-    MatchRequest other = (MatchRequest) obj;
+    com.zachary.bifromq.retain.rpc.proto.MatchRequest other = (com.zachary.bifromq.retain.rpc.proto.MatchRequest) obj;
 
     if (getReqId()
         != other.getReqId()) return false;
@@ -192,69 +192,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static MatchRequest parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.MatchRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static MatchRequest parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.MatchRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static MatchRequest parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.MatchRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static MatchRequest parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.MatchRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static MatchRequest parseFrom(byte[] data)
+  public static com.zachary.bifromq.retain.rpc.proto.MatchRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static MatchRequest parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.MatchRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static MatchRequest parseFrom(java.io.InputStream input)
+  public static com.zachary.bifromq.retain.rpc.proto.MatchRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static MatchRequest parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.MatchRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static MatchRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.zachary.bifromq.retain.rpc.proto.MatchRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static MatchRequest parseDelimitedFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.MatchRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static MatchRequest parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.MatchRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static MatchRequest parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.MatchRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -267,7 +267,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(MatchRequest prototype) {
+  public static Builder newBuilder(com.zachary.bifromq.retain.rpc.proto.MatchRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -288,18 +288,18 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:retainservice.MatchRequest)
-          MatchRequestOrBuilder {
+      com.zachary.bifromq.retain.rpc.proto.MatchRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return RetainServiceProtos.internal_static_retainservice_MatchRequest_descriptor;
+      return com.zachary.bifromq.retain.rpc.proto.RetainServiceProtos.internal_static_retainservice_MatchRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return RetainServiceProtos.internal_static_retainservice_MatchRequest_fieldAccessorTable
+      return com.zachary.bifromq.retain.rpc.proto.RetainServiceProtos.internal_static_retainservice_MatchRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              MatchRequest.class, MatchRequest.Builder.class);
+              com.zachary.bifromq.retain.rpc.proto.MatchRequest.class, com.zachary.bifromq.retain.rpc.proto.MatchRequest.Builder.class);
     }
 
     // Construct using com.zachary.bifromq.retain.rpc.proto.MatchRequest.newBuilder()
@@ -325,17 +325,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return RetainServiceProtos.internal_static_retainservice_MatchRequest_descriptor;
+      return com.zachary.bifromq.retain.rpc.proto.RetainServiceProtos.internal_static_retainservice_MatchRequest_descriptor;
     }
 
     @java.lang.Override
-    public MatchRequest getDefaultInstanceForType() {
-      return MatchRequest.getDefaultInstance();
+    public com.zachary.bifromq.retain.rpc.proto.MatchRequest getDefaultInstanceForType() {
+      return com.zachary.bifromq.retain.rpc.proto.MatchRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public MatchRequest build() {
-      MatchRequest result = buildPartial();
+    public com.zachary.bifromq.retain.rpc.proto.MatchRequest build() {
+      com.zachary.bifromq.retain.rpc.proto.MatchRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -343,14 +343,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public MatchRequest buildPartial() {
-      MatchRequest result = new MatchRequest(this);
+    public com.zachary.bifromq.retain.rpc.proto.MatchRequest buildPartial() {
+      com.zachary.bifromq.retain.rpc.proto.MatchRequest result = new com.zachary.bifromq.retain.rpc.proto.MatchRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(MatchRequest result) {
+    private void buildPartial0(com.zachary.bifromq.retain.rpc.proto.MatchRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.reqId_ = reqId_;
@@ -397,16 +397,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof MatchRequest) {
-        return mergeFrom((MatchRequest)other);
+      if (other instanceof com.zachary.bifromq.retain.rpc.proto.MatchRequest) {
+        return mergeFrom((com.zachary.bifromq.retain.rpc.proto.MatchRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(MatchRequest other) {
-      if (other == MatchRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.zachary.bifromq.retain.rpc.proto.MatchRequest other) {
+      if (other == com.zachary.bifromq.retain.rpc.proto.MatchRequest.getDefaultInstance()) return this;
       if (other.getReqId() != 0L) {
         setReqId(other.getReqId());
       }
@@ -628,12 +628,12 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:retainservice.MatchRequest)
-  private static final MatchRequest DEFAULT_INSTANCE;
+  private static final com.zachary.bifromq.retain.rpc.proto.MatchRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new MatchRequest();
+    DEFAULT_INSTANCE = new com.zachary.bifromq.retain.rpc.proto.MatchRequest();
   }
 
-  public static MatchRequest getDefaultInstance() {
+  public static com.zachary.bifromq.retain.rpc.proto.MatchRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -669,7 +669,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public MatchRequest getDefaultInstanceForType() {
+  public com.zachary.bifromq.retain.rpc.proto.MatchRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

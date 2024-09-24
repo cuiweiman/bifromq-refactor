@@ -9,7 +9,7 @@ public interface ReplacementOrBuilder extends
 
   /**
    * <pre>
-   * dots in replacing order
+   * repeated 可重复，表示数组
    * </pre>
    *
    * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -18,7 +18,7 @@ public interface ReplacementOrBuilder extends
       getDotsList();
   /**
    * <pre>
-   * dots in replacing order
+   * repeated 可重复，表示数组
    * </pre>
    *
    * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -26,7 +26,7 @@ public interface ReplacementOrBuilder extends
   com.zachary.bifromq.basecrdt.proto.Dot getDots(int index);
   /**
    * <pre>
-   * dots in replacing order
+   * repeated 可重复，表示数组
    * </pre>
    *
    * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -34,7 +34,7 @@ public interface ReplacementOrBuilder extends
   int getDotsCount();
   /**
    * <pre>
-   * dots in replacing order
+   * repeated 可重复，表示数组
    * </pre>
    *
    * <code>repeated .basecrdt.Dot dots = 1;</code>
@@ -43,7 +43,7 @@ public interface ReplacementOrBuilder extends
       getDotsOrBuilderList();
   /**
    * <pre>
-   * dots in replacing order
+   * repeated 可重复，表示数组
    * </pre>
    *
    * <code>repeated .basecrdt.Dot dots = 1;</code>

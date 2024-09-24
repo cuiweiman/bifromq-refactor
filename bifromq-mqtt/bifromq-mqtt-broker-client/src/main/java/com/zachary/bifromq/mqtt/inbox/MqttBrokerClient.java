@@ -12,6 +12,7 @@ import com.zachary.bifromq.plugin.subbroker.DeliveryResult;
 import com.zachary.bifromq.plugin.subbroker.IDeliverer;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Iterables;
+import com.zachary.bifromq.type.SubInfo;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 

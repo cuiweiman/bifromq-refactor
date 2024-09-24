@@ -6,6 +6,8 @@ import com.zachary.bifromq.mqtt.inbox.rpc.proto.WriteReply;
 import com.zachary.bifromq.mqtt.inbox.rpc.proto.WriteRequest;
 import com.zachary.bifromq.mqtt.inbox.rpc.proto.WriteResult;
 import com.zachary.bifromq.mqtt.session.v3.IMQTT3TransientSession;
+import com.zachary.bifromq.type.SubInfo;
+import com.zachary.bifromq.type.TopicMessagePack;
 import io.grpc.stub.StreamObserver;
 import lombok.extern.slf4j.Slf4j;
 

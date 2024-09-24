@@ -1,5 +1,7 @@
 package com.zachary.bifromq.dist.worker.scheduler;
 
+import com.zachary.bifromq.type.TopicMessagePack;
+
 /**
  * Using the wrapper as the map key instead of using TopicMessagePack directly to prevent heavy hashcode calculation
  */

@@ -32,15 +32,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return RetainCoProcProtos.internal_static_retainservice_GCReply_descriptor;
+    return com.zachary.bifromq.retain.rpc.proto.RetainCoProcProtos.internal_static_retainservice_GCReply_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return RetainCoProcProtos.internal_static_retainservice_GCReply_fieldAccessorTable
+    return com.zachary.bifromq.retain.rpc.proto.RetainCoProcProtos.internal_static_retainservice_GCReply_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            GCReply.class, GCReply.Builder.class);
+            com.zachary.bifromq.retain.rpc.proto.GCReply.class, com.zachary.bifromq.retain.rpc.proto.GCReply.Builder.class);
   }
 
   public static final int REQID_FIELD_NUMBER = 1;
@@ -94,10 +94,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof GCReply)) {
+    if (!(obj instanceof com.zachary.bifromq.retain.rpc.proto.GCReply)) {
       return super.equals(obj);
     }
-    GCReply other = (GCReply) obj;
+    com.zachary.bifromq.retain.rpc.proto.GCReply other = (com.zachary.bifromq.retain.rpc.proto.GCReply) obj;
 
     if (getReqId()
         != other.getReqId()) return false;
@@ -120,69 +120,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static GCReply parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.GCReply parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static GCReply parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.GCReply parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static GCReply parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.GCReply parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static GCReply parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.GCReply parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static GCReply parseFrom(byte[] data)
+  public static com.zachary.bifromq.retain.rpc.proto.GCReply parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static GCReply parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.GCReply parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static GCReply parseFrom(java.io.InputStream input)
+  public static com.zachary.bifromq.retain.rpc.proto.GCReply parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static GCReply parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.GCReply parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static GCReply parseDelimitedFrom(java.io.InputStream input)
+  public static com.zachary.bifromq.retain.rpc.proto.GCReply parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static GCReply parseDelimitedFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.GCReply parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static GCReply parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.GCReply parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static GCReply parseFrom(
+  public static com.zachary.bifromq.retain.rpc.proto.GCReply parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -195,7 +195,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(GCReply prototype) {
+  public static Builder newBuilder(com.zachary.bifromq.retain.rpc.proto.GCReply prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -216,18 +216,18 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:retainservice.GCReply)
-          GCReplyOrBuilder {
+      com.zachary.bifromq.retain.rpc.proto.GCReplyOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return RetainCoProcProtos.internal_static_retainservice_GCReply_descriptor;
+      return com.zachary.bifromq.retain.rpc.proto.RetainCoProcProtos.internal_static_retainservice_GCReply_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return RetainCoProcProtos.internal_static_retainservice_GCReply_fieldAccessorTable
+      return com.zachary.bifromq.retain.rpc.proto.RetainCoProcProtos.internal_static_retainservice_GCReply_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              GCReply.class, GCReply.Builder.class);
+              com.zachary.bifromq.retain.rpc.proto.GCReply.class, com.zachary.bifromq.retain.rpc.proto.GCReply.Builder.class);
     }
 
     // Construct using com.zachary.bifromq.retain.rpc.proto.GCReply.newBuilder()
@@ -251,17 +251,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return RetainCoProcProtos.internal_static_retainservice_GCReply_descriptor;
+      return com.zachary.bifromq.retain.rpc.proto.RetainCoProcProtos.internal_static_retainservice_GCReply_descriptor;
     }
 
     @java.lang.Override
-    public GCReply getDefaultInstanceForType() {
-      return GCReply.getDefaultInstance();
+    public com.zachary.bifromq.retain.rpc.proto.GCReply getDefaultInstanceForType() {
+      return com.zachary.bifromq.retain.rpc.proto.GCReply.getDefaultInstance();
     }
 
     @java.lang.Override
-    public GCReply build() {
-      GCReply result = buildPartial();
+    public com.zachary.bifromq.retain.rpc.proto.GCReply build() {
+      com.zachary.bifromq.retain.rpc.proto.GCReply result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -269,14 +269,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public GCReply buildPartial() {
-      GCReply result = new GCReply(this);
+    public com.zachary.bifromq.retain.rpc.proto.GCReply buildPartial() {
+      com.zachary.bifromq.retain.rpc.proto.GCReply result = new com.zachary.bifromq.retain.rpc.proto.GCReply(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(GCReply result) {
+    private void buildPartial0(com.zachary.bifromq.retain.rpc.proto.GCReply result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.reqId_ = reqId_;
@@ -317,16 +317,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof GCReply) {
-        return mergeFrom((GCReply)other);
+      if (other instanceof com.zachary.bifromq.retain.rpc.proto.GCReply) {
+        return mergeFrom((com.zachary.bifromq.retain.rpc.proto.GCReply)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(GCReply other) {
-      if (other == GCReply.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.zachary.bifromq.retain.rpc.proto.GCReply other) {
+      if (other == com.zachary.bifromq.retain.rpc.proto.GCReply.getDefaultInstance()) return this;
       if (other.getReqId() != 0L) {
         setReqId(other.getReqId());
       }
@@ -426,12 +426,12 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:retainservice.GCReply)
-  private static final GCReply DEFAULT_INSTANCE;
+  private static final com.zachary.bifromq.retain.rpc.proto.GCReply DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new GCReply();
+    DEFAULT_INSTANCE = new com.zachary.bifromq.retain.rpc.proto.GCReply();
   }
 
-  public static GCReply getDefaultInstance() {
+  public static com.zachary.bifromq.retain.rpc.proto.GCReply getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -467,7 +467,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public GCReply getDefaultInstanceForType() {
+  public com.zachary.bifromq.retain.rpc.proto.GCReply getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -4,6 +4,11 @@
 package com.zachary.bifromq.basecrdt.proto;
 
 /**
+ * <pre>
+ **
+ *oneof 定义多个字段，但只能选择一个进行赋值的结构，设置了其中一个成员，其他成员将被自动清除。
+ * </pre>
+ *
  * Protobuf type {@code basecrdt.StateLattice}
  */
 public final class StateLattice extends
@@ -378,6 +383,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   **
+   *oneof 定义多个字段，但只能选择一个进行赋值的结构，设置了其中一个成员，其他成员将被自动清除。
+   * </pre>
+   *
    * Protobuf type {@code basecrdt.StateLattice}
    */
   public static final class Builder extends

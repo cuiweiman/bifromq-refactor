@@ -15,7 +15,7 @@ public interface AckMessageOrBuilder extends
 
   /**
    * <pre>
-   * the index of covered lattice events
+   * 覆盖格点事件的索引
    * </pre>
    *
    * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -24,7 +24,7 @@ public interface AckMessageOrBuilder extends
       getLatticeEventsList();
   /**
    * <pre>
-   * the index of covered lattice events
+   * 覆盖格点事件的索引
    * </pre>
    *
    * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -32,7 +32,7 @@ public interface AckMessageOrBuilder extends
   com.zachary.bifromq.basecrdt.store.proto.EventIndex getLatticeEvents(int index);
   /**
    * <pre>
-   * the index of covered lattice events
+   * 覆盖格点事件的索引
    * </pre>
    *
    * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -40,7 +40,7 @@ public interface AckMessageOrBuilder extends
   int getLatticeEventsCount();
   /**
    * <pre>
-   * the index of covered lattice events
+   * 覆盖格点事件的索引
    * </pre>
    *
    * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -49,7 +49,7 @@ public interface AckMessageOrBuilder extends
       getLatticeEventsOrBuilderList();
   /**
    * <pre>
-   * the index of covered lattice events
+   * 覆盖格点事件的索引
    * </pre>
    *
    * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -59,7 +59,7 @@ public interface AckMessageOrBuilder extends
 
   /**
    * <pre>
-   * the index of covered history events
+   * 涵盖的历史事件索引
    * </pre>
    *
    * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -68,7 +68,7 @@ public interface AckMessageOrBuilder extends
       getHistoryEventsList();
   /**
    * <pre>
-   * the index of covered history events
+   * 涵盖的历史事件索引
    * </pre>
    *
    * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -76,7 +76,7 @@ public interface AckMessageOrBuilder extends
   com.zachary.bifromq.basecrdt.store.proto.EventIndex getHistoryEvents(int index);
   /**
    * <pre>
-   * the index of covered history events
+   * 涵盖的历史事件索引
    * </pre>
    *
    * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -84,7 +84,7 @@ public interface AckMessageOrBuilder extends
   int getHistoryEventsCount();
   /**
    * <pre>
-   * the index of covered history events
+   * 涵盖的历史事件索引
    * </pre>
    *
    * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -93,7 +93,7 @@ public interface AckMessageOrBuilder extends
       getHistoryEventsOrBuilderList();
   /**
    * <pre>
-   * the index of covered history events
+   * 涵盖的历史事件索引
    * </pre>
    *
    * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>

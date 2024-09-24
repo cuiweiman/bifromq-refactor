@@ -1,6 +1,7 @@
 package com.zachary.bifromq.dist.entity;
 
 import com.google.protobuf.ByteString;
+import com.zachary.bifromq.type.QoS;
 import lombok.EqualsAndHashCode;
 
 import java.util.List;

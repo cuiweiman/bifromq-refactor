@@ -22,5 +22,5 @@ public interface RetainCoProcReplyOrBuilder extends
    * <code>.retainservice.RetainCoProcReply.Result result = 2;</code>
    * @return The result.
    */
-  RetainCoProcReply.Result getResult();
+  com.zachary.bifromq.retain.rpc.proto.RetainCoProcReply.Result getResult();
 }

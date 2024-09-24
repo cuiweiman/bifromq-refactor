@@ -4,6 +4,10 @@
 package com.zachary.bifromq.basecrdt.store.proto;
 
 /**
+ * <pre>
+ * 响应
+ * </pre>
+ *
  * Protobuf type {@code basecrdt.AckMessage}
  */
 public final class AckMessage extends
@@ -61,7 +65,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.zachary.bifromq.basecrdt.store.proto.EventIndex> latticeEvents_;
   /**
    * <pre>
-   * the index of covered lattice events
+   * 覆盖格点事件的索引
    * </pre>
    *
    * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -72,7 +76,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the index of covered lattice events
+   * 覆盖格点事件的索引
    * </pre>
    *
    * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -84,7 +88,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the index of covered lattice events
+   * 覆盖格点事件的索引
    * </pre>
    *
    * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -95,7 +99,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the index of covered lattice events
+   * 覆盖格点事件的索引
    * </pre>
    *
    * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -106,7 +110,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the index of covered lattice events
+   * 覆盖格点事件的索引
    * </pre>
    *
    * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -122,7 +126,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.zachary.bifromq.basecrdt.store.proto.EventIndex> historyEvents_;
   /**
    * <pre>
-   * the index of covered history events
+   * 涵盖的历史事件索引
    * </pre>
    *
    * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -133,7 +137,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the index of covered history events
+   * 涵盖的历史事件索引
    * </pre>
    *
    * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -145,7 +149,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the index of covered history events
+   * 涵盖的历史事件索引
    * </pre>
    *
    * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -156,7 +160,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the index of covered history events
+   * 涵盖的历史事件索引
    * </pre>
    *
    * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -167,7 +171,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the index of covered history events
+   * 涵盖的历史事件索引
    * </pre>
    *
    * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -361,6 +365,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * 响应
+   * </pre>
+   *
    * Protobuf type {@code basecrdt.AckMessage}
    */
   public static final class Builder extends
@@ -688,7 +696,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * the index of covered lattice events
+     * 覆盖格点事件的索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -702,7 +710,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered lattice events
+     * 覆盖格点事件的索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -716,7 +724,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered lattice events
+     * 覆盖格点事件的索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -730,7 +738,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered lattice events
+     * 覆盖格点事件的索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -751,7 +759,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered lattice events
+     * 覆盖格点事件的索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -769,7 +777,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered lattice events
+     * 覆盖格点事件的索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -789,7 +797,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered lattice events
+     * 覆盖格点事件的索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -810,7 +818,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered lattice events
+     * 覆盖格点事件的索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -828,7 +836,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered lattice events
+     * 覆盖格点事件的索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -846,7 +854,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered lattice events
+     * 覆盖格点事件的索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -865,7 +873,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered lattice events
+     * 覆盖格点事件的索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -882,7 +890,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered lattice events
+     * 覆盖格点事件的索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -899,7 +907,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered lattice events
+     * 覆盖格点事件的索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -910,7 +918,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered lattice events
+     * 覆盖格点事件的索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -924,7 +932,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered lattice events
+     * 覆盖格点事件的索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -939,7 +947,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered lattice events
+     * 覆盖格点事件的索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -950,7 +958,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered lattice events
+     * 覆盖格点事件的索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -962,7 +970,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered lattice events
+     * 覆盖格点事件的索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex latticeEvents = 2;</code>
@@ -1000,7 +1008,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * the index of covered history events
+     * 涵盖的历史事件索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -1014,7 +1022,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered history events
+     * 涵盖的历史事件索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -1028,7 +1036,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered history events
+     * 涵盖的历史事件索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -1042,7 +1050,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered history events
+     * 涵盖的历史事件索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -1063,7 +1071,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered history events
+     * 涵盖的历史事件索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -1081,7 +1089,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered history events
+     * 涵盖的历史事件索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -1101,7 +1109,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered history events
+     * 涵盖的历史事件索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -1122,7 +1130,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered history events
+     * 涵盖的历史事件索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -1140,7 +1148,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered history events
+     * 涵盖的历史事件索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -1158,7 +1166,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered history events
+     * 涵盖的历史事件索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -1177,7 +1185,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered history events
+     * 涵盖的历史事件索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -1194,7 +1202,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered history events
+     * 涵盖的历史事件索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -1211,7 +1219,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered history events
+     * 涵盖的历史事件索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -1222,7 +1230,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered history events
+     * 涵盖的历史事件索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -1236,7 +1244,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered history events
+     * 涵盖的历史事件索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -1251,7 +1259,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered history events
+     * 涵盖的历史事件索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -1262,7 +1270,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered history events
+     * 涵盖的历史事件索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>
@@ -1274,7 +1282,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the index of covered history events
+     * 涵盖的历史事件索引
      * </pre>
      *
      * <code>repeated .basecrdt.EventIndex historyEvents = 3;</code>

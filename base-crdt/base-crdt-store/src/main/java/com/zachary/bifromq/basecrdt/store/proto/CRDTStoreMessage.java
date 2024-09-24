@@ -4,6 +4,10 @@
 package com.zachary.bifromq.basecrdt.store.proto;
 
 /**
+ * <pre>
+ * CRDT 消息存储体
+ * </pre>
+ *
  * Protobuf type {@code basecrdt.CRDTStoreMessage}
  */
 public final class CRDTStoreMessage extends
@@ -323,6 +327,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * CRDT 消息存储体
+   * </pre>
+   *
    * Protobuf type {@code basecrdt.CRDTStoreMessage}
    */
   public static final class Builder extends

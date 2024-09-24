@@ -21,6 +21,8 @@ import com.github.benmanes.caffeine.cache.Weigher;
 import com.google.common.collect.Maps;
 import com.google.common.util.concurrent.MoreExecutors;
 import com.google.protobuf.ByteString;
+import com.zachary.bifromq.type.ClientInfo;
+import com.zachary.bifromq.type.TopicMessage;
 import io.micrometer.core.instrument.Metrics;
 import io.micrometer.core.instrument.Tags;
 import io.micrometer.core.instrument.Timer;

@@ -3,6 +3,7 @@ package com.zachary.bifromq.inbox.util;
 import com.zachary.bifromq.inbox.storage.proto.InboxMessage;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.UnsafeByteOperations;
+import com.zachary.bifromq.type.TopicMessage;
 
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;

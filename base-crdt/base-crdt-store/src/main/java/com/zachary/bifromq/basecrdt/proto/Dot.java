@@ -70,6 +70,10 @@ private static final long serialVersionUID = 0L;
   public static final int LATTICE_FIELD_NUMBER = 3;
   private com.zachary.bifromq.basecrdt.proto.StateLattice lattice_;
   /**
+   * <pre>
+   * optional 标识字段是可选的，proto3 移除了(所有字段都是可选的)
+   * </pre>
+   *
    * <code>optional .basecrdt.StateLattice lattice = 3;</code>
    * @return Whether the lattice field is set.
    */
@@ -78,6 +82,10 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
+   * <pre>
+   * optional 标识字段是可选的，proto3 移除了(所有字段都是可选的)
+   * </pre>
+   *
    * <code>optional .basecrdt.StateLattice lattice = 3;</code>
    * @return The lattice.
    */
@@ -86,6 +94,10 @@ private static final long serialVersionUID = 0L;
     return lattice_ == null ? com.zachary.bifromq.basecrdt.proto.StateLattice.getDefaultInstance() : lattice_;
   }
   /**
+   * <pre>
+   * optional 标识字段是可选的，proto3 移除了(所有字段都是可选的)
+   * </pre>
+   *
    * <code>optional .basecrdt.StateLattice lattice = 3;</code>
    */
   @java.lang.Override
@@ -553,6 +565,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.zachary.bifromq.basecrdt.proto.StateLattice, com.zachary.bifromq.basecrdt.proto.StateLattice.Builder, com.zachary.bifromq.basecrdt.proto.StateLatticeOrBuilder> latticeBuilder_;
     /**
+     * <pre>
+     * optional 标识字段是可选的，proto3 移除了(所有字段都是可选的)
+     * </pre>
+     *
      * <code>optional .basecrdt.StateLattice lattice = 3;</code>
      * @return Whether the lattice field is set.
      */
@@ -560,6 +576,10 @@ private static final long serialVersionUID = 0L;
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
+     * <pre>
+     * optional 标识字段是可选的，proto3 移除了(所有字段都是可选的)
+     * </pre>
+     *
      * <code>optional .basecrdt.StateLattice lattice = 3;</code>
      * @return The lattice.
      */
@@ -571,6 +591,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * optional 标识字段是可选的，proto3 移除了(所有字段都是可选的)
+     * </pre>
+     *
      * <code>optional .basecrdt.StateLattice lattice = 3;</code>
      */
     public Builder setLattice(com.zachary.bifromq.basecrdt.proto.StateLattice value) {
@@ -587,6 +611,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * optional 标识字段是可选的，proto3 移除了(所有字段都是可选的)
+     * </pre>
+     *
      * <code>optional .basecrdt.StateLattice lattice = 3;</code>
      */
     public Builder setLattice(
@@ -601,6 +629,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * optional 标识字段是可选的，proto3 移除了(所有字段都是可选的)
+     * </pre>
+     *
      * <code>optional .basecrdt.StateLattice lattice = 3;</code>
      */
     public Builder mergeLattice(com.zachary.bifromq.basecrdt.proto.StateLattice value) {
@@ -620,6 +652,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * optional 标识字段是可选的，proto3 移除了(所有字段都是可选的)
+     * </pre>
+     *
      * <code>optional .basecrdt.StateLattice lattice = 3;</code>
      */
     public Builder clearLattice() {
@@ -633,6 +669,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * optional 标识字段是可选的，proto3 移除了(所有字段都是可选的)
+     * </pre>
+     *
      * <code>optional .basecrdt.StateLattice lattice = 3;</code>
      */
     public com.zachary.bifromq.basecrdt.proto.StateLattice.Builder getLatticeBuilder() {
@@ -641,6 +681,10 @@ private static final long serialVersionUID = 0L;
       return getLatticeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * optional 标识字段是可选的，proto3 移除了(所有字段都是可选的)
+     * </pre>
+     *
      * <code>optional .basecrdt.StateLattice lattice = 3;</code>
      */
     public com.zachary.bifromq.basecrdt.proto.StateLatticeOrBuilder getLatticeOrBuilder() {
@@ -652,6 +696,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * optional 标识字段是可选的，proto3 移除了(所有字段都是可选的)
+     * </pre>
+     *
      * <code>optional .basecrdt.StateLattice lattice = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

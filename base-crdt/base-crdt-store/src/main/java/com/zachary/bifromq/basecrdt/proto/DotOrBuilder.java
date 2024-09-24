@@ -20,16 +20,28 @@ public interface DotOrBuilder extends
   long getVer();
 
   /**
+   * <pre>
+   * optional 标识字段是可选的，proto3 移除了(所有字段都是可选的)
+   * </pre>
+   *
    * <code>optional .basecrdt.StateLattice lattice = 3;</code>
    * @return Whether the lattice field is set.
    */
   boolean hasLattice();
   /**
+   * <pre>
+   * optional 标识字段是可选的，proto3 移除了(所有字段都是可选的)
+   * </pre>
+   *
    * <code>optional .basecrdt.StateLattice lattice = 3;</code>
    * @return The lattice.
    */
   com.zachary.bifromq.basecrdt.proto.StateLattice getLattice();
   /**
+   * <pre>
+   * optional 标识字段是可选的，proto3 移除了(所有字段都是可选的)
+   * </pre>
+   *
    * <code>optional .basecrdt.StateLattice lattice = 3;</code>
    */
   com.zachary.bifromq.basecrdt.proto.StateLatticeOrBuilder getLatticeOrBuilder();

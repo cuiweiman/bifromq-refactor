@@ -23,6 +23,8 @@ import com.zachary.bifromq.retain.utils.KeyUtil;
 import com.zachary.bifromq.retain.utils.TopicUtil;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
+import com.zachary.bifromq.type.Message;
+import com.zachary.bifromq.type.TopicMessage;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
