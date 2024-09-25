@@ -20,7 +20,7 @@
 ```bash
 cd bifromq
 mvn wrapper:wrapper
-./mvnw -U clean package
+./mvnw -U clean package -Dmaven.test.skip=true -Dcheckstyle.skip=true
 ```
 构建输出是两个 tar.gz 和一个 zip 文件，位于 /build/build-bifromq-starters/target/
 

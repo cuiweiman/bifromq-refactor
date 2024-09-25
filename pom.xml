@@ -32,6 +32,9 @@
         <module>base-scheduler</module>
         <module>bifromq-dist</module>
         <module>bifromq-retain</module>
+        <module>build</module>
+        <!--承保范围报告-->
+        <module>coverage-report</module>
     </modules>
 
     <developers>
@@ -74,7 +77,7 @@
 
         <slf4j.version>1.7.30</slf4j.version>
         <logback.version>1.2.9</logback.version>
-        <lombok.version>1.18.24</lombok.version>
+        <lombok.version>1.18.30</lombok.version>
 
         <!-- test dependencies-->
         <awaitility.version>4.2.0</awaitility.version>
